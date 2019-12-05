@@ -230,9 +230,11 @@ export default {
     border-right: solid 1px #7c7c7c;
     height: 100vh;
     transition: all 1s;
+    opacity: 1;
     &.isMenuClose {
       transition: all 1s;
       transform: translateX(-100%);
+      opacity: 0;
     }
     ul {
       list-style: none;
