@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.458" height="134.832" viewBox="0 0 96.458 134.832">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #141414;
+      }
+
+      .cls-2 {
+        fill: #a0002f;
+      }
+
+      .cls-3 {
+        fill: #ff7fa1;
+      }
+
+      .cls-4 {
+        fill: #ffc300;
+      }
+
+      .cls-5 {
+        fill: #00c4ff;
+      }
+
+      .cls-6 {
+        fill: #bbd500;
+      }
+
+      .cls-7 {
+        fill: #38bee3;
+      }
+    </style>
+  </defs>
+  <g id="Group_1600" data-name="Group 1600" transform="translate(-368 -384)">
+    <ellipse id="Ellipse_378" data-name="Ellipse 378" class="cls-1" cx="38" cy="5" rx="38" ry="5" transform="translate(378 508.832)"/>
+    <g id="Group_1588" data-name="Group 1588" transform="translate(6.229 -0.168)">
+      <path id="Path_1073" data-name="Path 1073" class="cls-2" d="M117.9,79.822c0,36.293-21.592,53.714-48.227,53.714S21.442,116.115,21.442,79.822,43.034,2.116,69.673,2.116,117.9,43.532,117.9,79.822Z" transform="translate(340.329 382.052)"/>
+      <path id="Intersection_44" data-name="Intersection 44" class="cls-3" d="M-10718.769-3398.669a92.481,92.481,0,0,1,5.82-11h65.9a92.481,92.481,0,0,1,5.82,11Z" transform="translate(11090 3817.168)"/>
+      <path id="Intersection_46" data-name="Intersection 46" class="cls-3" d="M-10721.432-3367.667c.253-2,.563-4.006.93-6h93.007c.366,1.994.677,4,.93,6Z" transform="translate(11084 3817.168)"/>
+      <path id="Intersection_48" data-name="Intersection 48" class="cls-4" d="M-10720.466-3331.667a59.016,59.016,0,0,1-2.246-8h93.425a59.016,59.016,0,0,1-2.246,8Z" transform="translate(11086 3817.168)"/>
+      <path id="Intersection_49" data-name="Intersection 49" class="cls-3" d="M-10717.866-3325.667c-.336-.654-.658-1.319-.971-2h85.675c-.312.681-.635,1.346-.971,2Z" transform="translate(11086 3817.168)"/>
+      <path id="Intersection_50" data-name="Intersection 50" class="cls-5" d="M-10710.9-3315.668a43.31,43.31,0,0,1-4.655-6h79.121a43.46,43.46,0,0,1-4.655,6Z" transform="translate(11086 3817.168)"/>
+      <path id="Intersection_47" data-name="Intersection 47" class="cls-3" d="M-10723.419-3343.667q-.286-1.956-.473-4h95.784q-.186,2.049-.473,4Z" transform="translate(11086 3817.168)"/>
+      <path id="Intersection_51" data-name="Intersection 51" class="cls-5" d="M-10720.049-3349.667q-.179-2.734-.181-5.626c0-1.451.035-2.912.1-4.376h96.253c.068,1.464.1,2.925.1,4.376q0,2.894-.181,5.626Z" transform="translate(11082 3817.168)"/>
+      <path id="Intersection_57" data-name="Intersection 57" class="cls-6" d="M-10729.075-3360.668q.17-2.992.521-6h95.108q.35,3.006.521,6Z" transform="translate(11091 3817.168)"/>
+      <path id="Intersection_77" data-name="Intersection 77" class="cls-4" d="M-11113.759-3792.668a65.033,65.033,0,0,1,7.376-9h47.223a65.033,65.033,0,0,1,7.376,9Z" transform="translate(11492.771 4197.168)"/>
+      <path id="Intersection_76" data-name="Intersection 76" class="cls-4" d="M-11110.729-3689.669h55.916c-7.886,5.42-17.536,8.087-27.957,8.087S-11102.843-3684.249-11110.729-3689.669Z" transform="translate(11492.771 4197.168)"/>
+      <path id="Intersection_78" data-name="Intersection 78" class="cls-6" d="M-11111.968-3770.668q.9-2.539,1.909-5h80.118q1.011,2.46,1.909,5Z" transform="translate(11480 4197.168)"/>
+      <path id="Intersection_79" data-name="Intersection 79" class="cls-7" d="M-11115.691-3757.667c.675-3.039,1.477-6.048,2.395-9h86.594c.919,2.952,1.721,5.961,2.4,9Z" transform="translate(11480 4197.168)"/>
+    </g>
+  </g>
+</svg>

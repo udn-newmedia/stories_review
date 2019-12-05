@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.458" height="134.832" viewBox="0 0 96.458 134.832">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #141414;
+      }
+
+      .cls-2 {
+        fill: #a0002f;
+      }
+
+      .cls-3 {
+        fill: #ffc300;
+      }
+
+      .cls-4 {
+        fill: #bbd500;
+      }
+
+      .cls-5 {
+        fill: #ff7fa1;
+      }
+
+      .cls-6 {
+        fill: #38bee3;
+      }
+    </style>
+  </defs>
+  <g id="Group_1593" data-name="Group 1593" transform="translate(-651 -142)">
+    <ellipse id="Ellipse_371" data-name="Ellipse 371" class="cls-1" cx="38" cy="5" rx="38" ry="5" transform="translate(663 266.832)"/>
+    <g id="Group_1582" data-name="Group 1582" transform="translate(15.23 -0.168)">
+      <path id="Path_1065" data-name="Path 1065" class="cls-2" d="M117.9,79.822c0,36.293-21.592,53.714-48.227,53.714S21.442,116.115,21.442,79.822,43.034,2.116,69.673,2.116,117.9,43.532,117.9,79.822Z" transform="translate(614.329 140.052)"/>
+      <path id="Intersection_89" data-name="Intersection 89" class="cls-3" d="M-11060.012-3761l-11.258,10.35-11.261-10.35-11.66,10.719-11.665-10.719-10.055,9.241-10.051-9.241-2.2,2.024c.832-3.546,1.838-7.051,3-10.461l9.256,8.512,10.055-9.244,11.665,10.722,11.66-10.722,11.261,10.353,11.258-10.353,11.66,10.722,8.646-7.948q1.144,3.59,2.052,7.279l-10.7,9.835Z" transform="translate(11766.771 3955.168)"/>
+      <path id="Intersection_90" data-name="Intersection 90" class="cls-4" d="M-11060.012-3745.542l-11.258,10.872-11.261-10.872-11.66,11.261-11.665-11.261-10.055,9.708-10.051-9.708-3.285,3.171a23.948,23.948,0,0,1-1.145-3.722q.306-2.77.761-5.532l3.669-3.54,10.051,9.7,10.055-9.7,11.665,11.258,11.66-11.258,11.261,10.869,11.258-10.869,11.66,11.258,11.66-11.258.169.163c.581,2.96,1.041,5.939,1.371,8.917q-.183.827-.42,1.625l-1.12-1.081-11.66,11.261Z" transform="translate(11766.771 3955.168)"/>
+      <path id="Intersection_64" data-name="Intersection 64" class="cls-5" d="M-10709.153-3418.668a54.191,54.191,0,0,1,6.01-6h40.747a54.191,54.191,0,0,1,6.01,6Z" transform="translate(11366.771 3575.168)"/>
+      <path id="Intersection_65" data-name="Intersection 65" class="cls-5" d="M-10713.759-3412.667q1.43-2.082,2.95-4h56.076q1.521,1.915,2.95,4Z" transform="translate(11366.771 3575.168)"/>
+      <path id="Intersection_87" data-name="Intersection 87" class="cls-3" d="M-11106.422-3691.5a106.492,106.492,0,0,1,30.421-4.169,106.514,106.514,0,0,1,30.423,4.17c-8.3,6.651-18.887,9.917-30.42,9.917S-11098.122-3684.847-11106.422-3691.5Z" transform="translate(11760 3955.168)"/>
+      <path id="Intersection_91" data-name="Intersection 91" class="cls-3" d="M-11118.913-3720.669q-.464-2.423-.771-5h95.367q-.3,2.577-.771,5Z" transform="translate(11756 3955.168)"/>
+      <path id="Intersection_92" data-name="Intersection 92" class="cls-4" d="M-11116.467-3711.669q-.866-2.4-1.544-5h92.022q-.677,2.6-1.544,5Z" transform="translate(11756 3955.168)"/>
+      <path id="Intersection_93" data-name="Intersection 93" class="cls-6" d="M-11111.561-3701.668a47.114,47.114,0,0,1-2.806-5h84.733a47.114,47.114,0,0,1-2.806,5Z" transform="translate(11756 3955.168)"/>
+    </g>
+  </g>
+</svg>

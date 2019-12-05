@@ -1,0 +1,51 @@
+<svg id="Group_1610" data-name="Group 1610" xmlns="http://www.w3.org/2000/svg" width="35.929" height="50.223" viewBox="0 0 35.929 50.223">
+  <ellipse id="Ellipse_379" data-name="Ellipse 379" cx="14.154" cy="1.862" rx="14.154" ry="1.862" transform="translate(3.725 46.498)" fill="#141414"/>
+  <g id="Group_1589" data-name="Group 1589" transform="translate(0 0)">
+    <path id="Path_1072" data-name="Path 1072" d="M57.371,31.06c0,13.519-8.043,20.008-17.964,20.008S21.442,44.579,21.442,31.06,29.485,2.116,39.407,2.116,57.371,17.543,57.371,31.06Z" transform="translate(-21.442 -2.116)" fill="#a0002f"/>
+    <path id="Intersection_38" data-name="Intersection 38" d="M7.493,5.77A26.6,26.6,0,0,1,0,2.159Q.247,1.071.551,0A30.666,30.666,0,0,0,17.081,4.575,30.742,30.742,0,0,0,33.439.11q.3,1.075.547,2.171A26.69,26.69,0,0,1,26.667,5.77a32.473,32.473,0,0,1-9.586,1.411A32.485,32.485,0,0,1,7.493,5.77Z" transform="translate(0.986 18.271)" fill="#bbd500"/>
+    <path id="Intersection_39" data-name="Intersection 39" d="M6.024,4.739A27.389,27.389,0,0,1,0,2.083C.257,1.377.533.68.825,0A31.4,31.4,0,0,0,15.611,3.544,31.462,31.462,0,0,0,30.231.088q.438,1.027.823,2.095A27.492,27.492,0,0,1,25.2,4.739a32.474,32.474,0,0,1-9.587,1.411A32.483,32.483,0,0,1,6.024,4.739Z" transform="translate(2.455 13.342)" fill="#38bee3"/>
+    <path id="Intersection_40" data-name="Intersection 40" d="M1.54,1.933Q.755,1.751,0,1.541.593.733,1.225,0a43.022,43.022,0,0,0,9.914,1.127A43.11,43.11,0,0,0,20.885.039q.632.736,1.226,1.548-.674.184-1.372.346A42.539,42.539,0,0,1,11.139,3,42.527,42.527,0,0,1,1.54,1.933Z" transform="translate(6.927 5.322)" fill="#bbd500"/>
+    <ellipse id="Ellipse_247" data-name="Ellipse 247" cx="1.117" cy="2.794" rx="1.117" ry="2.794" transform="matrix(0.914, 0.407, -0.407, 0.914, 27.68, 8.292)" fill="#bbd500"/>
+    <ellipse id="Ellipse_248" data-name="Ellipse 248" cx="1.117" cy="3.166" rx="1.117" ry="3.166" transform="translate(20.783 9.513) rotate(-21)" fill="#38bee3"/>
+    <ellipse id="Ellipse_249" data-name="Ellipse 249" cx="1.117" cy="3.166" rx="1.117" ry="3.166" transform="translate(17.741 9.807) rotate(-7)" fill="#bbd500"/>
+    <ellipse id="Ellipse_250" data-name="Ellipse 250" cx="1.117" cy="3.166" rx="1.117" ry="3.166" transform="translate(9.551 9.274)" fill="#bbd500"/>
+    <ellipse id="Ellipse_252" data-name="Ellipse 252" cx="1.117" cy="3.166" rx="1.117" ry="3.166" transform="matrix(0.809, 0.588, -0.588, 0.809, 8.273, 7.36)" fill="#38bee3"/>
+    <ellipse id="Ellipse_251" data-name="Ellipse 251" cx="1.117" cy="3.166" rx="1.117" ry="3.166" transform="matrix(0.766, 0.643, -0.643, 0.766, 16.318, 8.552)" fill="#38bee3"/>
+    <ellipse id="Ellipse_256" data-name="Ellipse 256" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(3.353 17.072)" fill="#38bee3"/>
+    <ellipse id="Ellipse_257" data-name="Ellipse 257" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(7.45 18.562)" fill="#bbd500"/>
+    <ellipse id="Ellipse_258" data-name="Ellipse 258" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(11.92 19.679)" fill="#38bee3"/>
+    <ellipse id="Ellipse_259" data-name="Ellipse 259" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(17.135 20.052)" fill="#bbd500"/>
+    <ellipse id="Ellipse_260" data-name="Ellipse 260" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(22.349 19.679)" fill="#38bee3"/>
+    <ellipse id="Ellipse_261" data-name="Ellipse 261" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(26.819 18.562)" fill="#bbd500"/>
+    <ellipse id="Ellipse_262" data-name="Ellipse 262" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(31.289 16.699)" fill="#38bee3"/>
+    <g id="Ellipse_276" data-name="Ellipse 276" transform="translate(2.608 34.579)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="2.235" cy="2.235" rx="2.235" ry="2.235" stroke="none"/>
+      <ellipse cx="2.235" cy="2.235" rx="0.265" ry="0.265" fill="none"/>
+    </g>
+    <g id="Ellipse_287" data-name="Ellipse 287" transform="translate(7.822 32.344)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="2.235" cy="2.235" rx="2.235" ry="2.235" stroke="none"/>
+      <ellipse cx="2.235" cy="2.235" rx="0.265" ry="0.265" fill="none"/>
+    </g>
+    <g id="Ellipse_288" data-name="Ellipse 288" transform="translate(13.782 31.599)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="2.235" cy="2.235" rx="2.235" ry="2.235" stroke="none"/>
+      <ellipse cx="2.235" cy="2.235" rx="0.265" ry="0.265" fill="none"/>
+    </g>
+    <g id="Ellipse_346" data-name="Ellipse 346" transform="translate(26.819 24.149)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="3.725" cy="3.725" rx="3.725" ry="3.725" stroke="none"/>
+      <ellipse cx="3.725" cy="3.725" rx="1.225" ry="1.225" fill="none"/>
+    </g>
+    <g id="Ellipse_348" data-name="Ellipse 348" transform="translate(19.742 28.991)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="3.725" cy="3.725" rx="3.725" ry="3.725" stroke="none"/>
+      <ellipse cx="3.725" cy="3.725" rx="1.225" ry="1.225" fill="none"/>
+    </g>
+    <g id="Ellipse_347" data-name="Ellipse 347" transform="translate(1.863 25.267)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="3.725" cy="3.725" rx="3.725" ry="3.725" stroke="none"/>
+      <ellipse cx="3.725" cy="3.725" rx="1.225" ry="1.225" fill="none"/>
+    </g>
+    <g id="Ellipse_289" data-name="Ellipse 289" transform="translate(27.937 33.834)" fill="#fff" stroke="#38bee3" stroke-width="5">
+      <ellipse cx="2.235" cy="2.235" rx="2.235" ry="2.235" stroke="none"/>
+      <ellipse cx="2.235" cy="2.235" rx="0.265" ry="0.265" fill="none"/>
+    </g>
+    <path id="Intersection_94" data-name="Intersection 94" d="M0,2.724A26.674,26.674,0,0,1,12.236,0,26.789,26.789,0,0,1,24.344,2.657,17.551,17.551,0,0,1,12.137,7.11,17.574,17.574,0,0,1,0,2.724Z" transform="translate(5.829 41.843)" fill="#38bee3"/>
+  </g>
+</svg>

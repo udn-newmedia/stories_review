@@ -1,0 +1,20 @@
+<svg id="Group_1613" data-name="Group 1613" xmlns="http://www.w3.org/2000/svg" width="35.929" height="50.223" viewBox="0 0 35.929 50.223">
+  <ellipse id="Ellipse_375" data-name="Ellipse 375" cx="14.154" cy="1.862" rx="14.154" ry="1.862" transform="translate(3.725 46.498)" fill="#141414"/>
+  <g id="Group_1585" data-name="Group 1585" transform="translate(0 0)">
+    <path id="Path_1070" data-name="Path 1070" d="M57.371,31.06c0,13.519-8.043,20.008-17.964,20.008S21.442,44.579,21.442,31.06,29.485,2.116,39.407,2.116,57.371,17.543,57.371,31.06Z" transform="translate(-21.442 -2.116)" fill="#a0002f"/>
+    <g id="Group_1490" data-name="Group 1490" transform="translate(6.705 20.424)">
+      <path id="Polygon_123" data-name="Polygon 123" d="M3.725,0,7.45,6.332H0Z" transform="translate(7.45 6.332) rotate(180)" fill="#bbd500"/>
+      <path id="Polygon_124" data-name="Polygon 124" d="M3.725,0,7.45,6.332H0Z" transform="translate(16.389 6.332) rotate(180)" fill="#bbd500"/>
+      <path id="Polygon_125" data-name="Polygon 125" d="M3.725,0,7.45,6.332H0Z" transform="translate(25.329 6.332) rotate(180)" fill="#bbd500"/>
+    </g>
+    <g id="Group_1491" data-name="Group 1491" transform="translate(27.937 29.364) rotate(180)">
+      <path id="Polygon_123-2" data-name="Polygon 123" d="M3.725,0,7.45,6.332H0Z" transform="translate(7.45 6.332) rotate(180)" fill="#ffc300"/>
+      <path id="Polygon_124-2" data-name="Polygon 124" d="M3.725,0,7.45,6.332H0Z" transform="translate(16.389 6.332) rotate(180)" fill="#ffc300"/>
+      <path id="Polygon_125-2" data-name="Polygon 125" d="M3.725,0,7.45,6.332H0Z" transform="translate(25.329 6.332) rotate(180)" fill="#ffc300"/>
+    </g>
+    <path id="Intersection_71" data-name="Intersection 71" d="M2.445,3.725A16.78,16.78,0,0,1,0,0H31.562a16.781,16.781,0,0,1-2.444,3.725Z" transform="translate(2.184 39.607)" fill="#ff7fa1"/>
+    <path id="Intersection_70" data-name="Intersection 70" d="M.847,3.725A23.512,23.512,0,0,1,0,0H35.326a23.512,23.512,0,0,1-.847,3.725Z" transform="translate(0.302 33.275)" fill="#38bee3"/>
+    <path id="Intersection_69" data-name="Intersection 69" d="M0,3.725C.411,2.448.881,1.2,1.4,0H30.616c.523,1.2.993,2.448,1.4,3.725Z" transform="translate(1.955 13.161)" fill="#38bee3"/>
+    <path id="Intersection_68" data-name="Intersection 68" d="M0,3.725A30.585,30.585,0,0,1,2.333,0H24.359a30.587,30.587,0,0,1,2.334,3.725Z" transform="translate(4.619 6.828)" fill="#ff7fa1"/>
+  </g>
+</svg>

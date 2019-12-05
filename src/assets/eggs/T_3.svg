@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100.22" height="134.832" viewBox="0 0 100.22 134.832">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #141414;
+      }
+
+      .cls-3 {
+        fill: #a0002f;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        fill: #ff7fa1;
+      }
+
+      .cls-6 {
+        fill: #38bee3;
+      }
+
+      .cls-7 {
+        fill: #bbd500;
+      }
+
+      .cls-8 {
+        fill: #ffc300;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="87" height="12"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1594" data-name="Group 1594" transform="translate(-793 -142)">
+    <ellipse id="Ellipse_372" data-name="Ellipse 372" class="cls-2" cx="38" cy="5" rx="38" ry="5" transform="translate(806 266.832)"/>
+    <g id="Group_1583" data-name="Group 1583" transform="translate(12.001 -0.168)">
+      <path id="Path_1066" data-name="Path 1066" class="cls-3" d="M117.9,79.822c0,36.293-21.592,53.714-48.227,53.714S21.442,116.115,21.442,79.822,43.034,2.116,69.673,2.116,117.9,43.532,117.9,79.822Z" transform="translate(759.557 140.052)"/>
+      <g id="Repeat_Grid_25" data-name="Repeat Grid 25" class="cls-4" transform="matrix(0.809, -0.588, 0.588, 0.809, 789.781, 232.715)">
+        <g transform="translate(-786 -199)">
+          <circle id="Ellipse_307" data-name="Ellipse 307" class="cls-5" cx="6" cy="6" r="6" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-771 -199)">
+          <circle id="Ellipse_307-2" data-name="Ellipse 307" class="cls-5" cx="6" cy="6" r="6" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-756 -199)">
+          <circle id="Ellipse_307-3" data-name="Ellipse 307" class="cls-5" cx="6" cy="6" r="6" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-741 -199)">
+          <circle id="Ellipse_307-4" data-name="Ellipse 307" class="cls-5" cx="6" cy="6" r="6" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-726 -199)">
+          <circle id="Ellipse_307-5" data-name="Ellipse 307" class="cls-5" cx="6" cy="6" r="6" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-711 -199)">
+          <circle id="Ellipse_307-6" data-name="Ellipse 307" class="cls-5" cx="6" cy="6" r="6" transform="translate(786 199)"/>
+        </g>
+      </g>
+      <g id="Repeat_Grid_36" data-name="Repeat Grid 36" class="cls-4" transform="matrix(0.809, -0.588, 0.588, 0.809, 782.781, 205.715)">
+        <g transform="translate(-786 -199)">
+          <circle id="Ellipse_307-7" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-771 -199)">
+          <circle id="Ellipse_307-8" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-756 -199)">
+          <circle id="Ellipse_307-9" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-741 -199)">
+          <circle id="Ellipse_307-10" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-726 -199)">
+          <circle id="Ellipse_307-11" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-711 -199)">
+          <circle id="Ellipse_307-12" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+      </g>
+      <g id="Repeat_Grid_37" data-name="Repeat Grid 37" class="cls-4" transform="matrix(0.809, -0.588, 0.588, 0.809, 803.781, 261.715)">
+        <g transform="translate(-786 -199)">
+          <circle id="Ellipse_307-13" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-771 -199)">
+          <circle id="Ellipse_307-14" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-756 -199)">
+          <circle id="Ellipse_307-15" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-741 -199)">
+          <circle id="Ellipse_307-16" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-726 -199)">
+          <circle id="Ellipse_307-17" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+        <g transform="translate(-711 -199)">
+          <circle id="Ellipse_307-18" data-name="Ellipse 307" class="cls-6" cx="4" cy="4" r="4" transform="translate(786 199)"/>
+        </g>
+      </g>
+      <path id="Intersection_72" data-name="Intersection 72" class="cls-7" d="M-11099.869-3744.481l59.058-42.908a44.306,44.306,0,0,1,7.354,5.784l-69.523,50.512A111.826,111.826,0,0,1-11099.869-3744.481Z" transform="translate(11885.419 3934.237)"/>
+      <path id="Intersection_73" data-name="Intersection 73" class="cls-8" d="M-11110.4-3733.756l79.822-58a85.982,85.982,0,0,1,4.595,7.787l-83.559,60.71A78.327,78.327,0,0,1-11110.4-3733.756Z" transform="translate(11891.419 3955.168)"/>
+      <path id="Intersection_74" data-name="Intersection 74" class="cls-7" d="M-11112.024-3700.579l83.643-60.771c.819,3.178,1.5,6.406,2.036,9.644l-79.814,57.99A42.649,42.649,0,0,1-11112.024-3700.579Z" transform="translate(11902.419 3955.168)"/>
+      <path id="Intersection_75" data-name="Intersection 75" class="cls-8" d="M-11100.486-3684.479l65.895-47.875a74.765,74.765,0,0,1-1.35,12.106l-52.807,38.367A50.766,50.766,0,0,1-11100.486-3684.479Z" transform="translate(11912 3955.168)"/>
+    </g>
+  </g>
+</svg>

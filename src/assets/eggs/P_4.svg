@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.458" height="134.832" viewBox="0 0 96.458 134.832">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #141414;
+      }
+
+      .cls-2 {
+        fill: #a0002f;
+      }
+
+      .cls-3 {
+        fill: #ffc300;
+      }
+
+      .cls-4 {
+        fill: #ff7fa1;
+      }
+
+      .cls-5 {
+        fill: #38bee3;
+      }
+
+      .cls-6 {
+        fill: #bbd500;
+        stroke: #ff7fa1;
+        stroke-width: 8px;
+      }
+
+      .cls-7 {
+        stroke: none;
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_1598" data-name="Group 1598" transform="translate(-653.001 -384)">
+    <ellipse id="Ellipse_376" data-name="Ellipse 376" class="cls-1" cx="38" cy="5" rx="38" ry="5" transform="translate(663 508.832)"/>
+    <g id="Group_1587" data-name="Group 1587" transform="translate(17.23 -0.168)">
+      <path id="Path_1069" data-name="Path 1069" class="cls-2" d="M117.9,79.822c0,36.293-21.592,53.714-48.227,53.714S21.442,116.115,21.442,79.822,43.034,2.116,69.673,2.116,117.9,43.532,117.9,79.822Z" transform="translate(614.329 382.052)"/>
+      <circle id="Ellipse_290" data-name="Ellipse 290" class="cls-3" cx="3.5" cy="3.5" r="3.5" transform="translate(695 484)"/>
+      <circle id="Ellipse_305" data-name="Ellipse 305" class="cls-4" cx="3.5" cy="3.5" r="3.5" transform="translate(696 494)"/>
+      <circle id="Ellipse_291" data-name="Ellipse 291" class="cls-5" cx="4" cy="4" r="4" transform="translate(658 430)"/>
+      <circle id="Ellipse_301" data-name="Ellipse 301" class="cls-4" cx="4" cy="4" r="4" transform="translate(647 431)"/>
+      <circle id="Ellipse_302" data-name="Ellipse 302" class="cls-3" cx="4" cy="4" r="4" transform="translate(673 459)"/>
+      <circle id="Ellipse_306" data-name="Ellipse 306" class="cls-5" cx="4" cy="4" r="4" transform="translate(698 440)"/>
+      <circle id="Ellipse_292" data-name="Ellipse 292" class="cls-4" cx="3" cy="3" r="3" transform="translate(677 414)"/>
+      <circle id="Ellipse_298" data-name="Ellipse 298" class="cls-3" cx="3" cy="3" r="3" transform="translate(687 414)"/>
+      <circle id="Ellipse_299" data-name="Ellipse 299" class="cls-5" cx="3" cy="3" r="3" transform="translate(695 420)"/>
+      <circle id="Ellipse_300" data-name="Ellipse 300" class="cls-3" cx="3" cy="3" r="3" transform="translate(699 429)"/>
+      <circle id="Ellipse_293" data-name="Ellipse 293" class="cls-4" cx="3" cy="3" r="3" transform="translate(656 488)"/>
+      <circle id="Ellipse_303" data-name="Ellipse 303" class="cls-5" cx="3" cy="3" r="3" transform="translate(660 480)"/>
+      <circle id="Ellipse_304" data-name="Ellipse 304" class="cls-4" cx="3" cy="3" r="3" transform="translate(667 475)"/>
+      <circle id="Ellipse_294" data-name="Ellipse 294" class="cls-5" cx="4" cy="4" r="4" transform="translate(690 475)"/>
+      <g id="Ellipse_295" data-name="Ellipse 295" class="cls-6" transform="translate(644 440)">
+        <circle class="cls-7" cx="14" cy="14" r="14"/>
+        <circle class="cls-8" cx="14" cy="14" r="10"/>
+      </g>
+      <g id="Ellipse_296" data-name="Ellipse 296" class="cls-6" transform="translate(669 422)">
+        <circle class="cls-7" cx="14" cy="14" r="14"/>
+        <circle class="cls-8" cx="14" cy="14" r="10"/>
+      </g>
+      <g id="Ellipse_297" data-name="Ellipse 297" class="cls-6" transform="translate(665 482)">
+        <circle class="cls-7" cx="14" cy="14" r="14"/>
+        <circle class="cls-8" cx="14" cy="14" r="10"/>
+      </g>
+      <path id="Intersection_82" data-name="Intersection 82" class="cls-5" d="M-11069.339-3761.3a35.95,35.95,0,0,1-6.47-21.748c13.985,3.814,26.027,18.748,33.434,37.22-.436.027-.876.041-1.317.041C-11052.7-3745.783-11062.7-3751.452-11069.339-3761.3Z" transform="translate(11766.771 4168.159)"/>
+      <path id="Intersection_83" data-name="Intersection 83" class="cls-5" d="M-11058.132-3731.834c1.788-17.018,8.848-31.214,17.7-37.771a107.716,107.716,0,0,1,5.892,34.31c0,19.257-6.079,33.2-15.764,42.048C-11056.547-3701.846-11059.782-3716.13-11058.132-3731.834Z" transform="translate(11766.771 4197.168)"/>
+    </g>
+  </g>
+</svg>

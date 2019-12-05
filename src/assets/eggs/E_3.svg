@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.458" height="134.832" viewBox="0 0 96.458 134.832">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #141414;
+      }
+
+      .cls-2 {
+        fill: #a0002f;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke: #38bee3;
+      }
+
+      .cls-4 {
+        stroke: #bbd500;
+      }
+
+      .cls-5 {
+        stroke: #ffc300;
+      }
+
+      .cls-6 {
+        stroke: #ff7fa1;
+      }
+
+      .cls-7 {
+        fill: #ff7fa1;
+      }
+
+      .cls-8 {
+        fill: #ffc300;
+      }
+
+      .cls-9 {
+        fill: #bbd500;
+      }
+    </style>
+  </defs>
+  <g id="Group_1595" data-name="Group 1595" transform="translate(-939 -142)">
+    <ellipse id="Ellipse_373" data-name="Ellipse 373" class="cls-1" cx="38" cy="5" rx="38" ry="5" transform="translate(949 266.832)"/>
+    <g id="Group_1584" data-name="Group 1584" transform="translate(0.001 -0.167)">
+      <path id="Path_1067" data-name="Path 1067" class="cls-2" d="M117.9,79.822c0,36.293-21.592,53.714-48.227,53.714S21.442,116.115,21.442,79.822,43.034,2.116,69.673,2.116,117.9,43.532,117.9,79.822Z" transform="translate(917.557 140.052)"/>
+      <path id="Path_1180" data-name="Path 1180" class="cls-3" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="matrix(0.788, -0.616, 0.616, 0.788, -10984.321, 4548.342)"/>
+      <path id="Path_1181" data-name="Path 1181" class="cls-4" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="matrix(0.574, -0.819, 0.819, 0.574, -9197.285, 7836.154)"/>
+      <path id="Path_1182" data-name="Path 1182" class="cls-5" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="translate(11685.989 -6753.672) rotate(129)"/>
+      <path id="Path_1183" data-name="Path 1183" class="cls-6" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="matrix(-0.946, -0.326, 0.326, -0.946, 11177.072, 7826.462)"/>
+      <path id="Path_1185" data-name="Path 1185" class="cls-3" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="matrix(-0.921, -0.391, 0.391, -0.921, 10578.974, 8594.564)"/>
+      <path id="Path_1188" data-name="Path 1188" class="cls-3" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="translate(12866.212 4774.176) rotate(-177)"/>
+      <path id="Path_1189" data-name="Path 1189" class="cls-3" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="matrix(0.695, 0.719, -0.719, 0.695, -4581.177, -11231.331)"/>
+      <path id="Path_1190" data-name="Path 1190" class="cls-4" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="translate(-9577.525 -6880.903) rotate(16)"/>
+      <path id="Path_1187" data-name="Path 1187" class="cls-5" d="M12103.922,3932.927s10.782-14.184,20.64,0" transform="translate(11189.072 7899.461) rotate(-161)"/>
+      <path id="Polygon_128" data-name="Polygon 128" class="cls-7" d="M7.5,0,15,13H0Z" transform="translate(959.485 181.575) rotate(49)"/>
+      <path id="Polygon_129" data-name="Polygon 129" class="cls-8" d="M7.5,0,15,13H0Z" transform="matrix(0.438, -0.899, 0.899, 0.438, 976.37, 203.391)"/>
+      <path id="Polygon_134" data-name="Polygon 134" class="cls-7" d="M7.5,0,15,13H0Z" transform="translate(986.253 229.924) rotate(-99)"/>
+      <path id="Polygon_130" data-name="Polygon 130" class="cls-7" d="M7.5,0,15,13H0Z" transform="translate(1015.795 195.379) rotate(14)"/>
+      <path id="Polygon_131" data-name="Polygon 131" class="cls-9" d="M7.5,0,15,13H0Z" transform="translate(943.729 221.238) rotate(-51)"/>
+      <path id="Polygon_133" data-name="Polygon 133" class="cls-9" d="M7.5,0,15,13H0Z" transform="translate(976.401 178.014) rotate(-100)"/>
+      <path id="Intersection_80" data-name="Intersection 80" class="cls-8" d="M-11097.582-3787.5a28.817,28.817,0,0,1,14.812-4.336,28.474,28.474,0,0,1,13.992,3.863,81.116,81.116,0,0,1-15.722,1.47A83.589,83.589,0,0,1-11097.582-3787.5Z" transform="translate(12070 3934)"/>
+      <path id="Intersection_81" data-name="Intersection 81" class="cls-8" d="M-11110.424-3703.449a117.95,117.95,0,0,0,39.926,6.8,117.674,117.674,0,0,0,41.769-7.482c-8.5,15.167-23.7,22.547-41.04,22.547C-11086.849-3681.581-11101.854-3688.743-11110.424-3703.449Z" transform="translate(12057 3955.168)"/>
+    </g>
+  </g>
+</svg>

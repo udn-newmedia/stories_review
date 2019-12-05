@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.458" height="134.832" viewBox="0 0 96.458 134.832">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #141414;
+      }
+
+      .cls-2 {
+        fill: #a0002f;
+      }
+
+      .cls-3 {
+        fill: #38bee3;
+      }
+
+      .cls-4 {
+        fill: #ff7fa1;
+      }
+
+      .cls-5 {
+        fill: #ffc300;
+      }
+    </style>
+  </defs>
+  <g id="Group_1590" data-name="Group 1590" transform="translate(-225 -142)">
+    <ellipse id="Ellipse_368" data-name="Ellipse 368" class="cls-1" cx="38" cy="5" rx="38" ry="5" transform="translate(235 266.832)"/>
+    <g id="Group_1580" data-name="Group 1580" transform="translate(-0.269 -0.168)">
+      <path id="Path_1051" data-name="Path 1051" class="cls-2" d="M117.9,79.822c0,36.293-21.592,53.714-48.227,53.714S21.442,116.115,21.442,79.822,43.034,2.116,69.673,2.116,117.9,43.532,117.9,79.822Z" transform="translate(203.827 140.052)"/>
+      <path id="Intersection_30" data-name="Intersection 30" class="cls-3" d="M0,48.951C5.695,26.876,17.994,7.012,33.117,0c6.8,5.653,11.225,14.9,11.225,25.356,0,17.211-12.008,31.163-26.82,31.163A24.668,24.668,0,0,1,0,48.951Z" transform="translate(228.694 144.852)"/>
+      <path id="Intersection_28" data-name="Intersection 28" class="cls-4" d="M7.566,72.41A53.3,53.3,0,0,1,0,44.445C0,19.9,15.21,0,33.973,0,49.918,0,63.3,14.372,66.956,33.754c-4.8,26.977-24.052,40-47.079,40A55.445,55.445,0,0,1,7.566,72.41Z" transform="translate(253.622 199.838)"/>
+      <path id="Intersection_27" data-name="Intersection 27" class="cls-5" d="M0,27.076C0,12.122,10.178,0,22.734,0,33.76,0,42.952,9.35,45.028,21.755,36.982,36.816,22.483,44.475,5.768,45.1A30.068,30.068,0,0,1,0,27.076Z" transform="translate(269.97 228.447)"/>
+      <path id="Intersection_29" data-name="Intersection 29" class="cls-5" d="M0,29.459C5.767,16.619,13.814,5.873,23.151,0A22.2,22.2,0,0,1,29.6,16.072c0,11.286-7.548,20.435-16.859,20.435C7.651,36.507,3.091,33.777,0,29.459Z" transform="translate(234.754 146.983)"/>
+      <path id="Intersection_31" data-name="Intersection 31" class="cls-3" d="M0,6.376A23.339,23.339,0,0,1,.867,0,85.6,85.6,0,0,1,13.888,22.146a7.663,7.663,0,0,1-2.9.578C4.917,22.724,0,15.4,0,6.376Z" transform="translate(299.601 157.19)"/>
+      <circle id="Ellipse_201" data-name="Ellipse 201" class="cls-5" cx="3" cy="3" r="3" transform="translate(289 154)"/>
+      <circle id="Ellipse_202" data-name="Ellipse 202" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(289 163)"/>
+      <circle id="Ellipse_365" data-name="Ellipse 365" class="cls-2" cx="3.5" cy="3.5" r="3.5" transform="translate(254 156)"/>
+      <circle id="Ellipse_366" data-name="Ellipse 366" class="cls-2" cx="3.5" cy="3.5" r="3.5" transform="translate(251 165)"/>
+      <circle id="Ellipse_367" data-name="Ellipse 367" class="cls-2" cx="3.5" cy="3.5" r="3.5" transform="translate(243 172)"/>
+      <circle id="Ellipse_203" data-name="Ellipse 203" class="cls-5" cx="3" cy="3" r="3" transform="translate(293 173)"/>
+      <circle id="Ellipse_204" data-name="Ellipse 204" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(300 182)"/>
+      <circle id="Ellipse_205" data-name="Ellipse 205" class="cls-5" cx="3" cy="3" r="3" transform="translate(309 187)"/>
+      <circle id="Ellipse_206" data-name="Ellipse 206" class="cls-3" cx="3.5" cy="3.5" r="3.5" transform="translate(261 262)"/>
+      <circle id="Ellipse_207" data-name="Ellipse 207" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(258 253)"/>
+      <circle id="Ellipse_208" data-name="Ellipse 208" class="cls-3" cx="3.5" cy="3.5" r="3.5" transform="translate(257 241)"/>
+      <circle id="Ellipse_209" data-name="Ellipse 209" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(258 229)"/>
+      <circle id="Ellipse_210" data-name="Ellipse 210" class="cls-3" cx="3" cy="3" r="3" transform="translate(262 218)"/>
+      <circle id="Ellipse_211" data-name="Ellipse 211" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(270 209)"/>
+      <circle id="Ellipse_212" data-name="Ellipse 212" class="cls-3" cx="3" cy="3" r="3" transform="translate(281 204)"/>
+      <circle id="Ellipse_213" data-name="Ellipse 213" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(293 208)"/>
+      <circle id="Ellipse_214" data-name="Ellipse 214" class="cls-3" cx="3" cy="3" r="3" transform="translate(303 214)"/>
+      <circle id="Ellipse_215" data-name="Ellipse 215" class="cls-5" cx="3.5" cy="3.5" r="3.5" transform="translate(309 224)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg id="Group_1611" data-name="Group 1611" xmlns="http://www.w3.org/2000/svg" width="35.929" height="50.223" viewBox="0 0 35.929 50.223">
+  <ellipse id="Ellipse_376" data-name="Ellipse 376" cx="14.154" cy="1.862" rx="14.154" ry="1.862" transform="translate(3.725 46.498)" fill="#141414"/>
+  <g id="Group_1587" data-name="Group 1587" transform="translate(0 0)">
+    <path id="Path_1069" data-name="Path 1069" d="M57.371,31.06c0,13.519-8.043,20.008-17.964,20.008S21.442,44.579,21.442,31.06,29.485,2.116,39.407,2.116,57.371,17.543,57.371,31.06Z" transform="translate(-21.442 -2.116)" fill="#a0002f"/>
+    <ellipse id="Ellipse_290" data-name="Ellipse 290" cx="1.304" cy="1.304" rx="1.304" ry="1.304" transform="translate(22.062 37.186)" fill="#ffc300"/>
+    <ellipse id="Ellipse_305" data-name="Ellipse 305" cx="1.304" cy="1.304" rx="1.304" ry="1.304" transform="translate(22.435 40.911)" fill="#ff7fa1"/>
+    <ellipse id="Ellipse_291" data-name="Ellipse 291" cx="1.49" cy="1.49" rx="1.49" ry="1.49" transform="translate(8.28 17.072)" fill="#38bee3"/>
+    <ellipse id="Ellipse_301" data-name="Ellipse 301" cx="1.49" cy="1.49" rx="1.49" ry="1.49" transform="translate(4.183 17.444)" fill="#ff7fa1"/>
+    <ellipse id="Ellipse_302" data-name="Ellipse 302" cx="1.49" cy="1.49" rx="1.49" ry="1.49" transform="translate(13.867 27.874)" fill="#ffc300"/>
+    <ellipse id="Ellipse_306" data-name="Ellipse 306" cx="1.49" cy="1.49" rx="1.49" ry="1.49" transform="translate(23.18 20.797)" fill="#38bee3"/>
+    <ellipse id="Ellipse_292" data-name="Ellipse 292" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(15.357 11.112)" fill="#ff7fa1"/>
+    <ellipse id="Ellipse_298" data-name="Ellipse 298" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(19.082 11.112)" fill="#ffc300"/>
+    <ellipse id="Ellipse_299" data-name="Ellipse 299" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(22.062 13.347)" fill="#38bee3"/>
+    <ellipse id="Ellipse_300" data-name="Ellipse 300" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(23.552 16.699)" fill="#ffc300"/>
+    <ellipse id="Ellipse_293" data-name="Ellipse 293" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(7.535 38.676)" fill="#ff7fa1"/>
+    <ellipse id="Ellipse_303" data-name="Ellipse 303" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(9.025 35.696)" fill="#38bee3"/>
+    <ellipse id="Ellipse_304" data-name="Ellipse 304" cx="1.117" cy="1.117" rx="1.117" ry="1.117" transform="translate(11.632 33.834)" fill="#ff7fa1"/>
+    <ellipse id="Ellipse_294" data-name="Ellipse 294" cx="1.49" cy="1.49" rx="1.49" ry="1.49" transform="translate(20.2 33.834)" fill="#38bee3"/>
+    <g id="Ellipse_295" data-name="Ellipse 295" transform="translate(3.065 20.797)" fill="#bbd500" stroke="#ff7fa1" stroke-width="8">
+      <ellipse cx="5.215" cy="5.215" rx="5.215" ry="5.215" stroke="none"/>
+      <ellipse cx="5.215" cy="5.215" rx="1.215" ry="1.215" fill="none"/>
+    </g>
+    <g id="Ellipse_296" data-name="Ellipse 296" transform="translate(12.377 14.092)" fill="#bbd500" stroke="#ff7fa1" stroke-width="8">
+      <ellipse cx="5.215" cy="5.215" rx="5.215" ry="5.215" stroke="none"/>
+      <ellipse cx="5.215" cy="5.215" rx="1.215" ry="1.215" fill="none"/>
+    </g>
+    <g id="Ellipse_297" data-name="Ellipse 297" transform="translate(10.887 36.441)" fill="#bbd500" stroke="#ff7fa1" stroke-width="8">
+      <ellipse cx="5.215" cy="5.215" rx="5.215" ry="5.215" stroke="none"/>
+      <ellipse cx="5.215" cy="5.215" rx="1.215" ry="1.215" fill="none"/>
+    </g>
+    <path id="Intersection_82" data-name="Intersection 82" d="M2.427,8.1A13.391,13.391,0,0,1,.017,0c5.209,1.421,9.7,6.983,12.454,13.864q-.244.015-.491.015C8.624,13.879,4.9,11.767,2.427,8.1Z" transform="translate(20.541 0.353)" fill="#38bee3"/>
+    <path id="Intersection_83" data-name="Intersection 83" d="M.159,14.07C.825,7.73,3.455,2.442,6.751,0A40.116,40.116,0,0,1,8.946,12.781c0,7.173-2.264,12.367-5.871,15.662C.75,25.24-.455,19.919.159,14.07Z" transform="translate(26.983 16.164)" fill="#38bee3"/>
+  </g>
+</svg>

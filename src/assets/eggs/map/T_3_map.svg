@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35.929" height="50.223" viewBox="0 0 35.929 50.223">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="32" height="3" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="29" height="3" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1619" data-name="Group 1619" transform="translate(-462.641 -558.015)">
+    <ellipse id="Ellipse_372" data-name="Ellipse 372" cx="14.154" cy="1.862" rx="14.154" ry="1.862" transform="translate(467.483 604.513)" fill="#141414"/>
+    <g id="Group_1618" data-name="Group 1618">
+      <path id="Path_1066" data-name="Path 1066" d="M57.371,31.06c0,13.519-8.043,20.008-17.964,20.008S21.442,44.579,21.442,31.06,29.485,2.116,39.407,2.116,57.371,17.543,57.371,31.06Z" transform="translate(441.199 555.899)" fill="#a0002f"/>
+      <g id="Repeat_Grid_25" data-name="Repeat Grid 25" transform="matrix(0.809, -0.588, 0.588, 0.809, 466.912, 591.742)" clip-path="url(#clip-path)">
+        <g transform="translate(-786 -199)">
+          <circle id="Ellipse_307" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#ff7fa1"/>
+        </g>
+        <g transform="translate(-779 -199)">
+          <circle id="Ellipse_307-2" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#ff7fa1"/>
+        </g>
+        <g transform="translate(-772 -199)">
+          <circle id="Ellipse_307-3" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#ff7fa1"/>
+        </g>
+        <g transform="translate(-765 -199)">
+          <circle id="Ellipse_307-4" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#ff7fa1"/>
+        </g>
+        <g transform="translate(-758 -199)">
+          <circle id="Ellipse_307-5" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#ff7fa1"/>
+        </g>
+      </g>
+      <g id="Repeat_Grid_36" data-name="Repeat Grid 36" transform="matrix(0.809, -0.588, 0.588, 0.809, 465.304, 580.685)" clip-path="url(#clip-path-2)">
+        <g transform="translate(-786 -199)">
+          <circle id="Ellipse_307-6" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-780 -199)">
+          <circle id="Ellipse_307-7" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-774 -199)">
+          <circle id="Ellipse_307-8" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-768 -199)">
+          <circle id="Ellipse_307-9" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-762 -199)">
+          <circle id="Ellipse_307-10" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+      </g>
+      <g id="Repeat_Grid_38" data-name="Repeat Grid 38" transform="matrix(0.809, -0.588, 0.588, 0.809, 473.304, 600.685)" clip-path="url(#clip-path-2)">
+        <g transform="translate(-786 -199)">
+          <circle id="Ellipse_307-11" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-780 -199)">
+          <circle id="Ellipse_307-12" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-774 -199)">
+          <circle id="Ellipse_307-13" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-768 -199)">
+          <circle id="Ellipse_307-14" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+        <g transform="translate(-762 -199)">
+          <circle id="Ellipse_307-15" data-name="Ellipse 307" cx="1.5" cy="1.5" r="1.5" transform="translate(786 199)" fill="#38bee3"/>
+        </g>
+      </g>
+      <path id="Intersection_72" data-name="Intersection 72" d="M1.16,15.983,23.158,0A16.512,16.512,0,0,1,25.9,2.154L0,20.969A41.582,41.582,0,0,1,1.16,15.983Z" transform="translate(463.175 559.758)" fill="#bbd500"/>
+      <path id="Intersection_73" data-name="Intersection 73" d="M0,21.6,29.733,0a32.01,32.01,0,0,1,1.712,2.9L.32,25.514A29.3,29.3,0,0,1,0,21.6Z" transform="translate(462.646 565.93)" fill="#ffc300"/>
+      <path id="Intersection_74" data-name="Intersection 74" d="M0,22.636,31.156,0c.305,1.184.56,2.386.759,3.593l-29.73,21.6A15.9,15.9,0,0,1,0,22.636Z" transform="translate(466.14 577.254)" fill="#bbd500"/>
+      <path id="Intersection_75" data-name="Intersection 75" d="M0,17.833,24.545,0a27.879,27.879,0,0,1-.5,4.509L4.372,18.8A18.908,18.908,0,0,1,0,17.833Z" transform="translate(474.007 588.053)" fill="#ffc300"/>
+    </g>
+  </g>
+</svg>
