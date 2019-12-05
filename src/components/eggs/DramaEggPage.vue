@@ -1,9 +1,9 @@
 <template>
-  <h1>
-    這是一顆小劇場蛋
-    {{$route.params.y + '_' + $route.params.x}}
+  <div>
+    <!-- 這是一顆小劇場蛋
+    {{$route.params.y + '_' + $route.params.x}} -->
     <slot />
-  </h1>
+  </div>
 </template>
 
 <script>
@@ -24,6 +24,9 @@ export default {
       type: Number,
       default: 0,
     },
+  },
+  mounted () {
+    console.log(this.pageInfo)
   },
   methods: {
     updatedEggCollectedStatus() {

@@ -47,6 +47,7 @@
         >↓</button>
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -59,7 +60,7 @@ export default {
   name: "PageMaze",
   components: {
     CoverPage,
-    Page,
+    Page
   },
   data() {
     return {
