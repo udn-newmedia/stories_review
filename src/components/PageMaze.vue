@@ -11,56 +11,22 @@
         :colorScheme="colorScheme"
       />
     </div>
-    <div class="page-maze-controller">
-      <div class="page-maze-controller-group">
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('up')
-          }"
-          @click="handleControllerClick('up')"
-        >↑</button>
-      </div>
-      <div class="page-maze-controller-group page-maze-controller-group--middle">
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('left')
-          }"
-          @click="handleControllerClick('left')"
-        >←</button>
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('right')
-          }"
-          @click="handleControllerClick('right')"
-        >→</button>
-      </div>
-      <div class="page-maze-controller-group">
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('down')
-          }"
-          @click="handleControllerClick('down')"
-        >↓</button>
-      </div>
-    </div>
-    
+    <DirController :mazeIndexTable="mazeIndexTable" />
   </div>
 </template>
 
 <script>
 import EventBus from '@/eventBus';
 import CoverPage from "./CoverPage";
+import DirController from "./DirController";
 import Page from "./Page";
 
 export default {
   name: "PageMaze",
   components: {
     CoverPage,
-    Page
+    DirController,
+    Page,
   },
   data() {
     return {
@@ -1644,95 +1610,22 @@ export default {
       );
     }
   },
-  methods: {
-    handleControllerClick(dir) {
-      const currentX = this.$route.params.x ? +this.$route.params.x : 0;
-      const currentY = this.$route.params.y ? +this.$route.params.y : 0;
-      switch (dir) {
-        case "up":
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: currentX,
-              y: currentY - 1
-            }
-          });
-          break;
-        case "down":
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: currentX,
-              y: currentY + 1
-            }
-          });
-          break;
-        case "left":
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: currentX - 1,
-              y: currentY
-            }
-          });
-          break;
-        case "right":
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: currentX + 1,
-              y: currentY
-            }
-          });
-          break;
-        default:
-          break;
+  mounted() {
+    EventBus.$on('UPDATE_COLLECTED', (payload) => {
+      if (!this.mazeData[payload].egg.collected) {
+        this.mazeData[payload].egg.collected = true;
+        this.eggsCollection++;
       }
-    },
-    hasNeighbor(dir) {
-      const currentX = this.$route.params.x ? +this.$route.params.x : 0;
-      const currentY = this.$route.params.y ? +this.$route.params.y : 0;
-      switch (dir) {
-        case "up":
-          return (
-            this.mazeIndexTable.filter(e => {
-              return (
-                e[0] === currentX &&
-                e[1] === currentY - 1
-              );
-            }).length > 0
-          );
-        case "down":
-          return (
-            this.mazeIndexTable.filter(e => {
-              return (
-                e[0] === currentX &&
-                e[1] === currentY + 1
-              );
-            }).length > 0
-          );
-        case "left":
-          return (
-            this.mazeIndexTable.filter(e => {
-              return (
-                e[1] === currentY &&
-                e[0] === currentX - 1
-              );
-            }).length > 0
-          );
-        case "right":
-          return (
-            this.mazeIndexTable.filter(e => {              
-              return (
-                e[1] === currentY &&
-                e[0] === currentX + 1
-              );
-            }).length > 0
-          );
-        default:
-          break;
-      }
-    },
+    });
+    window.addEventListener('keyup', (e) => {
+      if (e.keyCode === 38 && this.hasNeighbor('up')) this.handleControllerClick('up');
+      if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
+      if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
+      if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
+
+      // esc
+      if (e.keyCode === 27) console.log(27);
+    });
   },
   mounted() {
     EventBus.$on('UPDATE_COLLECTED', (payload) => {
@@ -1746,6 +1639,8 @@ export default {
       if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
       if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
       if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
+
+      if (e.keyCode === 27) console.log(27);
     });
   },
 };
@@ -1766,37 +1661,6 @@ export default {
     justify-content: center;
     align-items: center;
     transition: 0.666s ease-in-out;
-  }
-  .page-maze-controller {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 120px;
-    height: 120px;
-    margin: 10px;
-    .page-maze-controller-group {
-      position: relative;
-      width: 120px;
-      height: 40px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .page-maze-controller-group--middle {
-      justify-content: space-between;
-    }
-    .page-maze-controller-button {
-      width: 40px;
-      height: 40px;
-      border: none;
-      border-radius: 50%;
-      background-color: #ffffff;
-    }
-    .page-maze-controller-button--disabled {
-      pointer-events: none;
-      color: #898989;
-      opacity: 0.2;
-    }
   }
 }
 </style>
