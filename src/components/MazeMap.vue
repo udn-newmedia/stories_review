@@ -2,7 +2,8 @@
   <div class="maze-map">
     <div class="maze-map-table">
       <div class="maze-map-table-row">
-
+        <h1>{{row}}</h1>
+        <h1>{{column}}</h1>
       </div>
     </div>
   </div>
@@ -25,7 +26,12 @@ export default {
       default: '0',
     },
   },
-  data:
+  data() {
+    return {
+      row: 29,
+      column: 5,
+    };
+  },
 };
 </script>
 
