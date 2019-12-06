@@ -1665,11 +1665,19 @@ export default {
     transition: 0.666s ease-in-out;
   }
   .page-maze-map {
+    visibility: hidden;
     position: fixed;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+    background: #3d3657;
+  }
+  .page-maze-map--active {
+    visibility: visible;
+    position: fixed;
+    z-index: 500;
     background: #3d3657;
   }
 }
