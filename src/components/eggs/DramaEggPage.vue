@@ -117,6 +117,8 @@ export default {
     .drama_title {
       font-size: 1.5rem;
       margin-bottom: 12px;
+      color: inherit;
+      font-weight: 600;
       @media screen and (min-width: 769px) {
         font-size: 1.875rem;
       }

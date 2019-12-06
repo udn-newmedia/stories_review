@@ -12,7 +12,7 @@
       />
     </div>
     <DirController :mazeIndexTable="mazeIndexTable" />
-    <CollectionEggsBar :colorScheme="colorScheme" :pageInfo="pageInfo" />
+    <CollectionEggsBar :colorScheme="colorScheme" :pageInfo="mazeData[currentId]" />
   </div>
 </template>
 
