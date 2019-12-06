@@ -142,6 +142,7 @@
 </template>
 
 <script>
+import EventBus from '@/eventBus';
 import CategoryPage from "@/components/CategoryPage";
 import DramaEggPage from "@/components/eggs/DramaEggPage";
 import EditorPage from "@/components/EditorPage";
@@ -187,6 +188,18 @@ export default {
     },
     pagePosition() {
       return [(this.pageInfo.x + 1) * 100 + '%', this.pageInfo.y * 100 + 'vh'];
+    },
+  },
+  watch: {
+    ON_THIS_PAGE: {
+      handler(value) {
+        if (value) this.updatedCurrentId();
+      },
+    }
+  },
+  methods: {
+    updatedCurrentId() {
+      EventBus.$emit('UPDATE_CURRENTID', this.id);
     },
   },
 };

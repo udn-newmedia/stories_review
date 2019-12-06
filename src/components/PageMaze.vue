@@ -1597,6 +1597,7 @@ export default {
         '#a2c4fd',
         '#3d3657'
       ],
+      currentId: 0,
     };
   },
   computed: {
@@ -1608,7 +1609,7 @@ export default {
         this.$route.params.y * -100 +
         "vh)"
       );
-    }
+    },
   },
   mounted() {
     EventBus.$on('UPDATE_COLLECTED', (payload) => {
@@ -1634,6 +1635,9 @@ export default {
         this.eggsCollection++;
       }
     });
+    EventBus.$on('UPDATE_CURRENTID', (payload) => {
+      this.currentId = payload;
+    });
     document.addEventListener('keyup', (e) => {
       if (e.keyCode === 38 && this.hasNeighbor('up')) this.handleControllerClick('up');
       if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
@@ -1641,7 +1645,7 @@ export default {
       if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
 
       if (e.keyCode === 27) console.log(27);
-    });
+    });    
   },
 };
 </script>
