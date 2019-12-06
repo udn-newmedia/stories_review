@@ -1,6 +1,6 @@
 <template>
   <div class="page-maze-controller">
-    <button>地圖出來吧</button>
+    <button @click="updatedMazeMapFlag">地圖出來吧</button>
     <div class="page-maze-controller-group">
       <button
         :class="{
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import EventBus from '@/eventBus';
 export default {
   name: 'DirController',
   props: {
@@ -158,6 +159,19 @@ export default {
       }
       return traceDirect();
     },
+    updatedMazeMapFlag() {
+      EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);    
+    },
+  },
+  mounted() {
+    document.addEventListener('keyup', (e) => {
+      if (e.keyCode === 38 && this.hasNeighbor('up')) this.handleControllerClick('up');
+      if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
+      if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
+      if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
+
+      if (e.keyCode === 27) console.log(27);
+    });
   },
 };
 </script>

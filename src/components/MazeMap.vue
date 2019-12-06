@@ -69,7 +69,6 @@ export default {
   },
   methods: {
     mapTabClick(x, y) {
-      console.log(x, y);
       this.updatedMazeMapFlag();
       this.$router.push({
         name: 'coords',

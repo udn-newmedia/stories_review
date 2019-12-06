@@ -1641,14 +1641,9 @@ export default {
     EventBus.$on('UPDATE_CURRENTID', (payload) => {
       this.currentId = payload;
     });
-    document.addEventListener('keyup', (e) => {
-      if (e.keyCode === 38 && this.hasNeighbor('up')) this.handleControllerClick('up');
-      if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
-      if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
-      if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
-
-      if (e.keyCode === 27) console.log(27);
-    });    
+    EventBus.$on('UPDATE_MAZEMAP_FLAG', (payload) => {
+      this.mazeMapFlag = payload;
+    });
   },
 };
 </script>
@@ -1678,12 +1673,14 @@ export default {
     width: 100%;
     height: 100vh;
     background: #3d3657;
+    opacity: 0;
   }
   .page-maze-map--active {
     visibility: visible;
     position: fixed;
     z-index: 500;
     background: #3d3657;
+    opacity: 1;
   }
 }
 </style>
