@@ -80,6 +80,7 @@ export default {
           x: 2,
           y: 0,
           key: 'e_3',
+          title: '地圖迷宮',
           category: 5,
           egg: {
             flag: true,
