@@ -1646,15 +1646,48 @@ export default {
   },
   methods: {
     handleControllerClick(dir) {
+      const vm = this;
       const currentX = this.$route.params.x ? +this.$route.params.x : 0;
       const currentY = this.$route.params.y ? +this.$route.params.y : 0;
+
+      function traceDirect() {
+        let directArray = vm.mazeIndexTable.filter((e, i) => {
+          if (dir === 'up') {
+            if (e[0] === currentX && e[1] < currentY) {
+              return e;
+            }
+          }
+          if (dir === 'down') {
+            if (e[0] === currentX && e[1] > currentY) {
+              return e;
+            }
+          }
+          if (dir === 'left') {
+            if (e[0] < currentX && e[1] === currentY) {
+              return e;
+            }
+          }
+          if (dir === 'right') {
+            if (e[0] > currentX && e[1] === currentY) {
+              return e;
+            }
+          }
+        });
+
+        if (dir === 'up') return directArray.length > 0 ? directArray[directArray.length - 1][1] : currentY;
+        if (dir === 'down') return directArray.length > 0 ? directArray[0][1] : currentY;
+        if (dir === 'left') return directArray.length > 0 ? directArray[directArray.length - 1][0] : currentX;
+        if (dir === 'right') return directArray.length > 0 ? directArray[0][0] : currentX;
+        return 1;
+      }
+
       switch (dir) {
         case "up":
           this.$router.push({
             name: 'coords',
             params: {
               x: currentX,
-              y: currentY - 1
+              y: traceDirect()
             }
           });
           break;
@@ -1663,7 +1696,7 @@ export default {
             name: 'coords',
             params: {
               x: currentX,
-              y: currentY + 1
+              y: traceDirect()
             }
           });
           break;
@@ -1671,7 +1704,7 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: currentX - 1,
+              x: traceDirect(),
               y: currentY
             }
           });
@@ -1680,7 +1713,7 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: currentX + 1,
+              x: traceDirect(),
               y: currentY
             }
           });
@@ -1690,49 +1723,55 @@ export default {
       }
     },
     hasNeighbor(dir) {
+      const vm = this;
       const currentX = this.$route.params.x ? +this.$route.params.x : 0;
       const currentY = this.$route.params.y ? +this.$route.params.y : 0;
-      switch (dir) {
-        case "up":
-          return (
-            this.mazeIndexTable.filter(e => {
-              return (
-                e[0] === currentX &&
-                e[1] === currentY - 1
-              );
-            }).length > 0
-          );
-        case "down":
-          return (
-            this.mazeIndexTable.filter(e => {
-              return (
-                e[0] === currentX &&
-                e[1] === currentY + 1
-              );
-            }).length > 0
-          );
-        case "left":
-          return (
-            this.mazeIndexTable.filter(e => {
-              return (
-                e[1] === currentY &&
-                e[0] === currentX - 1
-              );
-            }).length > 0
-          );
-        case "right":
-          return (
-            this.mazeIndexTable.filter(e => {              
-              return (
-                e[1] === currentY &&
-                e[0] === currentX + 1
-              );
-            }).length > 0
-          );
-        default:
-          break;
+
+      function traceDirect() {
+        let directArray = vm.mazeIndexTable.filter((e, i) => {
+          if (dir === 'up') {
+            if (e[0] === currentX && e[1] < currentY) {
+              return e;
+            }
+          }
+          if (dir === 'down') {
+            if (e[0] === currentX && e[1] > currentY) {
+              return e;
+            }
+          }
+          if (dir === 'left') {
+            if (e[0] < currentX && e[1] === currentY) {
+              return e;
+            }
+          }
+          if (dir === 'right') {
+            if (e[0] > currentX && e[1] === currentY) {
+              return e;
+            }
+          }
+        });
+        
+        return directArray.length > 0;
       }
+      return traceDirect();
     },
+  },
+  mounted() {
+    EventBus.$on('UPDATE_COLLECTED', (payload) => {
+      if (!this.mazeData[payload].egg.collected) {
+        this.mazeData[payload].egg.collected = true;
+        this.eggsCollection++;
+      }
+    });
+    window.addEventListener('keyup', (e) => {
+      if (e.keyCode === 38 && this.hasNeighbor('up')) this.handleControllerClick('up');
+      if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
+      if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
+      if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
+
+      // esc
+      if (e.keyCode === 27) console.log(27);
+    });
   },
   mounted() {
     EventBus.$on('UPDATE_COLLECTED', (payload) => {
@@ -1746,6 +1785,8 @@ export default {
       if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
       if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
       if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
+
+      if (e.keyCode === 27) console.log(27);
     });
   },
 };
