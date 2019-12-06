@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="313" height="423" viewBox="0 0 313 423">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffcc5f;
+      }
+
+      .cls-2 {
+        fill: #666;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Group_1647" data-name="Group 1647" transform="translate(-106 -118)">
+    <g id="Group_1414" data-name="Group 1414" transform="translate(106.239 118)">
+      <path id="Subtraction_41" data-name="Subtraction 41" class="cls-1" d="M313,420H0L152.081,0h8.838Z" transform="translate(-0.239 0)"/>
+      <path id="Subtraction_40" data-name="Subtraction 40" class="cls-2" d="M38.087,40.107H0L14.281,0H23.8L38.086,40.106Z" transform="translate(137.265 0)"/>
+    </g>
+    <line id="Line_36" data-name="Line 36" class="cls-3" x2="103" transform="translate(211.5 539.5)"/>
+  </g>
+</svg>

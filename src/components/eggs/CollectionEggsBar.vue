@@ -7,7 +7,7 @@
         </li>
       </ul>
     </div>
-    <div class="egg-get-repo">
+    <div :class="{'close': isMenuClose}" class="egg-get-repo">
       <!-- <h1 class="congrate_title">恭喜獲得彩蛋！<div>邀請你來看新媒小劇場</div></h1> -->
       <ul>
         <li v-for="(item, index) in ani_eggs" :key="index">
@@ -274,7 +274,10 @@ export default {
     align-items: center;
     flex-direction: column;
     padding: 0 50px;
-     z-index: 100;
+    z-index: 100;
+    &.close {
+      display: none;
+    }
     h1.congrate_title {
       text-align: center;
       margin-bottom: 71px;

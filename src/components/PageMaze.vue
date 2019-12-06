@@ -214,8 +214,8 @@ export default {
               job: '數位內容製作',
               name: '洪欣慈',
               profile: {
-                mob: require('@/assets/drama/profile_videos/hong_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/hong.mp4'),
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/hong_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/hong.mp4',
               }
             },
             observatory: {},
@@ -342,8 +342,8 @@ export default {
               job: '數位內容製作',
               name: '蔡佩蓉',
               profile: {
-                mob: require('@/assets/drama/profile_videos/tsai_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/tsai.mp4'),
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/tsai_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/tsai.mp4',
               }
             },
             observatory: {},
@@ -440,8 +440,8 @@ export default {
               job: '工程師',
               name: '楊若榆',
               profile: {
-                mob: require('@/assets/drama/profile_videos/yang_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/yang.mp4'),
+                mob: "https://p3.udn.com.tw/stories_review/drama/profile/mob/yang_mob.mp4",
+                pc: "https://p3.udn.com.tw/stories_review/drama/profile/pc/yang.mp4",
               }
             },
             observatory: {},
@@ -743,8 +743,8 @@ export default {
               job: '動畫師',
               name: '許藹雯',
               profile: {
-                mob: require('@/assets/drama/profile_videos/hsu2_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/hsu2.mp4'),
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/hsu2_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/hsu2.mp4',
               }
             },
             observatory: {},
@@ -961,8 +961,8 @@ export default {
               job: '視覺設計師',
               name: '張心慈',
               profile: {
-                mob: require('@/assets/drama/profile_videos/chang_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/chang.mp4'),
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/chang_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/chang.mp4',
               }
             },
             observatory: {},
@@ -1350,8 +1350,8 @@ export default {
               job: '視覺設計師',
               name: '許瑋琳',
               profile: {
-                mob: require('@/assets/drama/profile_videos/hsu1_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/hsu1.mp4'),
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/hsu1_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/hsu1.mp4',
               }
             },
             observatory: {},
@@ -1448,8 +1448,8 @@ export default {
               job: '數位內容製作',
               name: '謝汶均',
               profile: {
-                mob: require('@/assets/drama/profile_videos/hsieh_mob.mp4'),
-                pc: require('@/assets/drama/profile_videos/hsieh.mp4'),
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/hsieh_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/hsieh.mp4',
               }
             },
             observatory: {},
