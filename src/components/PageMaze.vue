@@ -12,6 +12,18 @@
       />
     </div>
     <DirController :mazeIndexTable="mazeIndexTable" />
+    <div
+      :class="{
+        'page-maze-map': true,
+        'page-maze-map--active': mazeMapFlag,
+      }"
+    >
+      <MazeMap 
+        :mazeData="mazeData"
+        :colorScheme="colorScheme"
+        :currentId="currentId"
+      />
+    </div>
   </div>
 </template>
 
@@ -19,6 +31,7 @@
 import EventBus from '@/eventBus';
 import CoverPage from "./CoverPage";
 import DirController from "./DirController";
+import MazeMap from "./MazeMap";
 import Page from "./Page";
 
 export default {
@@ -26,6 +39,7 @@ export default {
   components: {
     CoverPage,
     DirController,
+    MazeMap,
     Page,
   },
   data() {
@@ -1597,7 +1611,8 @@ export default {
         '#a2c4fd',
         '#3d3657'
       ],
-      currentId: 0,
+      currentId: '0',
+      mazeMapFlag: false,
     };
   },
   computed: {
@@ -1610,23 +1625,6 @@ export default {
         "vh)"
       );
     },
-  },
-  mounted() {
-    EventBus.$on('UPDATE_COLLECTED', (payload) => {
-      if (!this.mazeData[payload].egg.collected) {
-        this.mazeData[payload].egg.collected = true;
-        this.eggsCollection++;
-      }
-    });
-    window.addEventListener('keyup', (e) => {
-      if (e.keyCode === 38 && this.hasNeighbor('up')) this.handleControllerClick('up');
-      if (e.keyCode === 40 && this.hasNeighbor('down')) this.handleControllerClick('down');
-      if (e.keyCode === 37 && this.hasNeighbor('left')) this.handleControllerClick('left');
-      if (e.keyCode === 39 && this.hasNeighbor('right')) this.handleControllerClick('right');
-
-      // esc
-      if (e.keyCode === 27) console.log(27);
-    });
   },
   mounted() {
     EventBus.$on('UPDATE_COLLECTED', (payload) => {
@@ -1665,6 +1663,14 @@ export default {
     justify-content: center;
     align-items: center;
     transition: 0.666s ease-in-out;
+  }
+  .page-maze-map {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #3d3657;
   }
 }
 </style>
