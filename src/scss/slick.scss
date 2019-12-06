@@ -1,0 +1,246 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    &:focus
+    {
+        outline: none;
+    }
+    &.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    &::before, &::after
+    {
+        display: table;
+        content: '';
+    }
+    &::after
+    {
+        clear: both;
+    }
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+
+    img
+    {
+        display: block;
+    }
+
+    &.slick-loading 
+    {
+        img {
+            display: none;
+        }
+    }
+
+    &.dragging
+    {
+        img {
+            pointer-events: none;
+        }
+        
+    }
+    .slick-page
+    {
+        width: 100%;
+        img
+        {
+            width: 100%;
+        }
+        .image-description {
+            margin: 5.6px 0;
+            color: #7b7a7a;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow {
+    text-decoration: none;
+    font-size: 0;
+    width: 38px;
+    padding: 19px;
+    border-radius: 51%;
+    text-decoration: none;
+    border: none;
+    z-index: 1;
+    opacity: 0.5;
+    background-color: #202020;
+    cursor: pointer;
+    &:focus {
+        outline:0;
+    }
+    &.slick-hidden {
+        display: none;
+    }
+}
+.slick-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-150%);
+    left: 10px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 3px;
+        top: 50%;
+        left: 35%;
+        transform-origin: left;
+        transform: rotate(-45deg);
+        background-color: #fff;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 3px;
+        left: 35%;
+        top: 45%;
+        transform-origin: left;
+        transform: rotate(45deg);
+        background-color: #fff;
+    }
+}
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-150%);
+    right: 10px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 3px;
+        top: 50%;
+        right: 35%;
+        transform-origin: right;
+        transform: rotate(45deg);
+        background-color: #fff;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 3px;
+        right: 35%;
+        top: 48%;
+        transform-origin: right;
+        transform: rotate(-45deg);
+        background-color: #fff;
+    }
+}
+ul.slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    li {
+        display: inline-block;
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 0 3.5px;
+        button {
+            width: 10px;
+            border: none;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+        }
+        &.slick-active {
+            button {
+                background-color: #57b09f;
+                &:focus {
+                    outline:0;
+                }
+            }
+        }
+    }
+}
