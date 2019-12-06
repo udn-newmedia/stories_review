@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import EventBus from '@/eventBus';
 import anime from 'animejs';
 
 export default {
@@ -88,7 +89,6 @@ export default {
   data () {
     return {
       eggTotal: 0,
-      test: '123',
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       currentBackgroundColor: '',
@@ -242,6 +242,10 @@ export default {
     colorScheme: {
       type: Array,
     },
+    currentId: {
+      type: String,
+      default: '0',
+    },
   },
   watch: { 
     pageInfo: function(newVal, oldVal) { // watch it
@@ -252,16 +256,20 @@ export default {
         let key = newVal.key
         let whichEgg = this.mapToEggDictionary[key]
         this.eggTitle = newVal.title
+        this.updatedEggCollectedStatus(this.currentId)
         this.eggShow(whichEgg, this.eggTotal)
       }
     }
   },
   mounted () {
     this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]
+    console.log(this.pageInfo)
     if (this.pageInfo.egg.flag && this.pageInfo.egg.collected === false) {
+
       let key = this.pageInfo.key
       let whichEgg = this.mapToEggDictionary[key]
       this.eggTitle = this.pageInfo.title
+      this.updatedEggCollectedStatus(this.currentId)
       this.eggShow(whichEgg, this.eggTotal)
       this.eggTotal += 1;
     }
@@ -279,12 +287,15 @@ export default {
       let vm = this
       let targetDOM = `.egg${target}`
       let target_forwardDOM = `.egg${target_forward}_wrapper`
+      let eggBarWidth = document.querySelector('.egg-repo')
 
       let element = document.querySelector(targetDOM),
           element_forward = document.querySelector(target_forwardDOM),
           move_x = -(element.getBoundingClientRect().left - element_forward.getBoundingClientRect().left),
           move_y = -(element.getBoundingClientRect().top - element_forward.getBoundingClientRect().top);
-
+      if (this.isMenuClose) {
+        move_x = move_x + eggBarWidth.getBoundingClientRect().width
+      }
       let tl = anime.timeline({
         targets: element,
         begin: function () {
@@ -323,7 +334,10 @@ export default {
         duration: 100,
         opacity: 0
       });
-    }
+    },
+    updatedEggCollectedStatus(id) {
+      EventBus.$emit('UPDATE_COLLECTED', id);    
+    },
   },
   computed: {
     curretnEggs: function () {

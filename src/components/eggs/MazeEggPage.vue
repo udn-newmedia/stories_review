@@ -1,17 +1,17 @@
 <template>
   <div class="maze">
     <div class="maze_title">
-      <div v-html="srcRWD('<h2>長按方向鍵中間<div>解鎖迷宮地圖</div></h2>', '<h2>長按方向鍵中間<div>解鎖迷宮地圖</div></h2>', '<h2>按ESC鍵即可領取迷宮地圖</h2>')" />
+      <div v-html="srcRWD('<h2>長按方向鍵中間<div>解鎖迷宮地圖</div></h2>', '<h2>按ESC鍵即可領取迷宮地圖</h2>')" />
     </div>
     <div class="maze_img">
-      <!-- <img :src="srcRWD(require('../../assets/maze/unlockmap.svg'), require('../../assets/maze/unlockmap.svg'), require('../../assets/maze/esckey.svg'))" alt=""> -->
+       <img :src="srcRWD(require('../../assets/maze/unlockmap.svg'), require('../../assets/maze/esckey.svg'))" alt="">
     </div>
   </div>
 </template>
 
 <script>
 import EventBus from '@/eventBus';
-import srcRWD from '@/mixin/srcRWD';
+import srcRWD from '@/mixin/srcRWD.js';
 
 export default {
   name: 'MazeEggPage',
@@ -40,6 +40,10 @@ export default {
 
 <style lang="scss">
 .maze {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .maze_title {
     h2 {
       text-align: center;

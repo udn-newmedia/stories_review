@@ -1,7 +1,7 @@
 <template>
   <div class="drama">
     <div class="left">
-      <img class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
+      <img class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
       <video autoplay muted :src="profile.photo"></video>
       <div class="profile">
         <div>{{ profile.title }}</div>
@@ -20,7 +20,7 @@
 
 <script>
 import EventBus from '@/eventBus';
-import srcRWD from '@/mixin/srcRWD'
+import srcRWD from '@/mixin/srcRWD.js'
 
 export default {
   name: 'DramaEggPage',
@@ -56,7 +56,7 @@ export default {
       let vm = this
       this.profile.name = this.pageInfo.egg.drama.name
       this.profile.title = this.pageInfo.egg.drama.job
-      this.profile.photo = this.srcRWD(vm.pageInfo.egg.drama.profile.mob, vm.pageInfo.egg.drama.profile.mob, vm.pageInfo.egg.drama.profile.pc)
+      this.profile.photo = this.srcRWD(vm.pageInfo.egg.drama.profile.mob, vm.pageInfo.egg.drama.profile.pc)
     },
     updatedEggCollectedStatus() {
       EventBus.$emit('UPDATE_COLLECTED', this.id);    
