@@ -1,15 +1,50 @@
 <template>
   <div class="maze-map">
     <div class="maze-map-table">
-      <div class="maze-map-table-row">
-        <h1>{{row}}</h1>
-        <h1>{{column}}</h1>
+      <div
+        v-for="(item_c, index_c) in column" :key="index_c"
+        class="maze-map-table-column"
+      >
+        <div
+          v-for="(item_r, index_r) in mazeData" :key="index_r"
+          :class="{
+            'maze-map-table-row': true,
+            'maze-map-table-row--active': +item_r.y === +index_c,
+          }"
+        >
+          <div
+            v-if="+item_r.y === +index_c"
+            :class="{
+              'maze-map-table-row-item': true,
+              'maze-map-table-row-item--category1': item_r.category === 1 && +index_r !== +currentId,
+              'maze-map-table-row-item--category2': item_r.category === 2 && +index_r !== +currentId,
+              'maze-map-table-row-item--category3': item_r.category === 3 && +index_r !== +currentId,
+              'maze-map-table-row-item--category4': item_r.category === 4 && +index_r !== +currentId,
+              'maze-map-table-row-item--category5': item_r.category === 5 && +index_r !== +currentId,
+              'maze-map-table-row-item--category1-active': item_r.category === 1 && +index_r === +currentId,
+              'maze-map-table-row-item--category2-active': item_r.category === 2 && +index_r === +currentId,
+              'maze-map-table-row-item--category3-active': item_r.category === 3 && +index_r === +currentId,
+              'maze-map-table-row-item--category4-active': item_r.category === 4 && +index_r === +currentId,
+              'maze-map-table-row-item--category5-active': item_r.category === 5 && +index_r === +currentId,
+            }"
+            @click="mapTabClick(item_r.x + 1, item_r.y)"
+          >
+            <div
+              v-for="(item, index) in item_r.title.split('\n')" :key="index"
+              class="maze-map-table-row-item-text"
+            >
+              <p>{{item}}</p>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import EventBus from '@/eventBus';
 export default {
   name: 'MazeMap',
   props: {
@@ -32,6 +67,22 @@ export default {
       column: 5,
     };
   },
+  methods: {
+    mapTabClick(x, y) {
+      console.log(x, y);
+      this.updatedMazeMapFlag();
+      this.$router.push({
+        name: 'coords',
+        params: {
+          x: x,
+          y: y
+        }
+      });
+    },
+    updatedMazeMapFlag() {
+      EventBus.$emit('UPDATE_MAZEMAP_FLAG', false);    
+    },
+  },
 };
 </script>
 
@@ -40,5 +91,72 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  .maze-map-table {
+    position: relative;
+    overflow-x: auto;
+  }
+  .maze-map-table-column {
+    position: relative;
+    width: calc(29 * (60vw));
+    height: 100px;
+  }
+  .maze-map-table-row {
+    position: relative;
+    visibility: hidden;
+    float: left;
+    .maze-map-table-row-item {
+      position: relative;
+      width: calc(100% - 20px);
+      height: calc(100% - 10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      border-radius: 15px 15px 0 0;
+      border-bottom: solid 2px #e4e4e4;
+      margin: 5px 10px;
+      padding: 10px;
+      p {
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .maze-map-table-row-item--category1 {
+      background-color: #40de7b44;
+    }
+    .maze-map-table-row-item--category2 {
+      background-color: #f45b7444;
+    }
+    .maze-map-table-row-item--category3 {
+      background-color: #fa6b4644;
+    }
+    .maze-map-table-row-item--category4 {
+      background-color: #a2c4fd44;
+    }
+    .maze-map-table-row-item--category5 {
+      background-color: #3d365744;
+    }
+    .maze-map-table-row-item--category1-active {
+      background-color: #40de7b;
+    }
+    .maze-map-table-row-item--category2-active {
+      background-color: #f45b74;
+    }
+    .maze-map-table-row-item--category3-active {
+      background-color: #fa6b46;
+    }
+    .maze-map-table-row-item--category4-active {
+      background-color: #a2c4fd;
+    }
+    .maze-map-table-row-item--category5-active {
+      background-color: #3d3657;
+    }
+  }
+  .maze-map-table-row--active {
+    visibility: visible;
+    width: 60vw;
+    height: 100px;
+  }
 }
 </style>

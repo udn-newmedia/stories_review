@@ -1,40 +1,41 @@
 <template>
   <div class="page-maze-controller">
-      <div class="page-maze-controller-group">
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('up')
-          }"
-          @click="handleControllerClick('up')"
-        >↑</button>
-      </div>
-      <div class="page-maze-controller-group page-maze-controller-group--middle">
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('left')
-          }"
-          @click="handleControllerClick('left')"
-        >←</button>
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('right')
-          }"
-          @click="handleControllerClick('right')"
-        >→</button>
-      </div>
-      <div class="page-maze-controller-group">
-        <button
-          :class="{
-            'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('down')
-          }"
-          @click="handleControllerClick('down')"
-        >↓</button>
-      </div>
+    <button>地圖出來吧</button>
+    <div class="page-maze-controller-group">
+      <button
+        :class="{
+          'page-maze-controller-button': true,
+          'page-maze-controller-button--disabled': !hasNeighbor('up')
+        }"
+        @click="handleControllerClick('up')"
+      >↑</button>
     </div>
+    <div class="page-maze-controller-group page-maze-controller-group--middle">
+      <button
+        :class="{
+          'page-maze-controller-button': true,
+          'page-maze-controller-button--disabled': !hasNeighbor('left')
+        }"
+        @click="handleControllerClick('left')"
+      >←</button>
+      <button
+        :class="{
+          'page-maze-controller-button': true,
+          'page-maze-controller-button--disabled': !hasNeighbor('right')
+        }"
+        @click="handleControllerClick('right')"
+      >→</button>
+    </div>
+    <div class="page-maze-controller-group">
+      <button
+        :class="{
+          'page-maze-controller-button': true,
+          'page-maze-controller-button--disabled': !hasNeighbor('down')
+        }"
+        @click="handleControllerClick('down')"
+      >↓</button>
+    </div>
+  </div>
 </template>
 
 <script>
