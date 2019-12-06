@@ -1,6 +1,7 @@
 <template>
   <div class="collection-eggs-bar">
     <div :class="{'isMenuClose': isMenuClose}" class="egg-repo">
+      <img class="eggs-bar-arrow" src="../../assets/eggs/eggbar.svg" alt="">
       <ul>
         <li v-for="(item, index) in bar_eggs" :key="index" >
           <div :class="['egg-wrapper', item.class]"><img :class="{'isGet': item.isGet}" :src="item.src" alt="" class="egg-hidden"></div>
@@ -28,7 +29,7 @@ export default {
   name: 'app',
   data () {
     return {
-      isMenuClose: true,
+      isMenuClose: false,
       eggDictionacry: {
         'egg1': require('../../assets/eggs/map/AE_3_map.svg'),
         'egg2': require('../../assets/eggs/map/D_5_map.svg'),
@@ -227,14 +228,25 @@ export default {
     left: 0px;
     top: 0px;
     box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
-    border-right: solid 1px #7c7c7c;
     height: 100vh;
     transition: all 1s;
     opacity: 1;
+    z-index: 100;
+    background-color: #3d3657;
     &.isMenuClose {
       transition: all 1s;
       transform: translateX(-100%);
       opacity: 0;
+    }
+    .eggs-bar-arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(20%);
+      height: 100%;
+      @media screen and (min-width: 769px) {
+        display: none;
+      }
     }
     ul {
       list-style: none;

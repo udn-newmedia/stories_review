@@ -10,7 +10,7 @@
       backgroundColor: colorScheme[pageInfo.category - 1],
     }"
   >
-    <CollectionEggsBar />
+    <CollectionEggsBar :pageInfo="pageInfo" />
     <!-- 觀察室 -->
     <div 
       v-if="pageInfo.egg.flag && pageInfo.egg.observatory.flag"
