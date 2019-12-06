@@ -38,6 +38,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.maze {
+  .maze_title {
+    h2 {
+      text-align: center;
+      margin-bottom: 71px;
+      color: #fcff98;
+      font-size: 1.652rem;
+      line-height: 1.33;
+      font-family: 'Microsoft JhengHei';
+      font-weight: 500;
+    }
+  }
+}
 
 </style>
