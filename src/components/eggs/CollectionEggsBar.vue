@@ -158,9 +158,18 @@ export default {
       ]
     }
   },
+  props: {
+    pageInfo: {
+      type: Object,
+      required: true,
+    },
+    colorScheme: {
+      type: Array,
+    },
+  },
   mounted () {
     // this.eggShow('12', '1')
-    
+    console.log('menu:', this.colorScheme[this.pageInfo.category - 1])
   },
   components: {
 
@@ -240,7 +249,7 @@ export default {
     }
     .eggs-bar-arrow {
       position: absolute;
-      top: 0;
+      top: 0px;
       right: 0;
       transform: translateX(20%);
       height: 100%;

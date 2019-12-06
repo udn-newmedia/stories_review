@@ -10,7 +10,6 @@
       backgroundColor: colorScheme[pageInfo.category - 1],
     }"
   >
-    <CollectionEggsBar :pageInfo="pageInfo" />
     <!-- 觀察室 -->
     <div 
       v-if="pageInfo.egg.flag && pageInfo.egg.observatory.flag"
@@ -149,7 +148,6 @@ import EditorPage from "@/components/EditorPage";
 import MazeEggPage from "@/components/eggs/MazeEggPage";
 import ObservatoryEggPage from "@/components/eggs/ObservatoryEggPage";
 import ProjectPage from "@/components/ProjectPage";
-import CollectionEggsBar from "./eggs/CollectionEggsBar"
 
 export default {
   name: "Page",
@@ -159,8 +157,7 @@ export default {
     EditorPage,
     MazeEggPage,
     ObservatoryEggPage,
-    ProjectPage,
-    CollectionEggsBar
+    ProjectPage
   },
   props: {
     pageInfo: {

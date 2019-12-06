@@ -12,6 +12,7 @@
       />
     </div>
     <DirController :mazeIndexTable="mazeIndexTable" />
+    <CollectionEggsBar :colorScheme="colorScheme" :pageInfo="pageInfo" />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import EventBus from '@/eventBus';
 import CoverPage from "./CoverPage";
 import DirController from "./DirController";
 import Page from "./Page";
+import CollectionEggsBar from "./eggs/CollectionEggsBar"
 
 export default {
   name: "PageMaze",
@@ -27,6 +29,7 @@ export default {
     CoverPage,
     DirController,
     Page,
+    CollectionEggsBar
   },
   data() {
     return {
@@ -1488,6 +1491,7 @@ export default {
           key: 'c_7',
           title: '',
           cover: '',
+          category: 4,
           description: '',
           editorFlag: true,
           egg: {

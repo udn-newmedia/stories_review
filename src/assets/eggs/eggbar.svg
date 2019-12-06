@@ -1,17 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="636.332" viewBox="0 0 76 636.332">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.136" height="640.001" viewBox="0 0 88.136 640.001">
   <defs>
     <style>
       .cls-1 {
-        fill: #3d3657;
+        fill: #f5822f;
       }
 
       .cls-2 {
-        fill: #fff;
+        fill: none;
+        stroke: #7c7c7c;
+        stroke-linecap: square;
       }
 
       .cls-3 {
-        fill: none;
-        stroke: #7c7c7c;
+        fill: #fff;
       }
 
       .cls-4 {
@@ -23,24 +24,24 @@
       }
 
       .cls-6 {
-        filter: url(#Subtraction_135);
+        filter: url(#Subtraction_144);
       }
     </style>
-    <filter id="Subtraction_135" x="0" y="0" width="76" height="630.499" filterUnits="userSpaceOnUse">
-      <feOffset dy="-3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="Subtraction_144" x="0" y="0" width="88.136" height="640.001" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Path_1330" x="49.303" y="7.824" width="26.517" height="323.786" filterUnits="userSpaceOnUse">
+    <filter id="Path_1330" x="52.302" y="8.961" width="27.807" height="323.484" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-2"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Path_1331" x="49.303" y="312.546" width="26.517" height="323.786" filterUnits="userSpaceOnUse">
+    <filter id="Path_1331" x="52.303" y="313.304" width="27.806" height="323.675" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-3"/>
       <feFlood flood-opacity="0.161"/>
@@ -48,18 +49,21 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Group_1673" data-name="Group 1673" transform="translate(50.5 18.5)">
-    <g class="cls-6" transform="matrix(1, 0, 0, 1, -50.5, -18.5)">
-      <path id="Subtraction_135-2" data-name="Subtraction 135" class="cls-1" d="M6022.636,2182.5H5972.5V1570h50.137v295.134L6030.5,1877l-7.863,11.865Z" transform="translate(-5963.5 -1558)"/>
+  <g id="Group_1677" data-name="Group 1677" transform="translate(55.501 15)">
+    <g class="cls-6" transform="matrix(1, 0, 0, 1, -55.5, -15)">
+      <path id="Subtraction_144-2" data-name="Subtraction 144" class="cls-1" d="M51.637,610H1.5V0H51.637V292.655l8,12.227-8,11.549V610Z" transform="translate(10.5 15)"/>
     </g>
-    <path id="Path_795" data-name="Path 795" class="cls-2" d="M7.28,8.59l4.166,4.157L15.611,8.59l1.28,1.28-5.445,5.445L6,9.87Z" transform="translate(-4.143 311.808) rotate(-90)"/>
-    <g id="Group_1672" data-name="Group 1672">
-      <g class="cls-5" transform="matrix(1, 0, 0, 1, -50.5, -18.5)">
-        <path id="Path_1330-2" data-name="Path 1330" class="cls-3" d="M-5940.7-1574.675v294.162l7.6,11.346" transform="translate(5999.5 1588.5)"/>
+    <g id="Group_1675" data-name="Group 1675" transform="translate(6006 1574)">
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, -6061.5, -1589)">
+        <path id="Path_1330-2" data-name="Path 1330" class="cls-2" d="M-5940.7-1574.215V-1282.2l8.609,12.275" transform="translate(6002.5 1589.68)"/>
       </g>
-      <g class="cls-4" transform="matrix(1, 0, 0, 1, -50.5, -18.5)">
-        <path id="Path_1331-2" data-name="Path 1331" class="cls-3" d="M-5940.7-1269.168V-1563.33l7.6-11.346" transform="translate(5999.5 1893.5)"/>
+      <g class="cls-4" transform="matrix(1, 0, 0, 1, -6061.5, -1589)">
+        <path id="Path_1331-2" data-name="Path 1331" class="cls-2" d="M-5940.658-1270.2l-.04-292.2,8.609-12.275" transform="translate(6002.5 1894.68)"/>
       </g>
+    </g>
+    <g id="Group_1676" data-name="Group 1676" transform="translate(6007.645 1576)">
+      <path id="Path_1333" data-name="Path 1333" class="cls-3" d="M0,0,2.019.015l.059,8.046L.059,8.046Z" transform="matrix(0.788, -0.616, 0.616, 0.788, -6004.25, -1276.536)"/>
+      <path id="Path_1334" data-name="Path 1334" class="cls-3" d="M.938.341,2.957.327,2.9,8.373.878,8.388Z" transform="matrix(0.788, 0.616, -0.616, 0.788, -5999.778, -1273.614)"/>
     </g>
   </g>
 </svg>
