@@ -1,0 +1,12 @@
+@mixin pad {
+    @media (min-width: 768px) and (max-width: 1279.98px) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (min-width: 1280px) {
+        @content
+    }
+}
+
