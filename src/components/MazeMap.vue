@@ -1,18 +1,21 @@
 <template>
   <div class="maze-map">
-    <div class="maze-map-table">
+    <div 
+      id="maze-map-table"
+      class="maze-map-table"
+    >
       <div
         v-for="(item_c, index_c) in column" :key="index_c"
         class="maze-map-table-column"
       >
-        <div
+        <ul
           v-for="(item_r, index_r) in mazeData" :key="index_r"
           :class="{
             'maze-map-table-row': true,
             'maze-map-table-row--active': +item_r.y === +index_c,
           }"
         >
-          <div
+          <li
             v-if="+item_r.y === +index_c"
             :class="{
               'maze-map-table-row-item': true,
@@ -35,9 +38,8 @@
             >
               <p>{{item}}</p>
             </div>
-            
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -60,12 +62,24 @@ export default {
       type: String,
       default: '0',
     },
+    mazeMapFlag: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       row: 29,
       column: 5,
     };
+  },
+  watch: {
+    mazeMapFlag: {
+      handler(value) {
+        const mazeMapItemWidth = window.innerWidth * 0.7;
+        if (value) document.getElementById('maze-map-table').scrollLeft = this.mazeData[this.currentId].x * mazeMapItemWidth;
+      },
+    }
   },
   methods: {
     mapTabClick(x, y) {
@@ -90,13 +104,14 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 50px 10px;
   .maze-map-table {
     position: relative;
     overflow-x: auto;
   }
   .maze-map-table-column {
     position: relative;
-    width: calc(29 * (60vw));
+    width: calc(29 * (70vw));
     height: 100px;
   }
   .maze-map-table-row {
@@ -116,6 +131,8 @@ export default {
       margin: 5px 10px;
       padding: 10px;
       p {
+        font-size: 16px;
+        line-height: 1.3;
         color: #ffffff;
         margin: 0;
         padding: 0;
@@ -154,7 +171,7 @@ export default {
   }
   .maze-map-table-row--active {
     visibility: visible;
-    width: 60vw;
+    width: 70vw;
     height: 100px;
   }
 }

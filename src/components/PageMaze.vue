@@ -23,6 +23,7 @@
         :mazeData="mazeData"
         :colorScheme="colorScheme"
         :currentId="currentId"
+        :mazeMapFlag="mazeMapFlag"
       />
     </div>
   </div>
@@ -52,7 +53,7 @@ export default {
           x: 0,
           y: 0,
           key: 'c_3',
-          title: 'category 1',
+          title: '製作有23個分頁的\n超級大專題',
           cover: '',
           description: '',
           category: 1,
@@ -523,7 +524,7 @@ export default {
           x: 0,
           y: 1,
           key: 'c_4',
-          title: 'category 2',
+          title: '原來調查報導可以這樣玩！',
           cover: '',
           description: '',
           category: 2,
@@ -784,7 +785,7 @@ export default {
           x: 0,
           y: 2,
           key: 'c_5',
-          title: 'category 3',
+          title: '最酷最炫的資料呈現\n都在這裡',
           cover: '',
           description: '',
           category: 3,
@@ -1102,7 +1103,7 @@ export default {
           x: 0,
           y: 3,
           key: 'c_6',
-          title: 'category 4',
+          title: '用視覺亮點打造\n讓人忘不了的專題',
           cover: '',
           description: '',
           url: '',
@@ -1504,7 +1505,7 @@ export default {
           x: 0,
           y: 4,
           key: 'c_7',
-          title: '',
+          title: '製作團隊',
           cover: '',
           category: 4,
           description: '',
@@ -1666,17 +1667,19 @@ export default {
   }
   .page-maze-map {
     visibility: hidden;
+    pointer-events: none;
     position: fixed;
-    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background: #3d3657;
     opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
   .page-maze-map--active {
     visibility: visible;
+    pointer-events: auto;
     position: fixed;
     z-index: 500;
     background: #3d3657;
