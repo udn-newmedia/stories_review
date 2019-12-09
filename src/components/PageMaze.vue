@@ -35,7 +35,7 @@ import CoverPage from "./CoverPage";
 import DirController from "./DirController";
 import MazeMap from "./MazeMap";
 import Page from "./Page";
-import CollectionEggsBar from "./eggs/CollectionEggsBar"
+import CollectionEggsBar from "./eggs/CollectionEggsBar";
 
 export default {
   name: "PageMaze",
