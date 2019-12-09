@@ -44,6 +44,10 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: 769px) {
+    padding-left: 50px;
+    padding-top: 100px;
+  }
   .maze_title {
     h2 {
       text-align: center;

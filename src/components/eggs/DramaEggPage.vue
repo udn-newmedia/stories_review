@@ -69,6 +69,10 @@ export default {
 .drama {
   display: flex;
   height: 100%;
+  @media screen and (min-width: 769px) {
+    padding-left: 50px;
+    padding-top: 100px;
+  }
   .left, .right {
     height: 80%;
   }
