@@ -2,6 +2,7 @@
   <div class="observatory">
     <!-- 這是一顆天文台蛋
     {{$route.params.y + '_' + $route.params.x}} -->
+    <img class="mouse" :src="srcRWD(require('../../assets/observatory/mouse/mouse_mob.svg'), require('../../assets/observatory/mouse/mouse.svg'))" alt="">
     <div class="observatory_content">
       <div class="left">
         <h1 class="observatory_title">新媒觀察室</h1>
@@ -63,12 +64,21 @@ export default {
 
 <style lang="scss">
 .observatory {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   height: 100%;
   @media screen and (min-width: 769px) {
     padding-left: 50px;
     padding-top: 100px;
+  }
+  .mouse {
+    position: absolute;
+    left: 15%;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    transform: translateY(-50%);
   }
   .observatory_content {
     width: 60%;

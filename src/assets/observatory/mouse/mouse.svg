@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="278" viewBox="0 0 58 278">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ff4040;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+        stroke-dasharray: 3 3;
+      }
+
+      .cls-4 {
+        filter: url(#Rectangle_190);
+      }
+    </style>
+    <filter id="Rectangle_190" x="0" y="201" width="58" height="77" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1637" data-name="Group 1637" transform="translate(-420 46)">
+    <g id="Group_1415" data-name="Group 1415" transform="translate(696.121 391.401) rotate(180)">
+      <g class="cls-4" transform="matrix(-1, 0, 0, -1, 276.12, 437.4)">
+        <rect id="Rectangle_190-2" data-name="Rectangle 190" class="cls-1" width="40" height="59" rx="20" transform="translate(49 266) rotate(180)"/>
+      </g>
+      <rect id="Rectangle_191" data-name="Rectangle 191" class="cls-2" width="4" height="13" transform="translate(245.121 175.401)"/>
+    </g>
+    <path id="Path_816" data-name="Path 816" class="cls-3" d="M10454,7525v241.6h0" transform="translate(10903 7720.597) rotate(180)"/>
+  </g>
+</svg>
