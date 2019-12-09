@@ -73,10 +73,15 @@ export default {
       column: 5,
     };
   },
+  computed: {
+    isMob() {
+      return window.innerWidth < 768 ? true : false;
+    }
+  },
   watch: {
     mazeMapFlag: {
       handler(value) {
-        const mazeMapItemWidth = window.innerWidth * 0.7;
+        const mazeMapItemWidth = this.isMob ? window.innerWidth * 0.7 : 270;
         if (value) document.getElementById('maze-map-table').scrollLeft = this.mazeData[this.currentId].x * mazeMapItemWidth;
       },
     }
