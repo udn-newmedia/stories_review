@@ -1,6 +1,5 @@
 <template>
   <div class="page-maze-controller">
-    <button @click="updatedMazeMapFlag">地圖出來吧</button>
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +247,14 @@
       <g id="right">
         <path
           id="Polygon_57-2_1_"
-          class="st2"
+          :class="{
+            'category--1': currentCategory === 1,
+            'category--2': currentCategory === 2,
+            'category--3': currentCategory === 3,
+            'category--4': currentCategory === 4,
+            'category--5': currentCategory === 5,
+            'category--disabled': !hasNeighbor('right'),
+          }"
           d="M116.24,63.82c1.41,0.87,1.84,2.72,0.97,4.13c-0.24,0.39-0.58,0.73-0.97,0.97l-8.29,5.12
           c-1.41,0.87-3.26,0.43-4.13-0.98c-0.29-0.47-0.45-1.02-0.45-1.57V61.25c0-1.66,1.34-3,3-3c0.56,0,1.1,0.16,1.58,0.45L116.24,63.82z
           "
@@ -257,7 +263,14 @@
       <g id="down">
         <path
           id="Polygon_58"
-          class="st2"
+          :class="{
+            'category--1': currentCategory === 1,
+            'category--2': currentCategory === 2,
+            'category--3': currentCategory === 3,
+            'category--4': currentCategory === 4,
+            'category--5': currentCategory === 5,
+            'category--disabled': !hasNeighbor('down'),
+          }"
           d="M68.42,116.74c-0.87,1.41-2.72,1.84-4.13,0.97c-0.39-0.24-0.73-0.58-0.97-0.97l-5.12-8.29
           c-0.87-1.41-0.43-3.26,0.98-4.13c0.47-0.29,1.02-0.45,1.57-0.45h10.24c1.66,0,3,1.34,3,3c0,0.56-0.15,1.1-0.45,1.58L68.42,116.74z"
         />
@@ -265,7 +278,14 @@
       <g id="left">
         <path
           id="Polygon_58-2_1_"
-          class="st2"
+          :class="{
+            'category--1': currentCategory === 1,
+            'category--2': currentCategory === 2,
+            'category--3': currentCategory === 3,
+            'category--4': currentCategory === 4,
+            'category--5': currentCategory === 5,
+            'category--disabled': !hasNeighbor('left'),
+          }"
           d="M15.5,68.92c-1.41-0.87-1.84-2.72-0.97-4.13c0.24-0.39,0.58-0.73,0.97-0.97l8.29-5.12
           c1.41-0.87,3.26-0.43,4.13,0.98c0.29,0.47,0.45,1.02,0.45,1.57v10.24c0,1.66-1.34,3-3,3c-0.56,0-1.1-0.15-1.58-0.45L15.5,68.92z"
         />
@@ -273,15 +293,23 @@
       <g id="up">
         <path
           id="Polygon_57"
-          class="st2"
+          :class="{
+            'category--1': currentCategory === 1,
+            'category--2': currentCategory === 2,
+            'category--3': currentCategory === 3,
+            'category--4': currentCategory === 4,
+            'category--5': currentCategory === 5,
+            'category--disabled': !hasNeighbor('up'),
+          }"
           d="M63.32,16c0.87-1.41,2.72-1.84,4.13-0.97c0.39,0.24,0.73,0.58,0.97,0.97l5.12,8.29
           c0.87,1.41,0.43,3.26-0.98,4.13c-0.47,0.29-1.02,0.45-1.57,0.45H60.75c-1.66,0-3-1.34-3-3c0-0.56,0.16-1.1,0.45-1.58L63.32,16z"
         />
       </g>
     </svg>
-
-
-    <div class="page-maze-controller-container">  
+    <div
+      class="page-maze-controller-container"
+      id="controller"
+    >
       <div class="page-maze-controller-group">
         <button
           :class="{
@@ -317,6 +345,7 @@
         />
       </div>
     </div>
+    <button v-show="mazeMapToggleFlag" @click="updatedMazeMapFlag">地圖出來吧</button>
   </div>
 </template>
 
@@ -328,7 +357,18 @@ export default {
     mazeIndexTable: {
       type: Array,
       required: true
-    }
+    },
+    currentCategory: {
+      type: Number,
+      default: 1,
+    },
+  },
+  data() {
+    return {
+      mazeMapToggleFlag: false,
+      startedTimeStamp: 0,
+      endedTimeStamp: 0,
+    };
   },
   methods: {
     handleControllerClick(dir) {
@@ -338,74 +378,74 @@ export default {
 
       function traceDirect() {
         let directArray = vm.mazeIndexTable.filter((e, i) => {
-          if (dir === "up") {
+          if (dir === 'up') {
             if (e[0] === currentX && e[1] < currentY) {
               return e;
             }
           }
-          if (dir === "down") {
+          if (dir === 'down') {
             if (e[0] === currentX && e[1] > currentY) {
               return e;
             }
           }
-          if (dir === "left") {
+          if (dir === 'left') {
             if (e[0] < currentX && e[1] === currentY) {
               return e;
             }
           }
-          if (dir === "right") {
+          if (dir === 'right') {
             if (e[0] > currentX && e[1] === currentY) {
               return e;
             }
           }
         });
 
-        if (dir === "up")
+        if (dir === 'up')
           return directArray.length > 0
             ? directArray[directArray.length - 1][1]
             : currentY;
-        if (dir === "down")
+        if (dir === 'down')
           return directArray.length > 0 ? directArray[0][1] : currentY;
-        if (dir === "left")
+        if (dir === 'left')
           return directArray.length > 0
             ? directArray[directArray.length - 1][0]
             : currentX;
-        if (dir === "right")
+        if (dir === 'right')
           return directArray.length > 0 ? directArray[0][0] : currentX;
         return 1;
       }
 
       switch (dir) {
-        case "up":
+        case 'up':
           this.$router.push({
-            name: "coords",
+            name: 'coords',
             params: {
               x: currentX,
               y: traceDirect()
             }
           });
           break;
-        case "down":
+        case 'down':
           this.$router.push({
-            name: "coords",
+            name: 'coords',
             params: {
               x: currentX,
               y: traceDirect()
             }
           });
           break;
-        case "left":
+        case 'left':
           this.$router.push({
-            name: "coords",
+            name: 'coords',
             params: {
               x: traceDirect(),
               y: currentY
             }
           });
           break;
-        case "right":
+        case 'right':
           this.$router.push({
-            name: "coords",
+            name: 'coords',
             params: {
               x: traceDirect(),
               y: currentY
@@ -423,22 +463,22 @@ export default {
 
       function traceDirect() {
         let directArray = vm.mazeIndexTable.filter((e, i) => {
-          if (dir === "up") {
+          if (dir === 'up') {
             if (e[0] === currentX && e[1] < currentY) {
               return e;
             }
           }
-          if (dir === "down") {
+          if (dir === 'down') {
             if (e[0] === currentX && e[1] > currentY) {
               return e;
             }
           }
-          if (dir === "left") {
+          if (dir === 'left') {
             if (e[0] < currentX && e[1] === currentY) {
               return e;
             }
           }
-          if (dir === "right") {
+          if (dir === 'right') {
             if (e[0] > currentX && e[1] === currentY) {
               return e;
             }
@@ -450,22 +490,36 @@ export default {
       return traceDirect();
     },
     updatedMazeMapFlag() {
-      EventBus.$emit("UPDATE_MAZEMAP_FLAG", true);
-    }
+      EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
+    },
+    handleControllerTouchstart(e) {
+      this.startedTimeStamp = e.timeStamp;
+    },
+    handleControllerTouchend(e) {
+      this.endedTimeStamp = e.timeStamp;
+      if (this.endedTimeStamp - this.startedTimeStamp > 100) {
+        this.mazeMapToggleFlag = true;
+        document.getElementById('controller').removeEventListener('touchstart', this.handleControllerTouchstart);
+        document.getElementById('controller').removeEventListener('touchend', this.handleControllerTouchend);
+      }
+    },
   },
   mounted() {
-    document.addEventListener("keyup", e => {
-      if (e.keyCode === 38 && this.hasNeighbor("up"))
-        this.handleControllerClick("up");
-      if (e.keyCode === 40 && this.hasNeighbor("down"))
-        this.handleControllerClick("down");
-      if (e.keyCode === 37 && this.hasNeighbor("left"))
-        this.handleControllerClick("left");
-      if (e.keyCode === 39 && this.hasNeighbor("right"))
-        this.handleControllerClick("right");
+    document.addEventListener('keyup', e => {
+      if (e.keyCode === 38 && this.hasNeighbor('up'))
+        this.handleControllerClick('up');
+      if (e.keyCode === 40 && this.hasNeighbor('down'))
+        this.handleControllerClick('down');
+      if (e.keyCode === 37 && this.hasNeighbor('left'))
+        this.handleControllerClick('left');
+      if (e.keyCode === 39 && this.hasNeighbor('right'))
+        this.handleControllerClick('right');
 
       if (e.keyCode === 27) console.log(27);
     });
+
+    document.getElementById('controller').addEventListener('touchstart', this.handleControllerTouchstart);
+    document.getElementById('controller').addEventListener('touchend', this.handleControllerTouchend);
   }
 };
 </script>
@@ -520,21 +574,22 @@ export default {
 .st2 {
   fill: #bbd500;
 }
-
-
-.category-1 {
+.category--1 {
   fill: #3fde7e;
 }
-.category-2 {
+.category--2 {
   fill: #f45b74;
 }
-.category-3 {
+.category--3 {
   fill: #f5822f;
 }
-.category-4 {
+.category--4 {
   fill: #a2c4fd;
 }
-.category-5 {
+.category--5 {
   fill: #3d3657;
+}
+.category--disabled {
+  fill: #dedede;
 }
 </style>

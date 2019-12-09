@@ -11,7 +11,10 @@
         :colorScheme="colorScheme"
       />
     </div>
-    <DirController :mazeIndexTable="mazeIndexTable" />
+    <DirController
+      :mazeIndexTable="mazeIndexTable"
+      :currentCategory="currentCategory"
+    />
     <CollectionEggsBar :currentId="currentId" :colorScheme="colorScheme" :pageInfo="mazeData[currentId]" />
     <div
       :class="{
@@ -1631,6 +1634,9 @@ export default {
         "vh)"
       );
     },
+    currentCategory() {
+      return this.mazeData[this.currentId].category;
+    },
   },
   mounted() {
     EventBus.$on('UPDATE_COLLECTED', (payload) => {
@@ -1644,7 +1650,7 @@ export default {
     });
     EventBus.$on('UPDATE_MAZEMAP_FLAG', (payload) => {
       this.mazeMapFlag = payload;
-    });
+    });   
   },
 };
 </script>
