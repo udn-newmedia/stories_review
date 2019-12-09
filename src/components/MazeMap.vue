@@ -107,12 +107,19 @@ export default {
   padding: 50px 10px;
   .maze-map-table {
     position: relative;
+    height: 100%;
     overflow-x: auto;
+    @media screen and (min-width: 769px) {
+      margin-left: 185px;
+    }
   }
   .maze-map-table-column {
     position: relative;
     width: calc(29 * (70vw));
     height: 100px;
+    @media screen and (min-width: 769px) {
+      width: calc(29 * (270px));
+    }
   }
   .maze-map-table-row {
     position: relative;
@@ -173,6 +180,9 @@ export default {
     visibility: visible;
     width: 70vw;
     height: 100px;
+    @media screen and (min-width: 769px) {
+      width: 270px;
+    }
   }
 }
 </style>

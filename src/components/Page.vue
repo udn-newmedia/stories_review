@@ -7,7 +7,6 @@
     :style="{
       left: pagePosition[0],
       top: pagePosition[1],
-      backgroundColor: colorScheme[pageInfo.category - 1],
     }"
   >
     <!-- 觀察室 -->
@@ -227,7 +226,9 @@ export default {
 .page-content {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  // width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   height: 100%;
 }
 .page-content--observatory {
@@ -247,7 +248,7 @@ export default {
   }
 }
 .page-content--project {
-  height: 70%;
+  height: 80%;
   border: 2px red solid;
   @media screen and (min-width: 769px) {
     height: 100%;

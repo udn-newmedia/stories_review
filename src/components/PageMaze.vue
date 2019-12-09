@@ -1,5 +1,10 @@
 <template>
-  <div class="page-maze-container">
+  <div
+    class="page-maze-container"
+    :style="{
+      backgroundColor: colorScheme[currentCategory - 1],
+    }"
+  >
     <div class="page-maze" :style="{transform: computeTranslate}">
       <CoverPage />
       <Page
@@ -1661,6 +1666,7 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  text-align: center;
   transition: 0.666s ease-in-out;
   .page-maze {
     position: relative;

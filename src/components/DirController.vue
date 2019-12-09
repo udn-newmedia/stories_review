@@ -549,6 +549,9 @@ export default {
   width: 120px;
   height: 120px;
   margin: 10px;
+  @media screen and (min-width: 769px) {
+    right: 100px;
+  }
   .page-maze-controller-container {
     position: absolute;
     top: 0;
