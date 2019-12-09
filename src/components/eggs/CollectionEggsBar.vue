@@ -2,61 +2,30 @@
   <div class="collection-eggs-bar">
     <div :style="{'background-color': currentBackgroundColor}" :class="{'isMenuClose': isMenuClose}" class="egg-repo">
       <div class="eggs-bar-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.135" height="640.529" viewBox="0 0 88.135 640.529">
-        <defs>
-            <filter id="Path_1036" x="0" y="0" width="80.268" height="640.529" filterUnits="userSpaceOnUse">
-              <feOffset dx="3" input="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="5" result="blur"/>
-              <feFlood flood-opacity="0.161"/>
-              <feComposite operator="in" in2="blur"/>
-              <feComposite in="SourceGraphic"/>
-            </filter>
-            <filter id="Path_1332" x="49.153" y="291.181" width="38.982" height="56.696" filterUnits="userSpaceOnUse">
-              <feOffset dx="3" input="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="5" result="blur-2"/>
-              <feFlood flood-opacity="0.161"/>
-              <feComposite operator="in" in2="blur-2"/>
-              <feComposite in="SourceGraphic"/>
-            </filter>
-            <filter id="Path_1330" x="52.302" y="8.989" width="27.807" height="323.484" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="3" result="blur-3"/>
-              <feFlood flood-opacity="0.161"/>
-              <feComposite operator="in" in2="blur-3"/>
-              <feComposite in="SourceGraphic"/>
-            </filter>
-            <filter id="Path_1331" x="52.275" y="313.332" width="27.833" height="324.192" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="3" result="blur-4"/>
-              <feFlood flood-opacity="0.161"/>
-              <feComposite operator="in" in2="blur-4"/>
-              <feComposite in="SourceGraphic"/>
-            </filter>
-          </defs>
-          <g id="Group_1682" data-name="Group 1682" transform="translate(4736.5 1827.029)">
-            <g class="cls-7" transform="matrix(1, 0, 0, 1, -4736.5, -1827.03)">
-              <path :style="{'fill': currentBackgroundColor}" id="Path_1036-2" data-name="Path 1036" class="cls-1" d="M2.478-.133,613,0V50.136H2.471Z" transform="translate(62.14 12.53) rotate(90)"/>
-            </g>
-            <g class="cls-6" transform="matrix(1, 0, 0, 1, -4736.5, -1827.03)">
-              <path :style="{'fill': currentBackgroundColor}" id="Path_1332-2" data-name="Path 1332" class="cls-1" d="M13.727-.135,26.7,8.847H0Z" transform="translate(70 306.18) rotate(90)"/>
-            </g>
-            <g id="Group_1675" data-name="Group 1675" transform="translate(1325 -238)">
-              <g class="cls-5" transform="matrix(1, 0, 0, 1, -6061.5, -1589.03)">
-                <path id="Path_1330-2" data-name="Path 1330" class="cls-2" d="M-5940.7-1574.215V-1282.2l8.609,12.275" transform="translate(6002.5 1589.7)"/>
-              </g>
-              <g class="cls-4" transform="matrix(1, 0, 0, 1, -6061.5, -1589.03)">
-                <path id="Path_1331-2" data-name="Path 1331" class="cls-2" d="M-5940.725-1269.68l.027-292.72,8.609-12.275" transform="translate(6002.5 1894.7)"/>
-              </g>
-            </g>
-            <g id="Group_1676" data-name="Group 1676" transform="translate(1326.645 -236)">
-              <path id="Path_1333" data-name="Path 1333" class="cls-3" d="M0,0,2.019.015l.059,8.046L.059,8.046Z" transform="matrix(0.788, -0.616, 0.616, 0.788, -6004.25, -1276.536)"/>
-              <path id="Path_1334" data-name="Path 1334" class="cls-3" d="M.938.341,2.957.327,2.9,8.373.878,8.388Z" transform="matrix(0.788, 0.616, -0.616, 0.788, -5999.778, -1273.614)"/>
+        <svg class="bar" x="0px" y="0px" viewBox="0 0 67 608" style="enable-background:new 0 0 67 608;" xml:space="preserve">
+          <g id="圖層_4">
+            <polygon  :style="{'fill': currentBackgroundColor}" class="st0" points="57.61,304.11 49.69,292 49.75,0.01 0,0 0,608 49.62,608 49.68,315.56 	"/>
+          </g>
+          <g id="圖層_2">
+            <g>
+              <polyline class="st1" points="49.5,0 49.5,292 57.5,304 		"/>
+              <polyline class="st2" points="49.5,608 49.5,316 57.5,304 		"/>
             </g>
           </g>
         </svg>
+        <div :class="{'open': !isMenuClose}" class="pointer">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+          <g>
+            <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+              c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
+              "/>
+          </g>
+          </svg>
+        </div>
       </div>
-<!-- 
-      <img  class="eggs-bar-arrow" src="../../assets/eggs/eggbar.svg" alt=""> -->
+
+      <!-- <img  class="eggs-bar-arrow" src="../../assets/eggs/eggbar.svg" alt=""> -->
       <ul>
         <li v-for="(item, index) in bar_eggs" :key="index" >
           <div :class="['egg-wrapper', item.class]"><img :class="{'isGet': item.isGet}" :src="item.src" alt="" class="egg-hidden"></div>
@@ -263,9 +232,7 @@ export default {
   },
   mounted () {
     this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]
-    console.log(this.pageInfo)
     if (this.pageInfo.egg.flag && this.pageInfo.egg.collected === false) {
-
       let key = this.pageInfo.key
       let whichEgg = this.mapToEggDictionary[key]
       this.eggTitle = this.pageInfo.title
@@ -297,7 +264,6 @@ export default {
         move_x = move_x + eggBarWidth.getBoundingClientRect().width
       }
       let tl = anime.timeline({
-        targets: element,
         begin: function () {
             vm.isMenuClose = false
         },
@@ -316,13 +282,14 @@ export default {
         }
       });
 
-
       tl
       .add({
+        targets: element,
         opacity: 1,
         duration: 100
       })
       .add({
+        targets: element,
         duration: 1500,
         delay: 3000,
         translateX: move_x,
@@ -331,6 +298,7 @@ export default {
         scale: 0.15
       })
       .add({
+        targets: element,
         duration: 100,
         opacity: 0
       });
@@ -367,35 +335,32 @@ export default {
     }
     .eggs-bar-arrow {
       position: absolute;
-      // top: 0;
       right: -10px;
       transform: translateX(20%);
       z-index: 5;
-      // height: 100%;
-      .cls-2 {
-        fill: none;
-        stroke: #7c7c7c;
-        stroke-linecap: square;
+      height: 100%;
+      .pointer {
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        height: 15px;
+        width: 15px;;
+        transform: translate(-50%, -50%);
+        g {
+          fill:#FFFFFF;
+        }
+        &.open {
+          transform-origin: center;
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
       }
-
-      .cls-3 {
-        fill: #fff;
-      }
-
-      .cls-4 {
-        filter: url(#Path_1331);
-      }
-
-      .cls-5 {
-        filter: url(#Path_1330);
-      }
-
-      .cls-6 {
-        filter: url(#Path_1332);
-      }
-
-      .cls-7 {
-        filter: url(#Path_1036);
+      .bar {
+        position: absolute;
+        right: -20px;
+        height: inherit;
+        .st0{fill: transparent;}
+        .st1{fill:none;stroke:#7C7C7C;}
+        .st2{fill:none;stroke:#7C7C7C;stroke-linecap:round;}
       }
       @media screen and (min-width: 769px) {
         display: none;

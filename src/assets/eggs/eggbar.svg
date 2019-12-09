@@ -1,83 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.135" height="640.529" viewBox="0 0 88.135 640.529">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #f5822f;
-      }
-
-      .cls-2 {
-        fill: none;
-        stroke: #7c7c7c;
-        stroke-linecap: square;
-      }
-
-      .cls-3 {
-        fill: #fff;
-      }
-
-      .cls-4 {
-        filter: url(#Path_1331);
-      }
-
-      .cls-5 {
-        filter: url(#Path_1330);
-      }
-
-      .cls-6 {
-        filter: url(#Path_1332);
-      }
-
-      .cls-7 {
-        filter: url(#Path_1036);
-      }
-    </style>
-    <filter id="Path_1036" x="0" y="0" width="80.268" height="640.529" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Path_1332" x="49.153" y="291.181" width="38.982" height="56.696" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="5" result="blur-2"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur-2"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Path_1330" x="52.302" y="8.989" width="27.807" height="323.484" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur-3"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur-3"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Path_1331" x="52.275" y="313.332" width="27.833" height="324.192" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur-4"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur-4"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_1682" data-name="Group 1682" transform="translate(4736.5 1827.029)">
-    <g class="cls-7" transform="matrix(1, 0, 0, 1, -4736.5, -1827.03)">
-      <path id="Path_1036-2" data-name="Path 1036" class="cls-1" d="M2.478-.133,613,0V50.136H2.471Z" transform="translate(62.14 12.53) rotate(90)"/>
-    </g>
-    <g class="cls-6" transform="matrix(1, 0, 0, 1, -4736.5, -1827.03)">
-      <path id="Path_1332-2" data-name="Path 1332" class="cls-1" d="M13.727-.135,26.7,8.847H0Z" transform="translate(70 306.18) rotate(90)"/>
-    </g>
-    <g id="Group_1675" data-name="Group 1675" transform="translate(1325 -238)">
-      <g class="cls-5" transform="matrix(1, 0, 0, 1, -6061.5, -1589.03)">
-        <path id="Path_1330-2" data-name="Path 1330" class="cls-2" d="M-5940.7-1574.215V-1282.2l8.609,12.275" transform="translate(6002.5 1589.7)"/>
-      </g>
-      <g class="cls-4" transform="matrix(1, 0, 0, 1, -6061.5, -1589.03)">
-        <path id="Path_1331-2" data-name="Path 1331" class="cls-2" d="M-5940.725-1269.68l.027-292.72,8.609-12.275" transform="translate(6002.5 1894.7)"/>
-      </g>
-    </g>
-    <g id="Group_1676" data-name="Group 1676" transform="translate(1326.645 -236)">
-      <path id="Path_1333" data-name="Path 1333" class="cls-3" d="M0,0,2.019.015l.059,8.046L.059,8.046Z" transform="matrix(0.788, -0.616, 0.616, 0.788, -6004.25, -1276.536)"/>
-      <path id="Path_1334" data-name="Path 1334" class="cls-3" d="M.938.341,2.957.327,2.9,8.373.878,8.388Z" transform="matrix(0.788, 0.616, -0.616, 0.788, -5999.778, -1273.614)"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 67 608" style="enable-background:new 0 0 67 608;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F5822F;}
+	.st1{fill:none;stroke:#7C7C7C;}
+	.st2{fill:none;stroke:#7C7C7C;stroke-linecap:round;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g id="圖層_4">
+	<polygon class="st0" points="57.61,304.11 49.69,292 49.75,0.01 0,0 0,608 49.62,608 49.68,315.56 	"/>
+</g>
+<g id="圖層_2">
+	<g>
+		<polyline class="st1" points="49.5,0 49.5,292 57.5,304 		"/>
+		<polyline class="st2" points="49.5,608 49.5,316 57.5,304 		"/>
+	</g>
+</g>
+<g id="圖層_3">
+	<g id="Group_1676" transform="translate(1326.645 -236)">
+		<path id="Path_1333" class="st3" d="M-1280.27,534.69l1.6-1.23l5,6.3l-1.6,1.23L-1280.27,534.69z"/>
+		<path id="Path_1334" class="st3" d="M-1275.27,538.46l1.6,1.23l-5,6.31l-1.6-1.23L-1275.27,538.46z"/>
+	</g>
+</g>
 </svg>
