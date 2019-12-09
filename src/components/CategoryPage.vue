@@ -1,12 +1,23 @@
 <template>
   <div class="category-page">
-    <h1>This is a catogory cover.</h1>
+    <img :src="pageInfo.cover[isMob ? 'mob' : 'pc']" :alt="pageInfo.title" srcset="">
   </div>
 </template>
 
 <script>
 export default {
   name: 'CategoryPage',
+  props: {
+    pageInfo: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    isMob() {
+      return window.innerWidth < 768 ? true : false;
+    }
+  },
 };
 </script>
 
@@ -18,6 +29,9 @@ export default {
   padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  img {
+    width: 80%;
+  }
 }
 </style>

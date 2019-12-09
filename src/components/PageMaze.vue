@@ -62,7 +62,10 @@ export default {
           y: 0,
           key: 'c_3',
           title: '製作有23個分頁的\n超級大專題',
-          cover: '',
+          cover: {
+            mob: require('@/assets/category/title01_mob.png'),
+            pc: require('@/assets/category/title01.png')
+          },
           description: '',
           category: 1,
           categoryCover: true,
@@ -533,7 +536,10 @@ export default {
           y: 1,
           key: 'c_4',
           title: '原來調查報導可以這樣玩！',
-          cover: '',
+          cover: {
+            mob: require('@/assets/category/title02_mob.png'),
+            pc: require('@/assets/category/title02.png')
+          },
           description: '',
           category: 2,
           categoryCover: true,
@@ -794,7 +800,10 @@ export default {
           y: 2,
           key: 'c_5',
           title: '最酷最炫的資料呈現\n都在這裡',
-          cover: '',
+          cover: {
+            mob: require('@/assets/category/title03_mob.png'),
+            pc: require('@/assets/category/title03.png')
+          },
           description: '',
           category: 3,
           categoryCover: true,
@@ -1112,7 +1121,10 @@ export default {
           y: 3,
           key: 'c_6',
           title: '用視覺亮點打造\n讓人忘不了的專題',
-          cover: '',
+          cover: {
+            mob: require('@/assets/category/title04_mob.png'),
+            pc: require('@/assets/category/title04.png')
+          },
           description: '',
           url: '',
           create: '',
