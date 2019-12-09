@@ -322,7 +322,6 @@ export default {
       }
       let tl = anime.timeline({
         begin: function () {
-            vm.isMenuClose = false
             vm.isAnimationClose = false
         },
         complete: function() {
@@ -405,7 +404,10 @@ export default {
         translateX: move_x,
         translateY: move_y -2,
         translateZ: 0,
-        scale: 0.15
+        scale: 0.15,
+        changeBegin: function(anim) {
+          vm.isMenuClose = false
+        },
       })
       .add({
         targets: element,

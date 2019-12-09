@@ -2,7 +2,7 @@
   <div class="drama">
     <div class="left">
       <img class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
-      <video autoplay muted :src="profile.photo"></video>
+      <video loop autoplay muted :src="profile.photo"></video>
       <div class="profile">
         <div>{{ profile.title }}</div>
         <div>{{ profile.name }}</div>
