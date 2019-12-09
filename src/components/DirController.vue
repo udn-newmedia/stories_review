@@ -248,6 +248,7 @@
         <path
           id="Polygon_57-2_1_"
           :class="{
+            'st2': true,
             'category--1': currentCategory === 1,
             'category--2': currentCategory === 2,
             'category--3': currentCategory === 3,
@@ -264,6 +265,7 @@
         <path
           id="Polygon_58"
           :class="{
+            'st2': true,
             'category--1': currentCategory === 1,
             'category--2': currentCategory === 2,
             'category--3': currentCategory === 3,
@@ -279,6 +281,7 @@
         <path
           id="Polygon_58-2_1_"
           :class="{
+            'st2': true,
             'category--1': currentCategory === 1,
             'category--2': currentCategory === 2,
             'category--3': currentCategory === 3,
@@ -294,6 +297,7 @@
         <path
           id="Polygon_57"
           :class="{
+            'st2': true,
             'category--1': currentCategory === 1,
             'category--2': currentCategory === 2,
             'category--3': currentCategory === 3,
@@ -366,8 +370,7 @@ export default {
   data() {
     return {
       mazeMapToggleFlag: false,
-      startedTimeStamp: 0,
-      endedTimeStamp: 0,
+      longTouchFlag: false,
     };
   },
   methods: {
@@ -493,15 +496,20 @@ export default {
       EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
     },
     handleControllerTouchstart(e) {
-      this.startedTimeStamp = e.timeStamp;
+      this.longTouchFlag = true;
+      setTimeout(() => {
+        if (this.longTouchFlag) {
+          this.mazeMapToggleFlag = true;
+          document.getElementById('controller').removeEventListener('touchstart',   this.handleControllerTouchstart);
+          document.getElementById('controller').removeEventListener('touchend',   this.handleControllerTouchend);
+        }
+      }, 3000);
+    },
+    handleControllerTouchmove(e) {
+      this.longTouchFlag = false;
     },
     handleControllerTouchend(e) {
-      this.endedTimeStamp = e.timeStamp;
-      if (this.endedTimeStamp - this.startedTimeStamp > 3000) {
-        this.mazeMapToggleFlag = true;
-        document.getElementById('controller').removeEventListener('touchstart', this.handleControllerTouchstart);
-        document.getElementById('controller').removeEventListener('touchend', this.handleControllerTouchend);
-      }
+      this.longTouchFlag = false;
     },
   },
   mounted() {
@@ -518,8 +526,11 @@ export default {
       if (e.keyCode === 27) this.updatedMazeMapFlag();
     });
 
-    document.getElementById('controller').addEventListener('touchstart', this.handleControllerTouchstart);
-    document.getElementById('controller').addEventListener('touchend', this.handleControllerTouchend);
+    if (window.innerWidth < 1024) {
+      document.getElementById('controller').addEventListener('touchstart', this.handleControllerTouchstart);
+      document.getElementById('controller').addEventListener('touchmove', this.handleControllerTouchmove);
+      document.getElementById('controller').addEventListener('touchend', this.handleControllerTouchend);
+    }    
   }
 };
 </script>
@@ -572,7 +583,8 @@ export default {
   fill: #ffffff;
 }
 .st2 {
-  fill: #bbd500;
+  // fill: #bbd500;
+  transition: .333s ease-in-out;
 }
 .category--1 {
   fill: #3fde7e;
