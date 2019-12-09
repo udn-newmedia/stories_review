@@ -207,8 +207,8 @@ export default {
   position: absolute;
   height: 100vh;
   width: 100%;
-  // color: #ffffff;
   text-align: center;
+  padding-top: 35px;
   h1 {
     color: #000000;
   }
