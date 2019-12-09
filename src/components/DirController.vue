@@ -349,7 +349,13 @@
         />
       </div>
     </div>
-    <button v-show="mazeMapToggleFlag" @click="updatedMazeMapFlag">地圖出來吧</button>
+    <button
+     v-show="mazeMapToggleFlag"
+     class="maze-map-button"
+     @click="updatedMazeMapFlag"
+    >
+      M
+    </button>
   </div>
 </template>
 
@@ -543,7 +549,6 @@ export default {
   width: 120px;
   height: 120px;
   margin: 10px;
-  text-align: center;
   .page-maze-controller-container {
     position: absolute;
     top: 0;
@@ -575,6 +580,13 @@ export default {
     color: #898989;
     opacity: 0.2;
   }
+}
+.maze-map-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
 }
 .st0 {
   display: none;

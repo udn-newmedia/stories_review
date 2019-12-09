@@ -1,0 +1,16 @@
+<svg id="access_time-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #555;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Path_771" data-name="Path 771" class="cls-1" d="M11.99,2A10,10,0,1,0,22,12,10,10,0,0,0,11.99,2ZM12,20a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
+  <path id="Path_772" data-name="Path 772" class="cls-2" d="M0,0H24V24H0Z"/>
+  <path id="Path_773" data-name="Path 773" class="cls-1" d="M12.5,7H11v6l5.25,3.15L17,14.92l-4.5-2.67Z"/>
+</svg>

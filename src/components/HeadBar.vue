@@ -4,8 +4,12 @@
       <a class="head-bar-link" href="#/0/0" @click="sendLogoGa"><i class="udn-icon udn-icon-logo" /></a>
     </div>
     <div class="head-bar-share">
-      <a class="head-bar-link" target="_blank" :href="shareUrlFB" @click="sendFacebookGA">FB</a>
-      <a class="head-bar-link" target="_blank" :href="shareUrlLine" @click="sendLineGA">LINE</a>
+      <a class="head-bar-link" target="_blank" :href="shareUrlFB" @click="sendFacebookGA">
+        <img :src="require('@/assets/headbar/fb_logo.svg')" alt="Facebook">
+      </a>
+      <a class="head-bar-link" target="_blank" :href="shareUrlLine" @click="sendLineGA">
+        <img :src="require('@/assets/headbar/line_logo.svg')" alt="Line">
+      </a>
     </div>
   </div>
 </template>
@@ -84,17 +88,24 @@ export default {
 .head-bar-logo {
   position: relative;
   i {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 .head-bar-share {
   position: relative;
+  width: 55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 10px;
+  img {
+    width: 24px;
+  }
 }
 .head-bar-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: none;
   text-decoration-line: none;
   color: #000000;
