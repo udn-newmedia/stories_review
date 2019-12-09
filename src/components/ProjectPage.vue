@@ -23,10 +23,16 @@
         </div>
         {{pageInfo.create}}
       </div>
+      <div v-if="!isMob" class="project-page-url">
+        <div class="project-page-url-arrow">→</div>
+        <a :href="pageInfo.url" target="_blank">看專題</a>
+      </div>
     </div>
-    <div class="project-page-url">
-      <div class="project-page-url-arrow">→</div>
-      <a :href="pageInfo.url" target="_blank">看專題</a>
+    <div v-if="isMob" class="project-page-url">
+      <a :href="pageInfo.url" target="_blank">
+        <div class="project-page-url-arrow">→</div>
+        看專題
+      </a>
     </div>
   </div>
 </template>
@@ -45,6 +51,9 @@ export default {
     },
   },
   computed: {
+    isMob() {
+      return window.innerWidth < 769 ? true : false;
+    },
     computeTitleText() {
       return this.pageInfo.title.split('\n');
     },
@@ -62,19 +71,37 @@ export default {
   height: 100%;
   text-align: left;
   padding: 20px 35px;
+  @media screen and (min-width: 769px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
   .project-page-image {
     position: relative;
     margin-bottom: 5px;
+    @media screen and (min-width: 769px) {
+      width: 50%;
+      height: 45%;
+      padding: 20px;
+      text-align: center;
+    }
     img {
       width: 100%;
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
       @media screen and (min-width: 769px) {
-        width: 50%;        
+        width: auto;
+        height: 100%;
       }
     }
   }
   .project-page-body {
     position: relative;
+    @media screen and (min-width: 769px) {
+      width: 50%;
+      height: 45%;
+      padding: 20px 20px 20px 50px;
+    }
   }
   .project-page-category {
     .page-category-text {
@@ -82,6 +109,10 @@ export default {
       font-weight: bold;
       color: #494949;
       margin-bottom: 10px;
+      @media screen and (min-width: 769px) {
+       font-size: 18px;
+        margin-bottom: 20px;
+      }
     }
   }
   .project-page-title {
@@ -92,6 +123,9 @@ export default {
       font-weight: bold;
       line-height: 1.3;
       color: #ffffff;
+      @media screen and (min-width: 769px) {
+        font-size: 44px;
+      }
     }
   }
   .project-page-create-time {
@@ -102,6 +136,9 @@ export default {
     font-size: 15px;
     margin-bottom: 20px;
     color: #666666;
+    @media screen and (min-width: 769px) {
+      font-size: 20px;
+    }
     .project-page-create-time-clock {
       margin-right: 10px;
       display: flex;
@@ -109,19 +146,25 @@ export default {
       align-items: center;
       img {
         width: 20px;
+        @media screen and (min-width: 769px) {
+          width: 35px;
+        }
       }
     }
   }
   .project-page-url {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 35px;
+    @media screen and (min-width: 769px) {
+      padding: 0 50px;
+    }
     .project-page-url-arrow {
       position: relative;
       width: 35px;
@@ -133,12 +176,22 @@ export default {
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
       color: #ffffff;
       margin-right: 10px;
+      @media screen and (min-width: 769px) {
+        width: 50px;
+        height: 50px;
+      }
     }
     a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       outline: none;
       text-decoration-line: none;
       color: #555555;
       font-size: 15px;
+      @media screen and (min-width: 769px) {
+        font-size: 20px;
+      }
     }
   }
 }
