@@ -497,7 +497,7 @@ export default {
     },
     handleControllerTouchend(e) {
       this.endedTimeStamp = e.timeStamp;
-      if (this.endedTimeStamp - this.startedTimeStamp > 100) {
+      if (this.endedTimeStamp - this.startedTimeStamp > 3000) {
         this.mazeMapToggleFlag = true;
         document.getElementById('controller').removeEventListener('touchstart', this.handleControllerTouchstart);
         document.getElementById('controller').removeEventListener('touchend', this.handleControllerTouchend);
@@ -515,7 +515,7 @@ export default {
       if (e.keyCode === 39 && this.hasNeighbor('right'))
         this.handleControllerClick('right');
 
-      if (e.keyCode === 27) console.log(27);
+      if (e.keyCode === 27) this.updatedMazeMapFlag();
     });
 
     document.getElementById('controller').addEventListener('touchstart', this.handleControllerTouchstart);
