@@ -43,6 +43,7 @@
         :id="id"
         :pageInfo="pageInfo"
         :eggsCollection="eggsCollection"
+        :colorScheme="colorScheme"
       >
         <!-- 欣慈 -->
         <slot v-if="pageInfo.key === 'l_3'">

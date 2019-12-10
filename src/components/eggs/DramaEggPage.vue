@@ -1,8 +1,11 @@
 <template>
   <div class="drama">
     <div class="left">
-      <img class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
-      <video loop autoplay muted :src="profile.photo"></video>
+      <div class="light_wrapper">
+        <img class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
+        <div :style="{'background-color': currentBackgroundColor}" class="light_cover"></div>
+      </div>
+      <video class="profile_video" loop autoplay muted :src="profile.photo"></video>
       <div class="profile">
         <div>{{ profile.title }}</div>
         <div>{{ profile.name }}</div>
@@ -20,7 +23,8 @@
 
 <script>
 import EventBus from '@/eventBus';
-import srcRWD from '@/mixin/srcRWD.js'
+import srcRWD from '@/mixin/srcRWD.js';
+import anime from 'animejs';
 
 export default {
   name: 'DramaEggPage',
@@ -30,7 +34,8 @@ export default {
         title: '數位內容製作',
         name: '洪欣慈',
         photo: ''
-      }
+      },
+      currentBackgroundColor: ''
     }
   },
   mixins: [srcRWD],
@@ -47,9 +52,24 @@ export default {
       type: Number,
       default: 0,
     },
+    colorScheme: {
+      type: Array,
+    }
   },
   mounted () {
     this.initData()
+    // this.playAni()
+
+  },
+  watch: {
+    'pageInfo.egg.collected': {
+      handler(newName, oldName) {
+        if(newName) {
+          console.log(newName)
+          this.playAni()
+        }
+      }
+    }
   },
   methods: {
     initData () {
@@ -57,6 +77,28 @@ export default {
       this.profile.name = this.pageInfo.egg.drama.name
       this.profile.title = this.pageInfo.egg.drama.job
       this.profile.photo = this.srcRWD(vm.pageInfo.egg.drama.profile.mob, vm.pageInfo.egg.drama.profile.pc)
+      this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]
+    },
+    playAni () {
+      let tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 750
+      });
+
+      // Add children
+      tl
+      .add({
+        targets: '.light_cover',
+        height: ['91%', '0%'],
+        duration: 250
+      })
+      .add({
+        delay: 750,
+        duration: 500,
+        targets: '.profile_video',
+        opacity: [0, 1]
+      })
+
     },
     updatedEggCollectedStatus() {
       EventBus.$emit('UPDATE_COLLECTED', this.id);    
@@ -82,22 +124,44 @@ export default {
     @media screen and (min-width: 769px) {
       width: 46%;
     }
-    .light {
+    .light_wrapper {
       height: 100%;
       vertical-align: bottom;
-      @media screen and (min-width: 769px) {
+      transition: all 1s;
+      position: relative;
+      // @media screen and (min-width: 769px) {
+      //   position: absolute;
+      //   left: 50%;
+      //   transform: translate(-50%);
+      // }
+      .light {
         position: absolute;
-        left: 50%;
+        height: inherit;
+        vertical-align: bottom;
+        height: 100%;
         transform: translate(-50%);
+        opacity: 1;
+      }
+      .light_cover {
+          position: absolute;
+          width: 90%;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+          transition: all 1s;
       }
     }
-    video {
+    .profile_video {
       position: absolute;
       left: 50%;
       height: 30%;
       bottom: 5px;
       transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 1s;
     }
+    
     .profile {
       position: absolute;
       width: 100%;

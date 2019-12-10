@@ -285,7 +285,6 @@ export default {
         let key = newVal.key
         let whichEgg = this.mapToEggDictionary[key]
         this.eggTitle = newVal.title
-        this.updatedEggCollectedStatus(this.currentId)
         this.eggShow(whichEgg, this.eggTotal)
       }
     }
@@ -296,7 +295,6 @@ export default {
       let key = this.pageInfo.key
       let whichEgg = this.mapToEggDictionary[key]
       this.eggTitle = this.pageInfo.title
-      this.updatedEggCollectedStatus(this.currentId)
       this.eggShow(whichEgg, this.eggTotal)
       this.eggTotal += 1;
     }
@@ -318,11 +316,10 @@ export default {
       let detactDevice = this.srcRWD(true, false)
 
       let eggBarWidth = document.querySelector('.egg-repo'),
-          congrateTitle = document.querySelector('.congrate_title'),
-          firework1 = document.querySelector(vm.srcRWD('.firework1_mob', '.firework1')),
-          firework2 = document.querySelector(vm.srcRWD('.firework2_mob', '.firework2')),
-          firework3 = document.querySelector(vm.srcRWD('.firework3_mob', '.firework3')),
-          firework4 = document.querySelector(vm.srcRWD('.firework4_mob', '.firework4'));
+          firework1 = vm.srcRWD('.firework1_mob', '.firework1'),
+          firework2 = vm.srcRWD('.firework2_mob', '.firework2'),
+          firework3 = vm.srcRWD('.firework3_mob', '.firework3'),
+          firework4 = vm.srcRWD('.firework4_mob', '.firework4');
 
       let element = document.querySelector(targetDOM),
           element_forward = document.querySelector(target_forwardDOM),
@@ -340,11 +337,12 @@ export default {
         complete: function() {
           let img = vm.eggDictionary[`egg${target}`]
           vm.bar_eggs[target_forward - 1].src = img
-          vm.bar_eggs[target_forward - 1].isGet = true
+          vm.bar_eggs[target_forward - 1].isGet = true       
           if ( (0 < vm.eggTotal && vm.eggTotal < 6) || (6 < vm.eggTotal && vm.eggTotal < 12) ) {
             setTimeout(() => {
               vm.isMenuClose = true
               vm.isAnimationClose = true
+              vm.updatedEggCollectedStatus(vm.currentId)
             }, 1000);
           } else if (vm.eggTotal === 12) {
               vm.isCongrateClose = false
@@ -352,6 +350,7 @@ export default {
                 vm.isCongrateClose = true
                 vm.isMenuClose = true
                 vm.isAnimationClose = true
+                vm.updatedEggCollectedStatus(vm.currentId)
             }, 5000);
           }
         }
@@ -364,7 +363,7 @@ export default {
         duration: 100
       })
       .add({
-        targets: congrateTitle,
+        targets: '.congrate_title',
         opacity: 1,
         duration: 3000,
         scale: 1,

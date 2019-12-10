@@ -1,24 +1,17 @@
 <template>
-  <div class="observatory">
-    <!-- 這是一顆天文台蛋
-    {{$route.params.y + '_' + $route.params.x}} -->
-    
+  <div class="observatory">    
     <div class="observatory_content">
       <div class="left">
         <h1 class="observatory_title">新媒觀察室</h1>
         <slot />
       </div>
       <div class="right">
-        <img class="mouse" :src="srcRWD(require('../../assets/observatory/mouse/mouse_mob.svg'), require('../../assets/observatory/mouse/mouse.svg'))" alt="">
+        <img :class="{'enter': isEnter }" class="mouse" :src="srcRWD(require('../../assets/observatory/mouse/mouse_mob.svg'), require('../../assets/observatory/mouse/mouse.svg'))" alt="">
         <div class="observatory-img-wrapper">
           <img class="observatory-img" v-for="(item, index) in imgSrc" :key="index" :src="item" alt="">
         </div>
-        
-        
       </div>
     </div>
-    
-    
   </div>
 </template>
 
@@ -31,6 +24,7 @@ export default {
   mixins: [srcRWD],
   mounted () {
     this.imgSource = this.pageInfo.egg.observatory.pics
+    
   },
   computed: {
     // 计算属性的 getter
@@ -41,7 +35,8 @@ export default {
   },
   data () {
     return {
-      imgSource: []
+      imgSource: [],
+      isEnter: false
     }
   },
   props: {
@@ -57,6 +52,14 @@ export default {
       type: Number,
       default: 0,
     },
+  },
+  watch: {
+    'pageInfo.egg.collected': {
+      handler(newName, oldName) {
+        console.log(newName)
+        this.isEnter = true
+      }
+    }
   },
   methods: {
     updatedEggCollectedStatus() {
@@ -109,8 +112,7 @@ export default {
         }
       }
     }
-    .right {
-      
+    .right {   
       @media screen and (min-width: 769px) {
         width: 45%;
         padding-right: 20px;
@@ -123,11 +125,20 @@ export default {
         top: 0;
         height: 100%;
         z-index: 1;
+        transform: translateY(-100%);
         @media screen and (min-width: 769px) {
           left: 92%;
-          transform: translateY(-40%);
+          transform: translateY(-100%);
           width: 40px;
         }
+        &.enter {
+          transition: all 1s;
+          transform: translateY(0%);
+          @media screen and (min-width: 769px) {
+            transform: translateY(-35%);
+          }
+        }
+        
       }
       .observatory-img-wrapper {
         @media screen and (min-width: 769px) {
