@@ -66,6 +66,16 @@ export default {
             mob: require('@/assets/category/title01_mob.png'),
             pc: require('@/assets/category/title01.png')
           },
+          coverSize: {
+            mob: {
+              width: 300,
+              height: 518,
+            },
+            pc: {
+              width: 1011,
+              height: 492,
+            }
+          },
           description: '',
           category: 1,
           categoryCover: true,
@@ -540,6 +550,16 @@ export default {
             mob: require('@/assets/category/title02_mob.png'),
             pc: require('@/assets/category/title02.png')
           },
+          coverSize: {
+            mob: {
+              width: 371,
+              height: 427,
+            },
+            pc: {
+              width: 1003,
+              height: 481,
+            }
+          },
           description: '',
           category: 2,
           categoryCover: true,
@@ -803,6 +823,16 @@ export default {
           cover: {
             mob: require('@/assets/category/title03_mob.png'),
             pc: require('@/assets/category/title03.png')
+          },
+          coverSize: {
+            mob: {
+              width: 392,
+              height: 477,
+            },
+            pc: {
+              width: 1129,
+              height: 503,
+            }
           },
           description: '',
           category: 3,
@@ -1125,9 +1155,17 @@ export default {
             mob: require('@/assets/category/title04_mob.png'),
             pc: require('@/assets/category/title04.png')
           },
+          coverSize: {
+            mob: {
+              width: 363,
+              height: 562,
+            },
+            pc: {
+              width: 1128,
+              height: 428,
+            }
+          },
           description: '',
-          url: '',
-          create: '',
           category: 4,
           award: false,
           categoryCover: true,

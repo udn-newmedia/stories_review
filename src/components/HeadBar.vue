@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 .head-bar {
   position: fixed;
-  z-index: 5000;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;

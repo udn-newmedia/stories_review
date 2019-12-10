@@ -128,7 +128,9 @@
       v-if="!pageInfo.egg.flag && pageInfo.categoryCover && !pageInfo.editorFlag"
       class="page-content"
     >
-      <CategoryPage 
+      <CategoryPage
+        v-if="ON_THIS_PAGE"
+        :id="id"
         :pageInfo="pageInfo"
       />
     </div>
@@ -138,7 +140,6 @@
     >
       <EditorPage />
     </div>
-    
   </div>
 </template>
 
