@@ -56,7 +56,6 @@ export default {
   watch: {
     'pageInfo.egg.collected': {
       handler(newName, oldName) {
-        console.log(newName)
         this.isEnter = true
       }
     }

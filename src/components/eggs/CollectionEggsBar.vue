@@ -448,7 +448,7 @@ export default {
     switchBar(){
       let detactDevice = this.srcRWD(true, false)
 
-      if (Boolean(detactDevice)) {
+      if (detactDevice) {
         if(this.isMenuClose === true) {
           this.isMenuClose = false 
         } else {
