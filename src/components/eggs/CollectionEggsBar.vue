@@ -315,6 +315,7 @@ export default {
       let vm = this;
       let targetDOM = `.egg${target}`;
       let target_forwardDOM = `.egg${target_forward}_wrapper`;
+      let detactDevice = this.srcRWD(true, false)
 
       let eggBarWidth = document.querySelector('.egg-repo'),
           congrateTitle = document.querySelector('.congrate_title'),
@@ -329,7 +330,7 @@ export default {
           move_y = -(element.getBoundingClientRect().top - element_forward.getBoundingClientRect().top);
 
 
-      if (this.isMenuClose) {
+      if (this.isMenuClose && detactDevice) {
         move_x = move_x + eggBarWidth.getBoundingClientRect().width
       }
       let tl = anime.timeline({
@@ -346,7 +347,12 @@ export default {
               vm.isAnimationClose = true
             }, 1000);
           } else if (vm.eggTotal === 12) {
-
+              vm.isCongrateClose = false
+              setTimeout(() => {
+                vm.isCongrateClose = true
+                vm.isMenuClose = true
+                vm.isAnimationClose = true
+            }, 5000);
           }
         }
       });

@@ -42,7 +42,7 @@ export default {
   .close {
         position: absolute;
         right: 12px;
-        top: 12px;
+        top: 62px;
         width: 32px;
         height: 32px;
         opacity: 0.3;
