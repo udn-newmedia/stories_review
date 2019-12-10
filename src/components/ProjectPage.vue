@@ -24,8 +24,9 @@
         {{pageInfo.create}}
       </div>
       <div v-if="!isMob" class="project-page-url">
-        <div class="project-page-url-arrow">→</div>
-        <a :href="pageInfo.url" target="_blank">看專題</a>
+        <a :href="pageInfo.url" target="_blank">
+          <div class="project-page-url-arrow">→</div>看專題
+        </a>
       </div>
     </div>
     <div v-if="isMob" class="project-page-url">
@@ -84,7 +85,7 @@ export default {
       width: 50%;
       height: 45%;
       padding: 20px;
-      text-align: center;
+      text-align: right;
     }
     img {
       width: 100%;

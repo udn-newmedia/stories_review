@@ -1737,7 +1737,7 @@ export default {
     height: 100vh;
     background: #3d3657;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: 0.666s ease-in-out;
   }
   .page-maze-map--active {
     visibility: visible;

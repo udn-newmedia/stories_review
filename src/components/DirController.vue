@@ -349,13 +349,13 @@
         />
       </div>
     </div>
-    <button
-     v-show="mazeMapToggleFlag"
+    <div
+     v-show="isMob && mazeMapToggleFlag"
      class="maze-map-button"
      @click="updatedMazeMapFlag"
     >
-      M
-    </button>
+      <img :src="require('@/assets/controller/mapkey.svg')" alt="key">
+    </div>
   </div>
 </template>
 
@@ -378,6 +378,11 @@ export default {
       mazeMapToggleFlag: false,
       longTouchFlag: false,
     };
+  },
+  computed: {
+    isMob() {
+      return window.innerWidth < 769 ? true : false;
+    },
   },
   methods: {
     handleControllerClick(dir) {
@@ -586,10 +591,16 @@ export default {
 }
 .maze-map-button {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: calc(50% - 10px);
-  left: calc(50% - 10px);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  img {
+    width: 100%;
+  }
 }
 .st0 {
   display: none;

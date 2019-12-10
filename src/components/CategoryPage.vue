@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       pageImageSize: {
-        width: window.innerWidth,
+        width: Math.min(window.innerWidth, 1280),
         height: window.innerHeight,
       },
       imageCompletedFlag: false,
@@ -50,6 +50,9 @@ export default {
   computed: {
     isMob() {
       return window.innerWidth < 768 ? true : false;
+    },
+    coverImageRatio() {
+      return this.pageInfo.coverSize[this.isMob ? 'mob' : 'pc'].height / this.pageInfo.coverSize[this.isMob ? 'mob' : 'pc'].width;
     },
   },
   methods: {
@@ -81,9 +84,9 @@ export default {
             img.width,
             img.height,
             (img.width - vm.pageImageSize.width * 0.8) / 2,
-            (img.height- vm.pageImageSize.height * 0.8) / 2,
+            0,
             vm.pageImageSize.width * 0.8,
-            vm.pageImageSize.height * 0.8
+            vm.pageImageSize.width * 0.8 * vm.coverImageRatio
           );
           getImageData();
         };
@@ -163,7 +166,7 @@ export default {
       class particule {
         constructor(options) {
           const centerOffsetX = canvas.width / 2 - img.width / 2;
-          const centerOffsetY = canvas.height / 2 - img.height / 2;
+          const centerOffsetY = 0;
           this.centerPosX = centerOffsetX + options.x;
           this.centerPosY = centerOffsetY + options.y;
           this.posX = getRandomInt(0, canvas.width);
@@ -217,6 +220,9 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
+    @media screen and (min-width: 769px) {
+      height: 100%;
+    }
   }
   .category-page-image-complete {
     position: absolute;
@@ -226,9 +232,12 @@ export default {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    img {
+      width: 80%;
+    }
   }
   .category-page-image-complete--active {
     opacity: 1;
@@ -250,9 +259,6 @@ export default {
   }
   .category-page-canvas--disabled {
     opacity: 0;
-  }
-  img {
-    width: 80%;
   }
 }
 </style>

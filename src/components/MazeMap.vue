@@ -1,5 +1,9 @@
 <template>
   <div class="maze-map">
+    <div class="maze-map-turn-back" @click="updatedMazeMapFlag()">
+      <img :src="require('@/assets/map/goback.svg')" alt="go back">
+      返回
+    </div>
     <div 
       id="maze-map-table"
       class="maze-map-table"
@@ -81,7 +85,7 @@ export default {
   watch: {
     mazeMapFlag: {
       handler(value) {
-        const mazeMapItemWidth = this.isMob ? window.innerWidth * 0.7 : 270;
+        const mazeMapItemWidth = this.isMob ? window.innerWidth * 0.7 : 320;
         if (value) document.getElementById('maze-map-table').scrollLeft = this.mazeData[this.currentId].x * mazeMapItemWidth;
       },
     }
@@ -109,7 +113,21 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 50px 10px;
+  padding: 70px 10px 0 10px;
+  text-align: left;
+  .maze-map-turn-back {
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 10px;
+    cursor: pointer;
+    img {
+      height: 24px;
+      margin-right: 3px;
+    }
+  }
   .maze-map-table {
     position: relative;
     height: 100%;
@@ -123,7 +141,8 @@ export default {
     width: calc(29 * (70vw));
     height: 100px;
     @media screen and (min-width: 769px) {
-      width: calc(29 * (270px));
+      width: calc(29 * (320px));
+      height: 135px;
     }
   }
   .maze-map-table-row {
@@ -148,6 +167,9 @@ export default {
         color: #ffffff;
         margin: 0;
         padding: 0;
+        @media screen and (min-width: 769px) {
+          font-size: 18px;
+        }
       }
     }
     .maze-map-table-row-item--category1 {
@@ -186,7 +208,8 @@ export default {
     width: 70vw;
     height: 100px;
     @media screen and (min-width: 769px) {
-      width: 270px;
+      width: 320px;
+      height: 135px;
     }
   }
 }
