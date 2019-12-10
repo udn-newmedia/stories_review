@@ -1,7 +1,10 @@
 <template>
   <div class="collection-eggs-bar">
-    <div v-if="isProposalCose === false">
+    <div v-if="isProposalClose === false">
       <ProposalEggPage @closeProposal="closeProposal" :currentBackgroundColor="currentBackgroundColor"></ProposalEggPage>
+    </div>
+    <div v-if="isCongrateClose === false">
+      <CongrateEggPage @closeProposal="closeProposal" :currentBackgroundColor="currentBackgroundColor"></CongrateEggPage>
     </div>
     <div @click="switchBar" :style="{'background-color': currentBackgroundColor}" :class="{'isMenuClose': isMenuClose}" class="egg-repo">
       <div class="eggs-bar-arrow">
@@ -48,10 +51,17 @@
         </li>
       </ul>
       <div class="congrate_content">
-        <h3 class="congrate_content_title">你已集滿6顆彩蛋<div>獲得新媒體提案書一份！</div></h3>
-        <div class="proposal_btn_wrapper">
-          <div @click="openProposal" class="proposal_btn">領取</div>
+        <div class="congrate_content_title">
+          <div v-show="eggTotal === 6">
+             你已集滿6顆彩蛋<div>獲得新媒體提案書一份！</div>
+             <div class="proposal_btn_wrapper">
+              <div @click="openProposal" class="proposal_btn">領取</div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="congrate_content12" v-show="eggTotal === 12">
+        你已集滿12顆彩蛋
       </div>
     </div>
   </div>
@@ -62,16 +72,18 @@ import EventBus from '@/eventBus';
 import anime from 'animejs';
 import srcRWD from '@/mixin/srcRWD.js';
 import ProposalEggPage from '@/components/eggs/ProposalEggPage.vue';
+import CongrateEggPage from '@/components/eggs/CongrateEggPage.vue';
 
 export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 0,
+      eggTotal: 11,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
-      isProposalCose: true,
+      isProposalClose: true,
+      isCongrateClose: true,
       currentBackgroundColor: '',
       mapToEggDictionary: {
         'ae_3': 1,
@@ -291,7 +303,8 @@ export default {
     
   },
   components: {
-    ProposalEggPage
+    ProposalEggPage,
+    CongrateEggPage
   },
   methods: {
     initEggList () {
@@ -309,7 +322,6 @@ export default {
           firework2 = document.querySelector(vm.srcRWD('.firework2_mob', '.firework2')),
           firework3 = document.querySelector(vm.srcRWD('.firework3_mob', '.firework3')),
           firework4 = document.querySelector(vm.srcRWD('.firework4_mob', '.firework4'));
-
 
       let element = document.querySelector(targetDOM),
           element_forward = document.querySelector(target_forwardDOM),
@@ -333,6 +345,8 @@ export default {
               vm.isMenuClose = true
               vm.isAnimationClose = true
             }, 1000);
+          } else if (vm.eggTotal === 12) {
+
           }
         }
       });
@@ -415,7 +429,7 @@ export default {
         opacity: 0
       });
 
-      if (this.eggTotal === 6) {
+      if (this.eggTotal === 6 || this.eggTotal === 12) {
         let sixEggInfo = document.querySelector('.congrate_content')
         tl.add({
           targets: sixEggInfo,
@@ -438,11 +452,12 @@ export default {
       }
     },
     closeProposal(){
-      this.isProposalCose = true
+      this.isProposalClose = true
       this.isMenuClose = true
+      this.isAnimationClose = true
     },
     openProposal(){
-      this.isProposalCose = false
+      this.isProposalClose = false
     },
     updatedEggCollectedStatus(id) {
       EventBus.$emit('UPDATE_COLLECTED', id);    
@@ -601,6 +616,13 @@ export default {
           cursor: pointer;
         }
       }
+    }
+    .congrate_content12 {
+      margin-top: 50px;
+      color: white;
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: bold;
     }
     ul.eggs {
       position: relative;

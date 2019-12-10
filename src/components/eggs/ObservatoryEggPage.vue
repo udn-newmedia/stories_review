@@ -2,14 +2,18 @@
   <div class="observatory">
     <!-- 這是一顆天文台蛋
     {{$route.params.y + '_' + $route.params.x}} -->
-    <img class="mouse" :src="srcRWD(require('../../assets/observatory/mouse/mouse_mob.svg'), require('../../assets/observatory/mouse/mouse.svg'))" alt="">
+    
     <div class="observatory_content">
       <div class="left">
         <h1 class="observatory_title">新媒觀察室</h1>
         <slot />
       </div>
       <div class="right">
-        <img v-for="(item, index) in imgSrc" :key="index" :src="item" alt="">
+        <img class="mouse" :src="srcRWD(require('../../assets/observatory/mouse/mouse_mob.svg'), require('../../assets/observatory/mouse/mouse.svg'))" alt="">
+        <div class="observatory-img-wrapper">
+          <img class="observatory-img" v-for="(item, index) in imgSrc" :key="index" :src="item" alt="">
+        </div>
+        
         
       </div>
     </div>
@@ -72,14 +76,6 @@ export default {
     padding-left: 50px;
     padding-top: 100px;
   }
-  .mouse {
-    position: absolute;
-    left: 15%;
-    top: 0;
-    height: 100%;
-    z-index: 1;
-    transform: translateY(-50%);
-  }
   .observatory_content {
     width: 60%;
     padding-top: 30px;
@@ -114,12 +110,35 @@ export default {
       }
     }
     .right {
-      img {
-        width: 100%;
-      }
+      
       @media screen and (min-width: 769px) {
         width: 45%;
         padding-right: 20px;
+        position: relative;
+        max-height: 60vh;
+      }
+      .mouse {
+        position: absolute;
+        left: 15%;
+        top: 0;
+        height: 100%;
+        z-index: 1;
+        @media screen and (min-width: 769px) {
+          left: 92%;
+          transform: translateY(-40%);
+          width: 40px;
+        }
+      }
+      .observatory-img-wrapper {
+        @media screen and (min-width: 769px) {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          display: flex;
+        }
+        .observatory-img {
+          width: 100%;
+        }
       }
     }
   }
