@@ -1579,7 +1579,6 @@ export default {
         },
       },
       mazeIndexTable: [
-        [0, 0],
         [1, 0],
         [2, 0],
         [3, 0],
@@ -1608,6 +1607,7 @@ export default {
         [26, 0],
         [27, 0],
         [28, 0],
+        [29, 0],
         [1, 1],
         [2, 1],
         [3, 1],
@@ -1710,7 +1710,15 @@ export default {
     });
     EventBus.$on('UPDATE_MAZEMAP_FLAG', (payload) => {
       this.mazeMapFlag = payload;
-    });   
+    });
+
+    this.$router.push({
+      name: 'coords',
+      params: {
+        x: 0,
+        y: 0
+      }
+    });
   },
 };
 </script>
