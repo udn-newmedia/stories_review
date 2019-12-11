@@ -1,44 +1,49 @@
 <template>
   <div class="project-page">
-    <div class="project-page-image">
-      <img :src="pageInfo.cover" :alt="pageInfo.title">
-    </div>
-    <div class="project-page-body">
-      <div class="project-page-category">
-        <p v-if="pageInfo.category === 1" class="page-category-text">製作有23個分頁的超級大專題</p>
-        <p v-if="pageInfo.category === 2" class="page-category-text">原來調查報導可以這樣玩！</p>
-        <p v-if="pageInfo.category === 3" class="page-category-text">最酷最炫的資料呈現都在這裡</p>
-        <p v-if="pageInfo.category === 4" class="page-category-text">用視覺亮點打造讓人過目不忘的專題</p>
+    <div class="project-page-container">
+      <div class="project-page-image">
+        <img :src="pageInfo.cover" :alt="pageInfo.title">
       </div>
-      <div class="project-page-title">
-        <h1
-          v-for="(item, index) in computeTitleText" :key="index"
-        >
-          {{item}}
-        </h1>
-      </div>
-      <div class="project-page-create-time">
-        <div class="project-page-create-time-clock">
-          <img :src="require('@/assets/project_page/date.svg')" alt="" srcset="">
+      <div class="project-page-body">
+        <div class="project-page-category">
+          <p v-if="pageInfo.category === 1" class="page-category-text">製作有23個分頁的超級大專題</p>
+          <p v-if="pageInfo.category === 2" class="page-category-text">原來調查報導可以這樣玩！</p>
+          <p v-if="pageInfo.category === 3" class="page-category-text">最酷最炫的資料呈現都在這裡</p>
+          <p v-if="pageInfo.category === 4" class="page-category-text">用視覺亮點打造讓人過目不忘的專題</p>
         </div>
-        {{pageInfo.create}}
+        <div class="project-page-title">
+          <h1
+            v-for="(item, index) in computeTitleText" :key="index"
+          >
+            {{item}}
+          </h1>
+        </div>
+        <div class="project-page-create-time">
+          <div class="project-page-create-time-clock">
+            <img :src="require('@/assets/project_page/date.svg')" alt="" srcset="">
+          </div>
+          {{pageInfo.create}}
+        </div>
+        <div v-if="!isMob" class="project-page-url">
+          <a :href="pageInfo.url" target="_blank">
+            <div class="project-page-url-arrow">→</div>看專題
+          </a>
+        </div>
       </div>
-      <div v-if="!isMob" class="project-page-url">
+      <div v-if="isMob" class="project-page-url">
         <a :href="pageInfo.url" target="_blank">
-          <div class="project-page-url-arrow">→</div>看專題
+          <div class="project-page-url-arrow">→</div>
+          看專題
         </a>
       </div>
-    </div>
-    <div v-if="isMob" class="project-page-url">
-      <a :href="pageInfo.url" target="_blank">
-        <div class="project-page-url-arrow">→</div>
-        看專題
-      </a>
+      <AwardHint v-if="!isMob && pageInfo.award" />
     </div>
   </div>
 </template>
 
 <script>
+import AwardHint from "@/components/AwardHint";
+
 export default {
   name: "ProjectPage",
   props: {
@@ -50,6 +55,9 @@ export default {
       type: String,
       required: true
     },
+  },
+  components: {
+    AwardHint,
   },
   computed: {
     isMob() {
@@ -70,17 +78,25 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 35px;
-  @media screen and (min-width: 769px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+  .project-page-container {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    @media screen and (min-width: 769px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
   }
   .project-page-image {
     position: relative;
     margin-bottom: 5px;
+    height: calc((100vw - 40px) * 0.63);
     @media screen and (min-width: 769px) {
       width: 50%;
       height: 45%;
@@ -91,16 +107,16 @@ export default {
       width: 100%;
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
       @media screen and (min-width: 769px) {
-        width: auto;
         height: 100%;
       }
     }
   }
   .project-page-body {
     position: relative;
+    height: 36vh;
     @media screen and (min-width: 769px) {
       width: 50%;
-      height: 45%;
+      height: 385px;
       padding: 20px 20px 20px 50px;
     }
   }
@@ -156,13 +172,12 @@ export default {
   .project-page-url {
     position: absolute;
     left: 0;
-    bottom: 20px;
+    bottom: 0;
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 35px;
     @media screen and (min-width: 769px) {
       padding: 0 50px;
     }
