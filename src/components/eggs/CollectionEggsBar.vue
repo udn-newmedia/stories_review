@@ -88,6 +88,7 @@ export default {
       isProposalClose: true,
       isCongrateClose: true,
       currentBackgroundColor: '',
+      switchBarRecord: 0,
       mapToEggDictionary: {
         'ae_3': 1,
         'd_5' : 2,
@@ -464,7 +465,12 @@ export default {
     },
     switchBar(){
       let detactDevice = this.srcRWD(true, false)
-
+      if (this.switchBarRecord === 0) {
+        this.handleGA('Egg', 'Open', 'Open_People')
+      } else {
+        this.handleGA('Egg', 'Open', 'Open_Visit')
+      }
+      
       if (detactDevice) {
         if(this.isMenuClose === true) {
           this.isMenuClose = false 
@@ -472,19 +478,24 @@ export default {
           this.isMenuClose = true
         }
       }
+      this.switchBarRecord = this.switchBarRecord + 1
     },
     closeProposal(){
       this.isProposalClose = true
       this.isMenuClose = true
       this.isAnimationClose = true
     },
-    openProposal(){
-      this.handleGA('Egg', 'Get', 'Get_Pitch')
+    openProposal(source){
+      if (source === 'bar') {
+        this.handleGA('Egg', 'Get', 'Get_Pitch')
+      } else {
+        this.handleGA('Egg', 'Click', 'Pitch_Button')
+      }
       this.isProposalClose = false
     },
     openProposalInBar(target) {
       if (this.eggTotal > 5 && target === 5) {
-        this.openProposal()
+        this.openProposal('bar')
       }
     },
     updatedEggCollectedStatus(id) {
