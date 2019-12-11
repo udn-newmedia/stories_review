@@ -58,7 +58,7 @@ export default {
         "hitType": "event",
         "eventCategory": "share",
         "eventAction": "click",
-        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [ headbar Line分享]"
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [headbar Line分享]"
       });
     },
     sendLogoGa() {

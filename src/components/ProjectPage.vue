@@ -25,13 +25,21 @@
           {{pageInfo.create}}
         </div>
         <div v-if="!isMob" class="project-page-url">
-          <a :href="pageInfo.url" target="_blank">
+          <a
+            :href="pageInfo.url"
+            target="_blank"
+            @click="sendReadProjectClickGA()"
+          >
             <div class="project-page-url-arrow">→</div>看專題
           </a>
         </div>
       </div>
       <div v-if="isMob" class="project-page-url">
-        <a :href="pageInfo.url" target="_blank">
+        <a
+          :href="pageInfo.url"
+          target="_blank"
+          @click="sendReadProjectClickGA()"
+        >
           <div class="project-page-url-arrow">→</div>
           看專題
         </a>
@@ -42,6 +50,7 @@
 </template>
 
 <script>
+import Utils from 'udn-newmedia-utils';
 import AwardHint from "@/components/AwardHint";
 
 export default {
@@ -66,6 +75,16 @@ export default {
     computeTitleText() {
       return this.pageInfo.title.split('\n');
     },
+  },
+  methods: {
+    sendReadProjectClickGA() {
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "view",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [Click_Project_" + this.pageInfo.key + "]"
+      });
+    }
   },
   data() {
     return {};

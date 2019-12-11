@@ -144,6 +144,7 @@
 </template>
 
 <script>
+import Utils from 'udn-newmedia-utils';
 import EventBus from '@/eventBus';
 import CategoryPage from "@/components/CategoryPage";
 import DramaEggPage from "@/components/eggs/DramaEggPage";
@@ -193,7 +194,10 @@ export default {
   watch: {
     ON_THIS_PAGE: {
       handler(value) {
-        if (value) this.updatedCurrentId();
+        if (value) {
+          this.updatedCurrentId();
+          this.sendEnterPageGA();
+        };
       },
     }
   },
@@ -201,6 +205,14 @@ export default {
     updatedCurrentId() {
       EventBus.$emit('UPDATE_CURRENTID', this.id);
     },
+    sendEnterPageGA() {
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "view",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [Click_Card_" + this.pageInfo.key + "]"
+      });
+    }
   },
 };
 </script>
