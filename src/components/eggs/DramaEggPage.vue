@@ -108,11 +108,6 @@ export default {
       vertical-align: bottom;
       transition: all 1s;
       position: relative;
-      // @media screen and (min-width: 769px) {
-      //   position: absolute;
-      //   left: 50%;
-      //   transform: translate(-50%);
-      // }
       .light {
         position: absolute;
         height: inherit;
@@ -120,6 +115,7 @@ export default {
         height: 100%;
         transform: translate(-50%);
         opacity: 1;
+        left: 50%;
         
       }
       .light_cover {

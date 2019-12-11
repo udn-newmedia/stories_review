@@ -75,6 +75,7 @@ import anime from 'animejs';
 import srcRWD from '@/mixin/srcRWD.js';
 import ProposalEggPage from '@/components/eggs/ProposalEggPage.vue';
 import CongrateEggPage from '@/components/eggs/CongrateEggPage.vue';
+import Utils from 'udn-newmedia-utils';
 
 export default {
   name: 'app',
@@ -289,6 +290,10 @@ export default {
         this.eggTitle = newVal.title
         this.eggShow(whichEgg, this.eggTotal)
       }
+    },
+    eggTotal: function(newVal, oldVal) {
+      let target = 'Collect_' + newVal
+      this.handleGA('Egg', 'Collect', target)
     }
   },
   mounted () {
@@ -474,6 +479,7 @@ export default {
       this.isAnimationClose = true
     },
     openProposal(){
+      this.handleGA('Egg', 'Get', 'Get_Pitch')
       this.isProposalClose = false
     },
     openProposalInBar(target) {
@@ -484,6 +490,14 @@ export default {
     updatedEggCollectedStatus(id) {
       EventBus.$emit('UPDATE_COLLECTED', id);    
     },
+    handleGA (category, action, target) {
+      console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
+      window.ga('newmedia.send', 'event', {
+        eventCategory: category,
+        eventAction: action,
+        eventLabel: "[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]"
+      });
+    }
   },
   computed: {
     curretnEggs: function () {
