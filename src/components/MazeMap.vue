@@ -1,8 +1,10 @@
 <template>
   <div class="maze-map">
     <div class="maze-map-turn-back" @click="updatedMazeMapFlag()">
-      <img :src="require('@/assets/map/goback.svg')" alt="go back">
-      返回
+      <div class="maze-map-turn-back-button">
+        <img :src="require('@/assets/map/goback.svg')" alt="go back">
+        返回
+      </div>
     </div>
     <div 
       id="maze-map-table"
@@ -36,11 +38,17 @@
             }"
             @click="mapTabClick(item_r.x + 1, item_r.y)"
           >
-            <div
+            <div class="maze-map-table-row-item-text">
+              <p
               v-for="(item, index) in item_r.title.split('\n')" :key="index"
-              class="maze-map-table-row-item-text"
-            >
-              <p>{{item}}</p>
+              >
+                {{item}}
+              </p>
+            </div>
+            <div
+              v-if="item_r.egg.flag && item_r.egg.collected"
+              class="maze-map-table-row-item-egg">
+              <img :src="item_r.egg.skin" alt="go back">
             </div>
           </li>
         </ul>
@@ -122,7 +130,13 @@ export default {
     justify-content: flex-start;
     align-items: center;
     margin: 5px 10px;
-    cursor: pointer;
+    .maze-map-turn-back-button {
+      width: 80px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+    }
     img {
       height: 24px;
       margin-right: 3px;
@@ -154,9 +168,8 @@ export default {
       width: calc(100% - 20px);
       height: calc(100% - 10px);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: space-between;
+      align-items: center;
       border-radius: 15px 15px 0 0;
       border-bottom: solid 2px #e4e4e4;
       margin: 5px 10px;
@@ -210,6 +223,23 @@ export default {
     @media screen and (min-width: 769px) {
       width: 320px;
       height: 135px;
+    }
+  }
+  .maze-map-table-row-item-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .maze-map-table-row-item-egg {
+    position: relative;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
     }
   }
 }

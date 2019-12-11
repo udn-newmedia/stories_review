@@ -550,12 +550,13 @@ export default {
 .page-maze-controller {
   position: fixed;
   right: 0;
-  top: 60%;
+  bottom: calc(10% + 50px);
   width: 120px;
   height: 120px;
   margin: 10px;
   @media screen and (min-width: 769px) {
     right: calc(50% - 590px);
+    top: 60%;
   }
   .page-maze-controller-container {
     position: absolute;
