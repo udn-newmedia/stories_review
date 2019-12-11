@@ -33,7 +33,9 @@
 
       <ul>
         <li v-for="(item, index) in bar_eggs" :key="index" >
-          <div :class="['egg-wrapper', item.class]"><img :class="{'isGet': item.isGet}" :src="item.src" alt="" class="egg-hidden"></div>
+          <div :class="['egg-wrapper', {'isSix': index === 5 && eggTotal === 6}, item.class]">
+            <img @click="openProposalInBar(index)" :class="{'isGet': item.isGet}" :src="item.src" alt="" class="egg-hidden">
+          </div>
         </li>
       </ul>
     </div>
@@ -78,7 +80,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 0,
+      eggTotal: 5,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -278,7 +280,7 @@ export default {
     },
   },
   watch: { 
-    pageInfo: function(newVal, oldVal) { // watch it
+    pageInfo: function(newVal, oldVal) {
       this.currentBackgroundColor = this.colorScheme[newVal.category - 1]
       if (newVal.egg.flag && newVal.egg.collected === false) {
         this.eggTotal += 1; 
@@ -344,13 +346,18 @@ export default {
               vm.isAnimationClose = true
               vm.updatedEggCollectedStatus(vm.currentId)
             }, 1000);
-          } else if (vm.eggTotal === 12) {
+          } else if (vm.eggTotal === 6) {
+            setTimeout(() => {
+              vm.isMenuClose = true
+              vm.updatedEggCollectedStatus(vm.currentId)
+            }, 1000);
+          } else {
               vm.isCongrateClose = false
-              setTimeout(() => {
-                vm.isCongrateClose = true
-                vm.isMenuClose = true
-                vm.isAnimationClose = true
-                vm.updatedEggCollectedStatus(vm.currentId)
+            setTimeout(() => {
+              vm.isCongrateClose = true
+              vm.isMenuClose = true
+              vm.isAnimationClose = true
+              vm.updatedEggCollectedStatus(vm.currentId)
             }, 5000);
           }
         }
@@ -360,7 +367,10 @@ export default {
       .add({
         targets: element,
         opacity: 1,
-        duration: 100
+        duration: 100,
+        begin: function() {
+          element.style.visibility = "visible";
+        }
       })
       .add({
         targets: '.congrate_title',
@@ -435,10 +445,12 @@ export default {
       });
 
       if (this.eggTotal === 6 || this.eggTotal === 12) {
+        let moveheight = -(element.getBoundingClientRect().height * 5)
         let sixEggInfo = document.querySelector('.congrate_content')
         tl.add({
           targets: sixEggInfo,
           duration: 1000,
+          translateY: moveheight,
           opacity: [0, 1]
         });
       }
@@ -463,6 +475,11 @@ export default {
     },
     openProposal(){
       this.isProposalClose = false
+    },
+    openProposalInBar(target) {
+      if (this.eggTotal > 5 && target === 5) {
+        this.openProposal()
+      }
     },
     updatedEggCollectedStatus(id) {
       EventBus.$emit('UPDATE_COLLECTED', id);    
@@ -557,6 +574,37 @@ export default {
         border-radius: 50%;
         background-color: #858585;
         text-align: center;
+        &.isSix {
+          border: solid 2px rgba(#ffbcbc, 0);
+          animation: flash 3s 5s ease-in-out infinite;
+          cursor: pointer;
+        }
+
+        @-webkit-keyframes flash {
+          from,
+          50%,
+          to {
+            border: solid 2px rgba(#ffbcbc, 1);
+          }
+
+          25%,
+          75% {
+            border: solid 2px rgba(#ffbcbc, 0);
+          }
+        }
+
+        @keyframes flash {
+          from,
+          50%,
+          to {
+            border: solid 2px rgba(#ffbcbc, 1);
+          }
+
+          25%,
+          75% {
+            border: solid 2px rgba(#ffbcbc, 0);
+          }
+        }
         img {
           height: 80%;
           width: 80%;
@@ -605,6 +653,7 @@ export default {
         color: #ffffff;
       }
       .proposal_btn_wrapper {
+        position: relative;
         font-size: 1.3125rem;
         border: solid 1px white;
         width: 79px;
@@ -613,12 +662,17 @@ export default {
         opacity: 0.58;
         background-color: #fff;
         color: #3d3657;
+        margin-top: 10px;
+        height: 40px;
         .proposal_btn {
+          line-height: 40px;
+          position: absolute;
           width: 100%;
           height: 100%;
           color: inherit;
           text-decoration: none;
           cursor: pointer;
+
         }
       }
     }
@@ -642,6 +696,7 @@ export default {
           text-align: center;
           z-index: 15;
           opacity: 0;
+          visibility: hidden;
           .egg_get_hidden {
             height: 25px;
             width: 25px;

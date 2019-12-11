@@ -1,6 +1,16 @@
 <template>
   <div :style="{'background-color': currentBackgroundColor}" class="proposal">
-      <h1>這是問卷跳調查頁面</h1>
+      <div class="proposal_content">
+          <iframe
+            width="100%"
+            height="600px"
+            src="https://www.surveycake.com/s/XvAX3"
+            style="border:#ddd 1px solid;"
+            allowTransparency="true"
+            frameborder="0">
+          </iframe> 
+      </div>
+      
       <div  :style="{'background-color': currentBackgroundColor}" @click="handleClose" class="close">
       </div>
   </div>
@@ -39,6 +49,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  .proposal_content {
+  }
   .close {
         position: absolute;
         right: 12px;
