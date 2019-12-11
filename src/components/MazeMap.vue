@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import Utils from 'udn-newmedia-utils';
 import EventBus from '@/eventBus';
 export default {
   name: 'MazeMap',
@@ -83,6 +84,7 @@ export default {
     return {
       row: 29,
       column: 5,
+      mazeMapFirstTimeFlag: false, // for GA
     };
   },
   computed: {
@@ -94,7 +96,15 @@ export default {
     mazeMapFlag: {
       handler(value) {
         const mazeMapItemWidth = this.isMob ? window.innerWidth * 0.7 : 320;
-        if (value) document.getElementById('maze-map-table').scrollLeft = this.mazeData[this.currentId].x * mazeMapItemWidth;
+        if (value) {
+          document.getElementById('maze-map-table').scrollLeft = this.mazeData[this.currentId].x * mazeMapItemWidth;
+          this.sendMazeMapTriggerGA('Trigger_total');
+
+          if (!this.mazeMapFirstTimeFlag) {
+            this.mazeMapFirstTimeFlag = true;
+            this.sendMazeMapTriggerGA('Trigger_People');
+          }
+        }
       },
     }
   },
@@ -112,6 +122,22 @@ export default {
     updatedMazeMapFlag() {
       EventBus.$emit('UPDATE_MAZEMAP_FLAG', false);    
     },
+    sendMazeMapTriggerGA(event) {
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "view",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [" + event + "]"
+      });
+    },
+    sendMazeMapItemClickGA(key) {
+      // window.ga("newmedia.send", {
+      //   "hitType": "event",
+      //   "eventCategory": "view",
+      //   "eventAction": "click",
+      //   "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [map_item_click " + key + "]"
+      // });
+    }
   },
 };
 </script>
