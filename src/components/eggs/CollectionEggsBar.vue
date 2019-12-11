@@ -80,7 +80,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 5,
+      eggTotal: 0,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -406,30 +406,30 @@ export default {
       .add({
         targets: firework1,
         opacity: 0,
-        duration: 100
+        duration: 50
       })
       .add({
         targets: firework2,
         opacity: 0,
-        delay: 250,
-        duration: 100
+        delay: 50,
+        duration: 50
       })
       .add({
         targets: firework3,
         opacity: 0,
-        delay: 500,
-        duration: 100
+        delay: 300,
+        duration: 50
       })
       .add({
         targets: firework4,
         opacity: 0,
-        delay: 600,
-        duration: 100
+        delay: 400,
+        duration: 50
       })
       .add({
         targets: element,
-        duration: 1250,
-        delay: 2500,
+        duration: 250,
+        delay: 1000,
         translateX: move_x,
         translateY: move_y -2,
         translateZ: 0,
@@ -714,7 +714,7 @@ export default {
            position: absolute;
            transform: translate(-50%, -50%);
            opacity: 0;
-           transition: all 1s;
+           transition: all .3s;
          }
          .firework1 {
            transform: translate(0%, -100%);

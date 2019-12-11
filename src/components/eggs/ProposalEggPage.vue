@@ -50,6 +50,10 @@ export default {
   justify-content: center;
   align-items: center;
   .proposal_content {
+      width: 100%;
+    @media screen and (min-width: 769px) {
+      width: 50%;
+    }
   }
   .close {
         position: absolute;
