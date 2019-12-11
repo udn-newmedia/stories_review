@@ -549,8 +549,8 @@ export default {
 <style lang="scss" scoped>
 .page-maze-controller {
   position: fixed;
-  right: 0;
-  bottom: calc(10% + 50px);
+  right: 18px;
+  top: calc((100vw - 40px) * 0.63 + 36vh - 25px);
   width: 120px;
   height: 120px;
   margin: 10px;

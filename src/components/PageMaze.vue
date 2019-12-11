@@ -34,11 +34,15 @@
         :mazeMapFlag="mazeMapFlag"
       />
     </div>
+    <AwardHint
+      v-if="mazeData[currentId].award"
+    />
   </div>
 </template>
 
 <script>
 import EventBus from '@/eventBus';
+import AwardHint from "./AwardHint";
 import CoverPage from "./CoverPage";
 import DirController from "./DirController";
 import MazeMap from "./MazeMap";
@@ -48,6 +52,7 @@ import CollectionEggsBar from "./eggs/CollectionEggsBar";
 export default {
   name: "PageMaze",
   components: {
+    AwardHint,
     CoverPage,
     DirController,
     MazeMap,

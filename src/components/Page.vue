@@ -230,14 +230,12 @@ export default {
 .page-content {
   position: relative;
   overflow: hidden;
-  // width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   height: 100%;
 }
 .page-content--observatory {
   height: 60%;
-  // border: 2px red solid;
   @media screen and (min-width: 769px) {
     width: 80%;
     height: 100%;
@@ -245,7 +243,6 @@ export default {
 }
 .page-content--drama {
   height: 65%;
-  // border: 2px red solid;
   @media screen and (min-width: 769px) {
     width: 80%;
     height: 100%;
@@ -253,7 +250,6 @@ export default {
 }
 .page-content--project {
   height: 80%;
-  // border: 2px red solid;
   @media screen and (min-width: 769px) {
     height: 100%;
   }

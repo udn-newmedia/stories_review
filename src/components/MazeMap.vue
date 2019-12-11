@@ -147,6 +147,7 @@ export default {
     height: 100%;
     overflow-x: auto;
     @media screen and (min-width: 769px) {
+      height: calc(100% - 50px);
       margin-left: 185px;
     }
   }
@@ -174,6 +175,7 @@ export default {
       border-bottom: solid 2px #e4e4e4;
       margin: 5px 10px;
       padding: 10px;
+      cursor: pointer;
       p {
         font-size: 16px;
         line-height: 1.3;
