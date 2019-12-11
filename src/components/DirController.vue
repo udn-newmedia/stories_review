@@ -556,7 +556,7 @@ export default {
   margin: 10px;
   @media screen and (min-width: 769px) {
     right: calc(50% - 590px);
-    top: 60%;
+    top: 63%;
   }
   .page-maze-controller-container {
     position: absolute;

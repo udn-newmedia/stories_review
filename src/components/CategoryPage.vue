@@ -213,6 +213,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 10% 0;
   @media screen and (min-width: 769px) {
     align-items: center;
   }
