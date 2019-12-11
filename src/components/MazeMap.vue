@@ -36,7 +36,7 @@
               'maze-map-table-row-item--category4-active': item_r.category === 4 && +index_r === +currentId,
               'maze-map-table-row-item--category5-active': item_r.category === 5 && +index_r === +currentId,
             }"
-            @click="mapTabClick(item_r.x + 1, item_r.y)"
+            @click="mapTabClick(item_r.x + 1, item_r.y, item_r.key)"
           >
             <div class="maze-map-table-row-item-text">
               <p
@@ -109,7 +109,7 @@ export default {
     }
   },
   methods: {
-    mapTabClick(x, y) {
+    mapTabClick(x, y, key) {
       this.updatedMazeMapFlag();
       this.$router.push({
         name: 'coords',
@@ -118,6 +118,7 @@ export default {
           y: y
         }
       });
+      this.sendMazeMapItemClickGA(key);
     },
     updatedMazeMapFlag() {
       EventBus.$emit('UPDATE_MAZEMAP_FLAG', false);    
@@ -131,12 +132,12 @@ export default {
       });
     },
     sendMazeMapItemClickGA(key) {
-      // window.ga("newmedia.send", {
-      //   "hitType": "event",
-      //   "eventCategory": "view",
-      //   "eventAction": "click",
-      //   "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [map_item_click " + key + "]"
-      // });
+      window.ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "view",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [map_item_click " + key + "]"
+      });
     }
   },
 };
