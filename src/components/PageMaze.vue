@@ -106,8 +106,8 @@ export default {
           category: 5,
           egg: {
             flag: true,
-            skin: require('@/assets/eggs/E_3.svg'),
             collected: false,
+            skin: require('@/assets/eggs/E_3.svg'),
             drama: {},
             observatory: {},
             maze: {
@@ -214,9 +214,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/L_3.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/L_3.svg'),
               job: '數位內容製作',
               name: '洪欣慈',
               profile: {
@@ -342,9 +342,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/T_3.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/T_3.svg'),
               job: '數位內容製作',
               name: '蔡佩蓉',
               profile: {
@@ -440,9 +440,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/Z_3.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/Z_3.svg'),
               job: '工程師',
               name: '楊若榆',
               profile: {
@@ -523,10 +523,10 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/AE_3.svg'),
             drama: {},
             observatory: {
               flag: true,
-              skin: require('@/assets/eggs/AE_3.svg'),
               pics: {
                 mob: [
                   require('@/assets/observatory/AE_3_pic01_mob.jpg'),
@@ -756,9 +756,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/P_4.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/P_4.svg'),
               job: '動畫師',
               name: '許藹雯',
               profile: {
@@ -849,8 +849,8 @@ export default {
           category: 5,
           egg: {
             flag: true,
-            skin: require('@/assets/eggs/D_5.svg'),
             collected: false,
+            skin: require('@/assets/eggs/D_5.svg'),
             drama: {},
             observatory: {},
             maze: {
@@ -987,9 +987,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/M_5.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/M_5.svg'),
               job: '視覺設計師',
               name: '張心慈',
               profile: {
@@ -1115,10 +1115,10 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/U_5.svg'),
             drama: {},
             observatory: {
               flag: true,
-              skin: require('@/assets/eggs/U_5.svg'),
               pics: {
                 mob: [
                   require('@/assets/observatory/U_5_pic_mob.jpg'),
@@ -1242,10 +1242,10 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/H_6.svg'),
             drama: {},
             observatory: {
               flag: true,
-              skin: require('@/assets/eggs/H_6.svg'),
               pics: {
                 mob: [
                   require('@/assets/observatory/H_6_pic_mob.jpg'),
@@ -1387,9 +1387,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/Q_6.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/Q_6.svg'),
               job: '視覺設計師',
               name: '許瑋琳',
               profile: {
@@ -1485,9 +1485,9 @@ export default {
           egg: {
             flag: true,
             collected: false,
+            skin: require('@/assets/eggs/W_6.svg'),
             drama: {
               flag: true,
-              skin: require('@/assets/eggs/W_6.svg'),
               job: '數位內容製作',
               name: '謝汶均',
               profile: {
