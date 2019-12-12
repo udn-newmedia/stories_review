@@ -119,7 +119,7 @@ export default {
     @media screen and (min-width: 769px) {
       width: 50%;
       height: 45%;
-      padding: 20px;
+      padding: 20px 0 20px 40px;
       text-align: right;
     }
     img {
@@ -136,7 +136,7 @@ export default {
     @media screen and (min-width: 769px) {
       width: 50%;
       height: 385px;
-      padding: 20px 20px 20px 50px;
+      padding: 0 20px 20px 50px;
     }
   }
   .project-page-category {

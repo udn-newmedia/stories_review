@@ -1,5 +1,8 @@
 <template>
-  <div class="page-maze-controller">
+  <div :class="{
+    'page-maze-controller': true,
+    'page-maze-controller--cover': isOnCover,
+  }">
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -383,6 +386,9 @@ export default {
     isMob() {
       return window.innerWidth < 769 ? true : false;
     },
+    isOnCover() {
+      return this.$route.params.x == 0 && this.$route.params.y == 0;
+    }
   },
   methods: {
     handleControllerClick(dir) {
@@ -554,8 +560,9 @@ export default {
   width: 120px;
   height: 120px;
   margin: 10px;
+  transition: .666s ease-in-out;
   @media screen and (min-width: 769px) {
-    right: calc(50% - 590px);
+    right: calc(50% - 540px);
     top: 63%;
   }
   .page-maze-controller-container {
@@ -588,6 +595,12 @@ export default {
     pointer-events: none;
     color: #898989;
     opacity: 0.2;
+  }
+}
+.page-maze-controller--cover {
+  @media screen and (min-width: 769px) {
+    transform: scale(1.75);
+    right: 180px;
   }
 }
 .maze-map-button {

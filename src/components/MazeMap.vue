@@ -25,16 +25,16 @@
             v-if="+item_r.y === +index_c"
             :class="{
               'maze-map-table-row-item': true,
-              'maze-map-table-row-item--category1': item_r.category === 1 && +index_r !== +currentId,
-              'maze-map-table-row-item--category2': item_r.category === 2 && +index_r !== +currentId,
-              'maze-map-table-row-item--category3': item_r.category === 3 && +index_r !== +currentId,
-              'maze-map-table-row-item--category4': item_r.category === 4 && +index_r !== +currentId,
-              'maze-map-table-row-item--category5': item_r.category === 5 && +index_r !== +currentId,
-              'maze-map-table-row-item--category1-active': item_r.category === 1 && +index_r === +currentId,
-              'maze-map-table-row-item--category2-active': item_r.category === 2 && +index_r === +currentId,
-              'maze-map-table-row-item--category3-active': item_r.category === 3 && +index_r === +currentId,
-              'maze-map-table-row-item--category4-active': item_r.category === 4 && +index_r === +currentId,
-              'maze-map-table-row-item--category5-active': item_r.category === 5 && +index_r === +currentId,
+              'maze-map-table-row-item--category1': item_r.y === 0 && +index_r !== +currentId,
+              'maze-map-table-row-item--category2': item_r.y === 1 && +index_r !== +currentId,
+              'maze-map-table-row-item--category3': item_r.y === 2 && +index_r !== +currentId,
+              'maze-map-table-row-item--category4': item_r.y === 3 && +index_r !== +currentId,
+              'maze-map-table-row-item--category5': item_r.y === 4 && +index_r !== +currentId,
+              'maze-map-table-row-item--category1-active': item_r.y === 0 && +index_r === +currentId,
+              'maze-map-table-row-item--category2-active': item_r.y === 1 && +index_r === +currentId,
+              'maze-map-table-row-item--category3-active': item_r.y === 2 && +index_r === +currentId,
+              'maze-map-table-row-item--category4-active': item_r.y === 3 && +index_r === +currentId,
+              'maze-map-table-row-item--category5-active': item_r.y === 4 && +index_r === +currentId,
             }"
             @click="mapTabClick(item_r.x + 1, item_r.y, item_r.key)"
           >
@@ -46,8 +46,12 @@
               </p>
             </div>
             <div
-              v-if="item_r.egg.flag && item_r.egg.collected"
-              class="maze-map-table-row-item-egg">
+              v-if="item_r.egg.flag"
+              :class="{
+                'maze-map-table-row-item-egg': true,
+                'maze-map-table-row-item-egg--active': item_r.egg.collected,
+              }"
+            >
               <img :src="item_r.egg.skin" alt="go back">
             </div>
           </li>
@@ -199,7 +203,6 @@ export default {
       justify-content: space-between;
       align-items: center;
       border-radius: 15px 15px 0 0;
-      border-bottom: solid 2px #e4e4e4;
       margin: 5px 10px;
       padding: 10px;
       cursor: pointer;
@@ -216,33 +219,60 @@ export default {
     }
     .maze-map-table-row-item--category1 {
       background-color: #40de7b44;
+      border-bottom: solid 2px #40de7b;
     }
     .maze-map-table-row-item--category2 {
       background-color: #f45b7444;
+      border-bottom: solid 2px #f45b74;
     }
     .maze-map-table-row-item--category3 {
       background-color: #fa6b4644;
+      border-bottom: solid 2px #fa6b46;
     }
     .maze-map-table-row-item--category4 {
       background-color: #a2c4fd44;
+      border-bottom: solid 2px #a2c4fd;
     }
     .maze-map-table-row-item--category5 {
-      background-color: #3d365744;
+      background-color: #e4e4e444;
+      border-bottom: solid 2px #e4e4e4;
     }
     .maze-map-table-row-item--category1-active {
       background-color: #40de7b;
+      animation: shake 0.1s ease-in-out infinite;
     }
     .maze-map-table-row-item--category2-active {
       background-color: #f45b74;
+      animation: shake 0.1s ease-in-out infinite;
     }
     .maze-map-table-row-item--category3-active {
       background-color: #fa6b46;
+      animation: shake 0.1s ease-in-out infinite;
     }
     .maze-map-table-row-item--category4-active {
       background-color: #a2c4fd;
+      animation: shake 0.1s ease-in-out infinite;
     }
     .maze-map-table-row-item--category5-active {
-      background-color: #3d3657;
+      background-color: #e4e4e4;
+      animation: shake 0.1s ease-in-out infinite;
+    }
+    @keyframes shake {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-1deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      75% {
+        transform: rotate(1deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
     }
   }
   .maze-map-table-row--active {
@@ -267,9 +297,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.3;
     img {
       width: 100%;
     }
+  }
+  .maze-map-table-row-item-egg--active {
+    opacity: 1;
   }
 }
 </style>

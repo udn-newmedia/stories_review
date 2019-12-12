@@ -1570,7 +1570,7 @@ export default {
           key: 'c_7',
           title: '製作團隊',
           cover: '',
-          category: 4,
+          category: 6,
           description: '',
           editorFlag: true,
           egg: {
@@ -1678,7 +1678,8 @@ export default {
         '#f45b74',
         '#fa6b46',
         '#a2c4fd',
-        '#3d3657'
+        '#3d3657',
+        '#ffffff',
       ],
       currentId: '0',
       mazeMapFlag: false,
