@@ -512,22 +512,6 @@ export default {
     updatedMazeMapFlag() {
       EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
     },
-    handleControllerTouchstart(e) {
-      this.longTouchFlag = true;
-      setTimeout(() => {
-        if (this.longTouchFlag) {
-          this.mazeMapToggleFlag = true;
-          document.getElementById('controller').removeEventListener('touchstart',   this.handleControllerTouchstart);
-          document.getElementById('controller').removeEventListener('touchend',   this.handleControllerTouchend);
-        }
-      }, 3000);
-    },
-    handleControllerTouchmove(e) {
-      this.longTouchFlag = false;
-    },
-    handleControllerTouchend(e) {
-      this.longTouchFlag = false;
-    },
   },
   mounted() {
     document.addEventListener('keyup', e => {
@@ -542,12 +526,6 @@ export default {
 
       if (e.keyCode === 27) this.updatedMazeMapFlag();
     });
-
-    if (window.innerWidth < 1024) {
-      document.getElementById('controller').addEventListener('touchstart', this.handleControllerTouchstart);
-      document.getElementById('controller').addEventListener('touchmove', this.handleControllerTouchmove);
-      document.getElementById('controller').addEventListener('touchend', this.handleControllerTouchend);
-    }    
   }
 };
 </script>

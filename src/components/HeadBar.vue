@@ -1,7 +1,10 @@
 <template>
   <div class="head-bar">
     <div class="head-bar-logo">
-      <a class="head-bar-link" href="#/0/0" @click="sendLogoGa"><i class="udn-icon udn-icon-logo" /></a>
+      <i
+        class="udn-icon udn-icon-logo"
+        @click="updatedMazeMapFlag()"
+      />
     </div>
     <div class="head-bar-share">
       <a class="head-bar-link" target="_blank" :href="shareUrlFB" @click="sendFacebookGA">
@@ -16,6 +19,7 @@
 
 <script>
 import Utils from 'udn-newmedia-utils';
+import EventBus from "@/eventBus";
 
 export default {
   name: 'HeadBar',
@@ -45,6 +49,9 @@ export default {
     },
   },
   methods: {
+    updatedMazeMapFlag() {
+      EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
+    },
     sendFacebookGA() {
       window.ga("newmedia.send", {
         "hitType": "event",
@@ -59,14 +66,6 @@ export default {
         "eventCategory": "share",
         "eventAction": "click",
         "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [headbar Line分享]"
-      });
-    },
-    sendLogoGa() {
-      window.ga("newmedia.send", {
-        "hitType": "event",
-        "eventCategory": "logo",
-        "eventAction": "click",
-        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [圓形logo點擊]"
       });
     },
   },
@@ -102,13 +101,7 @@ export default {
     width: 24px;
   }
 }
-.head-bar-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  text-decoration-line: none;
-  color: #000000;
+.udn-icon {
   cursor: pointer;
 }
 </style>

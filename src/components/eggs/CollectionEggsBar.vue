@@ -1,5 +1,5 @@
 <template>
-  <div class="collection-eggs-bar">
+  <div v-if="!isOnCover" class="collection-eggs-bar">
     <div v-if="isProposalClose === false">
       <ProposalEggPage @closeProposal="closeProposal" :currentBackgroundColor="currentBackgroundColor"></ProposalEggPage>
     </div>
@@ -517,6 +517,9 @@ export default {
     fireworksRWD: function () {
       let vm  = this
       return this.srcRWD(vm.fireworksMob, vm.fireworks)
+    },
+    isOnCover() {
+      return this.$route.params.x == 0 && this.$route.params.y == 0;
     }
   }
 }

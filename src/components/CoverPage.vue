@@ -2,9 +2,29 @@
   <div class="cover-page">
     <div class="cover-page-head">
       <div class="cover-page-title">
-        <img :src="require(isMob ? '@/assets/cover/cover_title_mob.png' : '@/assets/cover/cover_title.png')" alt="專題迷宮">
+        <div class="cover-page-title-canvas">
+          <canvas
+            id="cover-page-title-canvas"
+            :class="{
+              'cover-page-title-canvas': true,
+              'cover-page-title-canvas--disabled': imageCompletedFlag,
+            }"
+          />
+        </div>
+        <div
+          :class="{
+            'cover-page-title-image': true,
+            'cover-page-title-image--active': imageCompletedFlag,
+          }"
+        >
+          <img :src="titleImageSrc" alt="專題迷宮">
+        </div>
       </div>
-      <div class="cover-page-description">
+      <div :class="{
+        'cover-page-description': true,
+        'cover-page-description--active': imageCompletedFlag,
+        }"
+      >
         <div v-if="!isMob" class="cover-page-description-light">
           <img :src="require('@/assets/cover/cover_light.png')" alt="light">
         </div>
@@ -23,10 +43,174 @@
 <script>
 export default {
   name: 'CoverPage',
+  data() {
+    return {
+      imageCompletedFlag: false,
+    };
+  },
   computed: {
     isMob() {
       return window.innerWidth < 768 ? true : false;
-    }
+    },
+    pageImageSize() {
+      return {
+        width: this.isMob ? 200 :　window.innerWidth * 0.6,
+        height: window.innerHeight * 0.7,
+      }
+    },
+    coverImageRatio() {
+      return this.isMob ? (443 / 272) : (931 / 1288);
+    },
+    titleImageSrc() {
+      return require(this.isMob ? '@/assets/cover/cover_title_mob.png' : '@/assets/cover/cover_title.png');
+    },
+  },
+  methods: {
+    drawParticules() {
+      const vm = this;
+      const canvas = document.getElementById('cover-page-title-canvas');
+      const context = canvas.getContext('2d');
+      const img = new Image();
+      const particules_max = 2000;
+      const paritcule_size = 5;
+      let particlesDistance = 0;
+      let pixelCoordinates;
+      let pixels;
+      let raf;
+      init();
+      function init() {
+        canvas.width = window.innerWidth;
+        canvas.height = vm.pageImageSize.height;
+        drawImage();
+      }
+      function drawImage() {        
+        img.crossOrigin = 'Anonymous';
+        img.src = vm.titleImageSrc;
+        img.onload = function() {
+          context.drawImage(
+            img,
+            0,
+            0,
+            img.width,
+            img.height,
+            0,
+            0,
+            vm.pageImageSize.width,
+            vm.pageImageSize.width * vm.coverImageRatio
+          );
+          getImageData();
+        };
+      }
+      function getImageData() {
+        const imageData = context.getImageData(0, 0, img.width, img.height).data;
+
+        pixelCoordinates = [];
+        pixels = [];
+        for (let i = 0; i < imageData.length; i = i + 4) {
+          if (imageData[i] !== 0) {
+            const currentPixel = i / 4;
+            const x = currentPixel % img.width;
+            const y = ~~(currentPixel / img.width);
+            pixelCoordinates.push({
+              x: x,
+              y: y,
+              red: imageData[i],
+              green: imageData[i + 1],
+              blue: imageData[i + 2],
+              alpha: imageData[i + 3]
+            });
+          }
+        }
+        generateParticuleImage();
+        function generateParticuleImage() {
+          let particuleOffset = 0;
+          if (pixelCoordinates.length > particules_max) {
+            particuleOffset = ~~(pixelCoordinates.length / particules_max);
+          }
+          for (let i = 0; i < particules_max; i++) {
+            const pIndex = particuleOffset * i;
+            const pixelOptions = {
+              x: pixelCoordinates[pIndex].x,
+              y: pixelCoordinates[pIndex].y,
+              colors: {
+                red: pixelCoordinates[pIndex].red,
+                green: pixelCoordinates[pIndex].green,
+                blue: pixelCoordinates[pIndex].blue,
+                alpha: pixelCoordinates[pIndex].alpha
+              }
+            };
+            const pixel = new particule(pixelOptions);
+            pixels.push(pixel);
+          }
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          render();
+          generateTimelines();
+        }
+      }
+      function onMouseMove(ev) {
+        const mousePos = ev * 2;
+        for (let i = 0; i < pixels.length; i++) {
+          pixels[i].timeline.time(mousePos);
+        }
+      }
+      function render() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < pixels.length; i++) {
+          pixels[i].draw();
+        }
+        onMouseMove(Math.min(particlesDistance += 0.03, 1));
+        vm.imageCompletedFlag = particlesDistance >= 0.7 ? true : false ;
+        raf = window.requestAnimationFrame(render);
+      }
+      function generateTimelines() {
+        for (let i = 0; i < pixels.length; i++) {
+          pixels[i].animate();
+        }
+      }
+      function destroyParticules() {
+        for (let i = 0; i < pixels.length; i++) {
+          pixels[i] = null;
+          delete pixels[i];
+        }
+      }
+      class particule {
+        constructor(options) {
+          const centerOffsetX = canvas.width / 2 - img.width / 2;
+          const centerOffsetY = 0;
+          this.centerPosX = centerOffsetX + options.x;
+          this.centerPosY = centerOffsetY + options.y;
+          this.posX = getRandomInt(0, canvas.width);
+          this.posY = getRandomInt(0, canvas.height);
+          this.timeline = new TimelineMax({
+            paused: true
+          });
+          this.colors = options.colors;
+        }
+        draw() {
+          context.beginPath();
+          context.arc(this.posX, this.posY, paritcule_size, 0, 2 * Math.PI);
+          context.fillStyle = `rgb( ${this.colors.red},${this.colors.green},${this.colors.blue})`;
+          context.globalAlpha = this.colors.alpha;
+          context.fill();
+        }
+        animate() {
+          this.timeline.to(this, 1, {
+            posX: this.centerPosX,
+            posY: this.centerPosY,
+            delay: getRandomFloat(0, 0.001)
+          });
+        }
+      }
+      function getRandomInt(min, max) {
+        return ~~(Math.random() * (max - min + 1)) + min;
+      }
+      function getRandomFloat(min, max) {
+        return Math.random() * (max - min + 1) + min;
+      }
+    },
+  },
+  mounted() {
+    this.drawParticules();
   },
 };
 </script>
@@ -34,6 +218,7 @@ export default {
 <style lang="scss" scoped>
 .cover-page {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
 }
@@ -52,19 +237,36 @@ export default {
   .cover-page-title {
     position: relative;
     width: 200px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    height: 100%;
     @media screen and (min-width: 769px) {
       width: 60%;
-      padding-right: 50px;
-      padding-top: 25px;
     }
-    img {
+    .cover-page-title-image {
+      position: relative;
       width: 100%;
-      @media screen and (min-width: 769px) {
-        width: 85%;
+      height: 100%;
+      opacity: 0;
+      transition: .333s ease-in-out;
+      img {
+        width: 100%;
+        @media screen and (min-width: 769px) {
+          width: 100%;
+        }
       }
+    }
+    .cover-page-title-image--active {
+      opacity: 1;
+    }
+    .cover-page-title-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      transition: .333s ease-in-out;
+    }
+    .cover-page-title-canvas--disabled {
+      opacity: 0;
     }
   }
   .cover-page-description {
@@ -73,6 +275,7 @@ export default {
     padding: 60px 15px 0 5px;
     display: flex;
     flex-direction: column;
+    opacity: 0;
     @media screen and (min-width: 769px) {
       width: 40%;
       padding: 150px 90px 0 90px;
@@ -114,7 +317,10 @@ export default {
         font-size: 18px;
       }
     }
-
+  }
+  .cover-page-description--active {
+    transition: opacity .666s .333s ease-in-out;
+    opacity: 1;
   }
 }
 .cover-page-body {

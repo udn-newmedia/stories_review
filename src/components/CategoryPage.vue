@@ -58,8 +58,8 @@ export default {
   methods: {
     drawParticules() {
       const vm = this;
-      const canvas = document.getElementById("category-page-canvas" + vm.id);
-      const context = canvas.getContext("2d");
+      const canvas = document.getElementById('category-page-canvas' + vm.id);
+      const context = canvas.getContext('2d');
       const img = new Image();
       const particules_max = 2000;
       const paritcule_size = 5;
