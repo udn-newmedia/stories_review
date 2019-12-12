@@ -17,6 +17,7 @@
       />
     </div>
     <DirController
+      :mazeMapFlag="mazeMapFlag"
       :mazeIndexTable="mazeIndexTable"
       :currentCategory="currentCategory"
     />

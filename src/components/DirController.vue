@@ -375,9 +375,14 @@ export default {
       type: Number,
       default: 1,
     },
+    mazeMapFlag: {
+      type: Boolean,
+      default: false,
+    }
   },
   data() {
     return {
+      isMapOpen: false,
       mazeMapToggleFlag: false,
       longTouchFlag: false,
     };
@@ -524,7 +529,13 @@ export default {
       if (e.keyCode === 39 && this.hasNeighbor('right'))
         this.handleControllerClick('right');
 
-      if (e.keyCode === 27) this.updatedMazeMapFlag();
+      if (e.keyCode === 27) {
+        if (this.mazeMapFlag === true) {
+          EventBus.$emit('UPDATE_MAZEMAP_FLAG', false);
+        } else {
+          EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
+        }
+      };
     });
   }
 };

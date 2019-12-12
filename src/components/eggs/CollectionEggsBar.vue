@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!isOnCover" class="collection-eggs-bar">
+  <div :class="{'eggs-bar-disable': isOnCover}" class="collection-eggs-bar">
     <div v-if="isProposalClose === false">
       <ProposalEggPage @closeProposal="closeProposal" :currentBackgroundColor="currentBackgroundColor"></ProposalEggPage>
     </div>
@@ -528,6 +528,10 @@ export default {
 <style lang="scss">
 
 .collection-eggs-bar {
+  opacity: 1;
+  &.eggs-bar-disable {
+    opacity: 0;
+  }
   .egg-repo {
     position: absolute;
     left: 0px;
