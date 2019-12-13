@@ -1700,7 +1700,7 @@ export default {
       );
     },
     currentCategory() {
-      return !this.isLeaveCover ? 6 : this.mazeData[this.currentId].category;
+      return this.isLeaveCover === false ? 6 : this.mazeData[this.currentId].category;
     },
     isLeaveCover() {
       return +this.$route.params.x > 0;
@@ -1723,8 +1723,8 @@ export default {
     this.$router.push({
       name: 'coords',
       params: {
-        x: 0,
-        y: 0
+        x: '0',
+        y: '0'
       }
     });
   },

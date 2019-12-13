@@ -86,9 +86,6 @@ export default {
       });
     }
   },
-  data() {
-    return {};
-  },
 }
 </script>
 
@@ -159,6 +156,9 @@ export default {
       font-weight: bold;
       line-height: 1.3;
       color: #ffffff;
+      @media screen and (max-width: 375px) {
+        font-size: 22px;
+      }
       @media screen and (min-width: 769px) {
         font-size: 44px;
       }

@@ -222,6 +222,7 @@ export default {
   },
   mounted() {
     this.drawParticules();
+    // window.onload = () => { this.drawParticules(); };
   },
 };
 </script>
@@ -291,7 +292,19 @@ export default {
       left: 0;
       width: 100vw;
       height: 100%;
-      transition: .333s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      animation: bounce .666s ease-in-out forwards;
+      @keyframes bounce {
+        0% {
+          transform: scale(5);
+        }
+        50% {
+          transform: scale(2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     }
     .cover-page-title-canvas--disabled {
       opacity: 0;
@@ -304,6 +317,9 @@ export default {
     display: flex;
     flex-direction: column;
     opacity: 0;
+    @media screen and (max-width: 375px) {
+      padding: 10vh 15px 0 0;
+    }
     @media screen and (min-width: 769px) {
       width: 40%;
       padding: 150px 100px 0 0;

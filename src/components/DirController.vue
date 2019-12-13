@@ -401,28 +401,28 @@ export default {
         this.handleOnCoverControllerClick(dir);
       } else {
         const vm = this;
-        const currentX = this.$route.params.x ? +this.$route.params.x : 0;
-        const currentY = this.$route.params.y ? +this.$route.params.y : 0;
+        const currentX = this.$route.params.x ? +this.$route.params.x : '0';
+        const currentY = this.$route.params.y ? +this.$route.params.y : '0';
   
         function traceDirect() {
           let directArray = vm.mazeIndexTable.filter((e, i) => {
             if (dir === 'up') {
-              if (e[0] === currentX && e[1] < currentY) {
+              if (e[0] === +currentX && e[1] < +currentY) {
                 return e;
               }
             }
             if (dir === 'down') {
-              if (e[0] === currentX && e[1] > currentY) {
+              if (e[0] === +currentX && e[1] > +currentY) {
                 return e;
               }
             }
             if (dir === 'left') {
-              if (e[0] < currentX && e[1] === currentY) {
+              if (e[0] < +currentX && e[1] === +currentY) {
                 return e;
               }
             }
             if (dir === 'right') {
-              if (e[0] > currentX && e[1] === currentY) {
+              if (e[0] > +currentX && e[1] === +currentY) {
                 return e;
               }
             }
@@ -448,8 +448,8 @@ export default {
             this.$router.push({
               name: 'coords',
               params: {
-                x: currentX,
-                y: traceDirect()
+                x: currentX.toString(),
+                y: traceDirect().toString()
               }
             });
             break;
@@ -457,8 +457,8 @@ export default {
             this.$router.push({
               name: 'coords',
               params: {
-                x: currentX,
-                y: traceDirect()
+                x: currentX.toString(),
+                y: traceDirect().toString()
               }
             });
             break;
@@ -466,8 +466,8 @@ export default {
             this.$router.push({
               name: 'coords',
               params: {
-                x: traceDirect(),
-                y: currentY
+                x: traceDirect().toString(),
+                y: currentY.toString()
               }
             });
             break;
@@ -475,8 +475,8 @@ export default {
             this.$router.push({
               name: 'coords',
               params: {
-                x: traceDirect(),
-                y: currentY
+                x: traceDirect().toString(),
+                y: currentY.toString()
               }
             });
             break;
@@ -491,8 +491,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: 1,
-              y: 0,
+              x: '1',
+              y: '0',
             }
           });
           break;
@@ -500,8 +500,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: 1,
-              y: 2,
+              x: '1',
+              y: '2',
             }
           });
           break;
@@ -509,8 +509,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: 1,
-              y: 1,
+              x: '1',
+              y: '1',
             }
           });
           break;
@@ -518,8 +518,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: 1,
-              y: 3,
+              x: '1',
+              y: '3',
             }
           });
           break;
@@ -592,7 +592,7 @@ export default {
   position: fixed;
   z-index: 10;
   right: 18px;
-  top: calc((100vw - 40px) * 0.63 + 36vh - 25px);
+  top: calc((100vw - 40px) * 0.63 + 36vh - 50px);
   width: 120px;
   height: 120px;
   margin: 10px;
