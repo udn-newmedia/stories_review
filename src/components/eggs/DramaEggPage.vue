@@ -64,7 +64,7 @@ export default {
     'pageInfo.egg.collected': {
       handler(newName, oldName) {
         if(newName) {
-          console.log('hello light:',newName)
+          // console.log('hello light:',newName)
           this.isEnter = true
         }
       }

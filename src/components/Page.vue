@@ -198,11 +198,11 @@ export default {
         this.pageInfo.y === this.$store.state.y
       ) return true;
       if (
-        this.pageInfo.x === this.$store.state.x &&
+        this.pageInfo.x === this.$store.state.x - 1 &&
         this.pageInfo.y + 1 === this.$store.state.y
       ) return true;
       if (
-        this.pageInfo.x === this.$store.state.x &&
+        this.pageInfo.x === this.$store.state.x - 1 &&
         this.pageInfo.y - 1 === this.$store.state.y
       ) return true;
       return false;
@@ -230,7 +230,7 @@ export default {
       this.handleGA(category, action, target);
     },
     handleGA (category, action, target) {
-      console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
+      // console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
       window.ga('newmedia.send', 'event', {
         eventCategory: category,
         eventAction: action,
