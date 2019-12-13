@@ -341,6 +341,8 @@ export default {
       let tl = anime.timeline({
         begin: function () {
             vm.isAnimationClose = false
+            vm.$store.dispatch('setAnimationFlag', true)
+            console.log(vm.$store)
         },
         complete: function() {
           let img = vm.eggDictionary[`egg${target}`]
@@ -366,6 +368,8 @@ export default {
               vm.updatedEggCollectedStatus(vm.currentId)
             }, 5000);
           }
+
+          vm.$store.dispatch('setAnimationFlag', false)
         }
       });
 
