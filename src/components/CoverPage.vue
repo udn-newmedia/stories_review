@@ -1,5 +1,9 @@
 <template>
-  <div class="cover-page">
+  <div :class="{
+    'cover-page': true,
+    'cover-page--disabled': isLeaveCover,
+    }"
+  >
     <div class="cover-page-head">
       <div class="cover-page-title">
         <div class="cover-page-title-canvas">
@@ -43,6 +47,12 @@
 <script>
 export default {
   name: 'CoverPage',
+  props: {
+    isLeaveCover: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       imageCompletedFlag: false,
@@ -54,12 +64,13 @@ export default {
     },
     pageImageSize() {
       return {
-        width: this.isMob ? 200 :　window.innerWidth * 0.6,
+        width: window.innerWidth * 0.6,
         height: window.innerHeight * 0.7,
       }
     },
     coverImageRatio() {
-      return this.isMob ? (443 / 272) : (931 / 1288);
+      // return this.isMob ? (443 / 272) : (931 / 1288);
+      return this.isMob ? (443 / 272) : 0.6;
     },
     titleImageSrc() {
       return require(this.isMob ? '@/assets/cover/cover_title_mob.png' : '@/assets/cover/cover_title.png');
@@ -93,9 +104,9 @@ export default {
             0,
             img.width,
             img.height,
+            vm.pageImageSize.width * (vm.isMob ? 0 : 0.075),
             0,
-            0,
-            vm.pageImageSize.width,
+            vm.pageImageSize.width * (vm.isMob ? 1 : 0.85),
             vm.pageImageSize.width * vm.coverImageRatio
           );
           getImageData();
@@ -175,8 +186,8 @@ export default {
       }
       class particule {
         constructor(options) {
-          const centerOffsetX = canvas.width / 2 - img.width / 2;
-          const centerOffsetY = 0;
+          const centerOffsetX = 0;
+          const centerOffsetY = window.innerHeight * 0.05;
           this.centerPosX = centerOffsetX + options.x;
           this.centerPosY = centerOffsetY + options.y;
           this.posX = getRandomInt(0, canvas.width);
@@ -217,13 +228,29 @@ export default {
 
 <style lang="scss" scoped>
 .cover-page {
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
+.cover-page--disabled {
+  pointer-events: none;
+  animation: fade-out .666s ease-in-out forwards;
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
 .cover-page-head {
   position: relative;
+  z-index: 2;
   width: 100%;
   height: 70%;
   display: flex;
@@ -247,10 +274,11 @@ export default {
       height: 100%;
       opacity: 0;
       transition: .333s ease-in-out;
+      padding-top: 5vh;
       img {
-        width: 100%;
+        width: 60vw;
         @media screen and (min-width: 769px) {
-          width: 100%;
+          width: 50vw;
         }
       }
     }
@@ -272,19 +300,22 @@ export default {
   .cover-page-description {
     position: relative;
     width: calc(100% - 200px);
-    padding: 60px 15px 0 5px;
+    padding: 10vh 15px 0 15px;
     display: flex;
     flex-direction: column;
     opacity: 0;
     @media screen and (min-width: 769px) {
       width: 40%;
-      padding: 150px 90px 0 90px;
+      padding: 150px 100px 0 0;
     }
     .cover-page-description-light {
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
+      @media screen and (min-width: 769px) {
+        right: 50px;
+      }
       img {
         width: 100%;
       }
@@ -307,10 +338,9 @@ export default {
         color: #ffffff;
         text-align: justify;
         margin-bottom: 20px;
-        line-height: 1.3;
+        line-height: 1.67;
         @media screen and (min-width: 769px) {
           font-size: 1.6rem;
-          line-height: 1.67;
         }
       }
       .hint {
@@ -325,6 +355,7 @@ export default {
 }
 .cover-page-body {
   position: relative;
+  z-index: 1;
   width: 100%;
   height: 30%;
   background-image: url('../assets/cover/cover_ground_mob.jpg');

@@ -255,9 +255,9 @@
             'category--1': currentCategory === 1,
             'category--2': currentCategory === 2,
             'category--3': currentCategory === 3,
-            'category--4': currentCategory === 4,
+            'category--4': currentCategory === 4 || isOnCover,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('right'),
+            'category--disabled': !hasNeighbor('right') && !isOnCover,
           }"
           d="M116.24,63.82c1.41,0.87,1.84,2.72,0.97,4.13c-0.24,0.39-0.58,0.73-0.97,0.97l-8.29,5.12
           c-1.41,0.87-3.26,0.43-4.13-0.98c-0.29-0.47-0.45-1.02-0.45-1.57V61.25c0-1.66,1.34-3,3-3c0.56,0,1.1,0.16,1.58,0.45L116.24,63.82z
@@ -271,10 +271,10 @@
             'st2': true,
             'category--1': currentCategory === 1,
             'category--2': currentCategory === 2,
-            'category--3': currentCategory === 3,
+            'category--3': currentCategory === 3 || isOnCover,
             'category--4': currentCategory === 4,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('down'),
+            'category--disabled': !hasNeighbor('down') && !isOnCover,
           }"
           d="M68.42,116.74c-0.87,1.41-2.72,1.84-4.13,0.97c-0.39-0.24-0.73-0.58-0.97-0.97l-5.12-8.29
           c-0.87-1.41-0.43-3.26,0.98-4.13c0.47-0.29,1.02-0.45,1.57-0.45h10.24c1.66,0,3,1.34,3,3c0,0.56-0.15,1.1-0.45,1.58L68.42,116.74z"
@@ -286,11 +286,11 @@
           :class="{
             'st2': true,
             'category--1': currentCategory === 1,
-            'category--2': currentCategory === 2,
+            'category--2': currentCategory === 2 || isOnCover,
             'category--3': currentCategory === 3,
             'category--4': currentCategory === 4,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('left'),
+            'category--disabled': !hasNeighbor('left') && !isOnCover,
           }"
           d="M15.5,68.92c-1.41-0.87-1.84-2.72-0.97-4.13c0.24-0.39,0.58-0.73,0.97-0.97l8.29-5.12
           c1.41-0.87,3.26-0.43,4.13,0.98c0.29,0.47,0.45,1.02,0.45,1.57v10.24c0,1.66-1.34,3-3,3c-0.56,0-1.1-0.15-1.58-0.45L15.5,68.92z"
@@ -301,12 +301,12 @@
           id="Polygon_57"
           :class="{
             'st2': true,
-            'category--1': currentCategory === 1,
+            'category--1': currentCategory === 1 || isOnCover,
             'category--2': currentCategory === 2,
             'category--3': currentCategory === 3,
             'category--4': currentCategory === 4,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('up'),
+            'category--disabled': !hasNeighbor('up') && !isOnCover,
           }"
           d="M63.32,16c0.87-1.41,2.72-1.84,4.13-0.97c0.39,0.24,0.73,0.58,0.97,0.97l5.12,8.29
           c0.87,1.41,0.43,3.26-0.98,4.13c-0.47,0.29-1.02,0.45-1.57,0.45H60.75c-1.66,0-3-1.34-3-3c0-0.56,0.16-1.1,0.45-1.58L63.32,16z"
@@ -397,56 +397,102 @@ export default {
   },
   methods: {
     handleControllerClick(dir) {
-      const vm = this;
-      const currentX = this.$route.params.x ? +this.$route.params.x : 0;
-      const currentY = this.$route.params.y ? +this.$route.params.y : 0;
-
-      function traceDirect() {
-        let directArray = vm.mazeIndexTable.filter((e, i) => {
-          if (dir === 'up') {
-            if (e[0] === currentX && e[1] < currentY) {
-              return e;
+      if (this.isOnCover) {
+        this.handleOnCoverControllerClick(dir);
+      } else {
+        const vm = this;
+        const currentX = this.$route.params.x ? +this.$route.params.x : 0;
+        const currentY = this.$route.params.y ? +this.$route.params.y : 0;
+  
+        function traceDirect() {
+          let directArray = vm.mazeIndexTable.filter((e, i) => {
+            if (dir === 'up') {
+              if (e[0] === currentX && e[1] < currentY) {
+                return e;
+              }
             }
-          }
-          if (dir === 'down') {
-            if (e[0] === currentX && e[1] > currentY) {
-              return e;
+            if (dir === 'down') {
+              if (e[0] === currentX && e[1] > currentY) {
+                return e;
+              }
             }
-          }
-          if (dir === 'left') {
-            if (e[0] < currentX && e[1] === currentY) {
-              return e;
+            if (dir === 'left') {
+              if (e[0] < currentX && e[1] === currentY) {
+                return e;
+              }
             }
-          }
-          if (dir === 'right') {
-            if (e[0] > currentX && e[1] === currentY) {
-              return e;
+            if (dir === 'right') {
+              if (e[0] > currentX && e[1] === currentY) {
+                return e;
+              }
             }
-          }
-        });
-
-        if (dir === 'up')
-          return directArray.length > 0
-            ? directArray[directArray.length - 1][1]
-            : currentY;
-        if (dir === 'down')
-          return directArray.length > 0 ? directArray[0][1] : currentY;
-        if (dir === 'left')
-          return directArray.length > 0
-            ? directArray[directArray.length - 1][0]
-            : currentX;
-        if (dir === 'right')
-          return directArray.length > 0 ? directArray[0][0] : currentX;
-        return 1;
+          });
+  
+          if (dir === 'up')
+            return directArray.length > 0
+              ? directArray[directArray.length - 1][1]
+              : currentY;
+          if (dir === 'down')
+            return directArray.length > 0 ? directArray[0][1] : currentY;
+          if (dir === 'left')
+            return directArray.length > 0
+              ? directArray[directArray.length - 1][0]
+              : currentX;
+          if (dir === 'right')
+            return directArray.length > 0 ? directArray[0][0] : currentX;
+          return 1;
+        }
+  
+        switch (dir) {
+          case 'up':
+            this.$router.push({
+              name: 'coords',
+              params: {
+                x: currentX,
+                y: traceDirect()
+              }
+            });
+            break;
+          case 'down':
+            this.$router.push({
+              name: 'coords',
+              params: {
+                x: currentX,
+                y: traceDirect()
+              }
+            });
+            break;
+          case 'left':
+            this.$router.push({
+              name: 'coords',
+              params: {
+                x: traceDirect(),
+                y: currentY
+              }
+            });
+            break;
+          case 'right':
+            this.$router.push({
+              name: 'coords',
+              params: {
+                x: traceDirect(),
+                y: currentY
+              }
+            });
+            break;
+          default:
+            break;
+        }
       }
-
+    },
+    handleOnCoverControllerClick(dir) {
       switch (dir) {
         case 'up':
           this.$router.push({
             name: 'coords',
             params: {
-              x: currentX,
-              y: traceDirect()
+              x: 1,
+              y: 0,
             }
           });
           break;
@@ -454,8 +500,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: currentX,
-              y: traceDirect()
+              x: 1,
+              y: 2,
             }
           });
           break;
@@ -463,8 +509,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: traceDirect(),
-              y: currentY
+              x: 1,
+              y: 1,
             }
           });
           break;
@@ -472,8 +518,8 @@ export default {
           this.$router.push({
             name: 'coords',
             params: {
-              x: traceDirect(),
-              y: currentY
+              x: 1,
+              y: 3,
             }
           });
           break;
@@ -544,6 +590,7 @@ export default {
 <style lang="scss" scoped>
 .page-maze-controller {
   position: fixed;
+  z-index: 10;
   right: 18px;
   top: calc((100vw - 40px) * 0.63 + 36vh - 25px);
   width: 120px;
@@ -581,9 +628,9 @@ export default {
     }
   }
   .page-maze-controller-button--disabled {
-    pointer-events: none;
-    color: #898989;
-    opacity: 0.2;
+    // pointer-events: none;
+    // color: #898989;
+    // opacity: 0.2;
   }
 }
 .page-maze-controller--cover {

@@ -5,8 +5,11 @@
       backgroundColor: colorScheme[currentCategory - 1],
     }"
   >
-    <div class="page-maze" :style="{transform: computeTranslate}">
-      <CoverPage />
+    <CoverPage :isLeaveCover="isLeaveCover" />
+    <div
+      class="page-maze"
+      :style="{transform: computeTranslate}"
+    >
       <Page
         v-for="(item, index) in mazeData"
         :key="index"
@@ -16,11 +19,6 @@
         :colorScheme="colorScheme"
       />
     </div>
-    <DirController
-      :mazeMapFlag="mazeMapFlag"
-      :mazeIndexTable="mazeIndexTable"
-      :currentCategory="currentCategory"
-    />
     <CollectionEggsBar :currentId="currentId" :colorScheme="colorScheme" :pageInfo="mazeData[currentId]" />
     <div
       :class="{
@@ -35,6 +33,11 @@
         :mazeMapFlag="mazeMapFlag"
       />
     </div>
+    <DirController
+      :mazeMapFlag="mazeMapFlag"
+      :mazeIndexTable="mazeIndexTable"
+      :currentCategory="currentCategory"
+    />
     <AwardHint
       v-if="mazeData[currentId].award"
     />
@@ -1697,8 +1700,11 @@ export default {
       );
     },
     currentCategory() {
-      return this.mazeData[this.currentId].category;
+      return !this.isLeaveCover ? 6 : this.mazeData[this.currentId].category;
     },
+    isLeaveCover() {
+      return +this.$route.params.x > 0;
+    }
   },
   mounted() {
     EventBus.$on('UPDATE_COLLECTED', (payload) => {
