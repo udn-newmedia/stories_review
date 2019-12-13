@@ -392,7 +392,7 @@ export default {
       return window.innerWidth < 769 ? true : false;
     },
     isOnCover() {
-      return this.$route.params.x == 0 && this.$route.params.y == 0;
+      return this.$store.state.x === 0 && this.$store.state.y === 0;
     }
   },
   methods: {
@@ -401,8 +401,8 @@ export default {
         this.handleOnCoverControllerClick(dir);
       } else {
         const vm = this;
-        const currentX = this.$route.params.x ? +this.$route.params.x : '0';
-        const currentY = this.$route.params.y ? +this.$route.params.y : '0';
+        const currentX = this.$store.state.x;
+        const currentY = this.$store.state.y;
   
         function traceDirect() {
           let directArray = vm.mazeIndexTable.filter((e, i) => {
@@ -431,54 +431,30 @@ export default {
           if (dir === 'up')
             return directArray.length > 0
               ? directArray[directArray.length - 1][1]
-              : currentY;
+              : +currentY;
           if (dir === 'down')
-            return directArray.length > 0 ? directArray[0][1] : currentY;
+            return directArray.length > 0 ? directArray[0][1] : +currentY;
           if (dir === 'left')
             return directArray.length > 0
               ? directArray[directArray.length - 1][0]
-              : currentX;
+              : +currentX;
           if (dir === 'right')
-            return directArray.length > 0 ? directArray[0][0] : currentX;
+            return directArray.length > 0 ? directArray[0][0] : +currentX;
           return 1;
         }
   
         switch (dir) {
           case 'up':
-            this.$router.push({
-              name: 'coords',
-              params: {
-                x: currentX.toString(),
-                y: traceDirect().toString()
-              }
-            });
+            this.$store.dispatch('setCoordinate', { x: currentX, y: traceDirect() });
             break;
           case 'down':
-            this.$router.push({
-              name: 'coords',
-              params: {
-                x: currentX.toString(),
-                y: traceDirect().toString()
-              }
-            });
+            this.$store.dispatch('setCoordinate', { x: currentX, y: traceDirect() });
             break;
           case 'left':
-            this.$router.push({
-              name: 'coords',
-              params: {
-                x: traceDirect().toString(),
-                y: currentY.toString()
-              }
-            });
+            this.$store.dispatch('setCoordinate', { x: traceDirect(), y: currentY });
             break;
           case 'right':
-            this.$router.push({
-              name: 'coords',
-              params: {
-                x: traceDirect().toString(),
-                y: currentY.toString()
-              }
-            });
+            this.$store.dispatch('setCoordinate', { x: traceDirect(), y: currentY });
             break;
           default:
             break;
@@ -488,40 +464,16 @@ export default {
     handleOnCoverControllerClick(dir) {
       switch (dir) {
         case 'up':
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: '1',
-              y: '0',
-            }
-          });
+          this.$store.dispatch('setCoordinate', {x: 1, y: 0});
           break;
         case 'down':
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: '1',
-              y: '2',
-            }
-          });
+          this.$store.dispatch('setCoordinate', {x: 1, y: 2});
           break;
         case 'left':
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: '1',
-              y: '1',
-            }
-          });
+          this.$store.dispatch('setCoordinate', {x: 1, y: 1});
           break;
         case 'right':
-          this.$router.push({
-            name: 'coords',
-            params: {
-              x: '1',
-              y: '3',
-            }
-          });
+          this.$store.dispatch('setCoordinate', {x: 1, y: 3});
           break;
         default:
           break;
@@ -529,8 +481,8 @@ export default {
     },
     hasNeighbor(dir) {
       const vm = this;
-      const currentX = this.$route.params.x ? +this.$route.params.x : 0;
-      const currentY = this.$route.params.y ? +this.$route.params.y : 0;
+      const currentX = this.$store.state.x;
+      const currentY = this.$store.state.y;
 
       function traceDirect() {
         let directArray = vm.mazeIndexTable.filter((e, i) => {

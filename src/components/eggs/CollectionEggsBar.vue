@@ -519,7 +519,7 @@ export default {
       return this.srcRWD(vm.fireworksMob, vm.fireworks)
     },
     isOnCover() {
-      return this.$route.params.x == 0 && this.$route.params.y == 0;
+      return this.$store.state.x == 0 && this.$store.state.y == 0;
     }
   }
 }

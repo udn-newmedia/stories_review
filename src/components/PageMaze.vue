@@ -1693,9 +1693,9 @@ export default {
     computeTranslate() {
       return (
         "translate(" +
-        this.$route.params.x * -100 +
+        this.$store.state.x * -100 +
         "%, " +
-        this.$route.params.y * -100 +
+        this.$store.state.y * -100 +
         "vh)"
       );
     },
@@ -1703,7 +1703,7 @@ export default {
       return this.isLeaveCover === false ? 6 : this.mazeData[this.currentId].category;
     },
     isLeaveCover() {
-      return +this.$route.params.x > 0;
+      return this.$store.state.x > 0;
     }
   },
   mounted() {
@@ -1718,14 +1718,6 @@ export default {
     });
     EventBus.$on('UPDATE_MAZEMAP_FLAG', (payload) => {
       this.mazeMapFlag = payload;
-    });
-
-    this.$router.push({
-      name: 'coords',
-      params: {
-        x: '0',
-        y: '0'
-      }
     });
   },
 };

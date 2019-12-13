@@ -37,7 +37,6 @@ export default {
   width: 100%;
   height: 100%;
   transition: all 1s;
-  position: absolute;
   color: white;
   z-index: 2;  
   .congrate_marquee {

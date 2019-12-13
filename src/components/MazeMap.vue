@@ -115,13 +115,7 @@ export default {
   methods: {
     mapTabClick(x, y, key) {
       this.updatedMazeMapFlag();
-      this.$router.push({
-        name: 'coords',
-        params: {
-          x: x,
-          y: y
-        }
-      });
+      this.$store.dispatch('setCoordinate', {x: x, y: y});
       this.sendMazeMapItemClickGA(key);
     },
     updatedMazeMapFlag() {

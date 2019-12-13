@@ -13,7 +13,6 @@
     </div>
     <div class="right">
       <h1 class="drama_title">新媒小劇場</h1>
-      <!-- {{$route.params.y + '_' + $route.params.x}} -->
       <div class="drama_monologue">
         <slot />
       </div>
