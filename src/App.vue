@@ -14,7 +14,7 @@ export default {
   components: {
     HeadBar,
     PageMaze
-  }
+  },
 };
 </script>
 
@@ -24,5 +24,11 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, 微軟正黑體, sans-serif
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 </style>

@@ -2,6 +2,7 @@
   <div :class="{
     'page-maze-controller': true,
     'page-maze-controller--cover': isOnCover,
+    'page-maze-controller--disabled': $store.state.animationFlag
   }">
     <svg
       version="1.1"
@@ -534,7 +535,7 @@ export default {
           EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
         }
       };
-    });
+    });    
   }
 };
 </script>
@@ -588,6 +589,9 @@ export default {
     transform: scale(1.75);
     right: 180px;
   }
+}
+.page-maze-controller--disabled {
+  opacity: 0;
 }
 .maze-map-button {
   position: absolute;

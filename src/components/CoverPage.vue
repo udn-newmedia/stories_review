@@ -36,7 +36,7 @@
           <h1>你敢挑戰嗎？</h1>
           <p>聯合報新媒體中心在2019年共製作14檔專題，是史上最多產的一年。</p>
           <p>邀請你來感受專題產不完的體驗，歡迎以方向鍵探索專題迷宮，你，走得出去嗎？</p>
-          <p v-if="!isMob" class="hint">PS. 迷宮內藏有12顆彩蛋，集滿有神秘獎勵喔！</p>
+          <p class="hint">PS. 迷宮內藏有12顆彩蛋，集滿有神秘獎勵喔！</p>
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@ export default {
     pageImageSize() {
       return {
         width: window.innerWidth * 0.6,
-        height: window.innerHeight * 0.7,
+        height: window.innerHeight * 0.8,
       }
     },
     coverImageRatio() {
@@ -253,14 +253,14 @@ export default {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   background-image: url('../assets/cover/cover_door_mob.jpg');
   background-size: cover;
   background-position: -13px 0;
   @media screen and (min-width: 769px) {
     background-image: url('../assets/cover/cover_door.jpg');
-    background-position: 70% 100%;
+    background-position: 80% 100%;
   }
   .cover-page-title {
     position: relative;
@@ -373,7 +373,7 @@ export default {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 30%;
+  height: 20%;
   background-image: url('../assets/cover/cover_ground_mob.jpg');
   background-size: cover;
   background-position: -7px 0;
