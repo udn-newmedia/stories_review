@@ -5,7 +5,7 @@
         <img  class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
         <div :class="{'enter': isEnter}" :style="{'background-color': currentBackgroundColor}" class="light_cover"></div>
       </div>
-      <video  :class="{'enter': isEnter}" class="profile_video" loop autoplay muted :src="profile.photo"></video>
+      <video  :class="{'enter': isEnter}" class="profile_video" autobuffer loop autoplay muted :src="profile.photo" playsinline></video>
       <div class="profile">
         <div>{{ profile.title }}</div>
         <div>{{ profile.name }}</div>
