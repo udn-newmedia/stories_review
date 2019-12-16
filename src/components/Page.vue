@@ -22,7 +22,7 @@
       >
         <!-- 紙本921信 -->
         <slot v-if="pageInfo.key === 'ae_3'">
-          <p>921地震專題的「<a @click="handleProjectLinkClick(28, 0, 'Room', 'Click', '921')" style="color: #38bee3">寫一封信給921</a>」推出後，有317位讀者在網頁上分享921經歷，甚至有讀者在漸漸被遺忘的信紙、稿紙上寫下一行行對921的回憶、郵寄到聯合報，在數位時代，用紙本傳遞著手機沒辦法給予的溫度。</p>
+          <p>921地震專題的「<a @click="handleProjectLinkClick(28, 0, 'Room', 'Click', '921')" style="color: #38bee3 ;cursor: pointer;">寫一封信給921</a>」推出後，有317位讀者在網頁上分享921經歷，甚至有讀者在漸漸被遺忘的信紙、稿紙上寫下一行行對921的回憶、郵寄到聯合報，在數位時代，用紙本傳遞著手機沒辦法給予的溫度。</p>
         </slot>
         <!-- 選舉題 -->
         <slot v-if="pageInfo.key === 'u_5'">
@@ -30,7 +30,7 @@
         </slot>
         <!-- 兩岸通婚 -->
         <slot v-if="pageInfo.key === 'h_6'">
-          <p>你以為<a @click="handleProjectLinkClick(3, 3, 'Room', 'Click', 'Marriage')" style="color: #ff7fa1">兩岸婚姻</a>對數減少後，大家就對兩岸婚姻沒興趣了嗎？錯！兩岸婚姻專題在台灣和大陸「今日頭條」都引起熱烈討論。即使現在願意嫁來台灣的陸女少了，大家還是很愛看兩岸夫妻的相處故事（是在看八點檔嗎 XD）。</p>
+          <p>你以為<a @click="handleProjectLinkClick(3, 3, 'Room', 'Click', 'Marriage')" style="color: #ff7fa1 ;cursor: pointer;">兩岸婚姻</a>對數減少後，大家就對兩岸婚姻沒興趣了嗎？錯！兩岸婚姻專題在台灣和大陸「今日頭條」都引起熱烈討論。即使現在願意嫁來台灣的陸女少了，大家還是很愛看兩岸夫妻的相處故事（是在看八點檔嗎 XD）。</p>
         </slot>
       </ObservatoryEggPage>
     </div>
@@ -48,7 +48,7 @@
       >
         <!-- 欣慈 -->
         <slot v-if="pageInfo.key === 'l_3'">
-          <p>還記得到南投縣採訪921地震重建那天，龍眼林協會總幹事<a @click="handleProjectLinkClick(9, 0, 'Theater', 'Click', 'Cindy_Liao')" style="color: #38bee3">廖振益</a>踩著夾腳拖、熱情招呼，協會在震後為孤老們送餐20年，廖振益的退休老本全砸進去了，但他笑笑的跟我們說：「沒關係啦，我這樣很像『廢物再利用捏』」。</p>
+          <p>還記得到南投縣採訪921地震重建那天，龍眼林協會總幹事<a @click="handleProjectLinkClick(9, 0, 'Theater', 'Click', 'Cindy_Liao')" style="color: #38bee3 ;cursor: pointer;">廖振益</a>踩著夾腳拖、熱情招呼，協會在震後為孤老們送餐20年，廖振益的退休老本全砸進去了，但他笑笑的跟我們說：「沒關係啦，我這樣很像『廢物再利用捏』」。</p>
           <p><br></p>
           <p>他的眉毛彎彎很可愛、笑容暖暖的，卻莫名讓人覺得很心酸；臨走前他堅持塞一袋自家種的橘子給我們，那袋橘子沉甸甸，跟採訪完的心情一樣沉重。</p>
           <p><br></p>
@@ -56,20 +56,20 @@
         </slot>
         <!-- 佩蓉 -->
         <slot v-if="pageInfo.key === 't_3'">
-          <p>製作<a  @click="handleProjectLinkClick(6, 2, 'Theater', 'Click', 'Pei_Tiger')" style="color: #bbd500">石虎</a>專題時，取得一份苗栗縣石虎路殺地點資料。為了呈現石虎路殺與道路開發的相關性，製作團隊周末加班趕工，花了一番功夫將座標資料轉成可用的格式，用QGIS標在地圖上，再套疊路網圖，找出石虎路殺熱區。當時國內還沒有其他媒體將這份資料完整呈現。</p>
+          <p>製作<a  @click="handleProjectLinkClick(6, 2, 'Theater', 'Click', 'Pei_Tiger')" style="color: #bbd500 ;cursor: pointer;">石虎</a>專題時，取得一份苗栗縣石虎路殺地點資料。為了呈現石虎路殺與道路開發的相關性，製作團隊周末加班趕工，花了一番功夫將座標資料轉成可用的格式，用QGIS標在地圖上，再套疊路網圖，找出石虎路殺熱區。當時國內還沒有其他媒體將這份資料完整呈現。</p>
           <p><p></p>
           <p>雖然做這個專題一度加班到懷疑人生，但完成後真的有滿滿的成就感啊～</p>
         </slot>
         <!-- 若榆 -->
         <slot v-if="pageInfo.key === 'z_3'">
           <p>吼(ノ‵□′)ノ～┴─┴ </p>
-          <p><a @click="handleProjectLinkClick(16, 3, 'Theater', 'Click', 'Freddy_Privacy')" style="color: #ff7fa1">數位隱私</a>都還沒寫完，</p>
+          <p><a @click="handleProjectLinkClick(16, 3, 'Theater', 'Click', 'Freddy_Privacy')" style="color: #ff7fa1 ;cursor: pointer;">數位隱私</a>都還沒寫完，</p>
           <p>下下下題長官明天要看，</p>
-          <p>還好沒日沒夜沒有<a @click="handleProjectLinkClick('Theater', 'Click', 'Freddy_Tiger')" style="color: #bbd500" :to="`/2/6`">石虎</a>畫成豹🐆🐆🐆</p>
+          <p>還好沒日沒夜沒有<a @click="handleProjectLinkClick('Theater', 'Click', 'Freddy_Tiger')" style="color: #bbd500 ;cursor: pointer;" :to="`/2/6`">石虎</a>畫成豹🐆🐆🐆</p>
           <p><br></p>
           <p>年度專題照片難，首頁封面自己來，</p>
           <p>左手攝影📸，右手寫code⌨️，</p>
-          <p>專題滿滿<a @click="handleProjectLinkClick(2, 0, 'Theater', 'Click', 'Freddy_921')" style="color: #38bee3">天亮之後</a>。</p>
+          <p>專題滿滿<a @click="handleProjectLinkClick(2, 0, 'Theater', 'Click', 'Freddy_921')" style="color: #38bee3 ;cursor: pointer;">天亮之後</a>。</p>
           <p>灑花(*￣▽￣)/‧★*"`'*-.,_,.-*'`"*-.,_☆,.-*'`"*-.,_</p>
         </slot>      
         <!-- 藹雯 -->
@@ -80,11 +80,11 @@
         </slot>
         <!-- 心慈 -->
         <slot v-if="pageInfo.key === 'm_5'">
-          <p>製作<a @click="handleProjectLinkClick(6, 2, 'Theater', 'Click', 'Mi_Tiger')" style="color: #bbd500">石虎</a>專題時，內容多次提到路殺熱區在省道、縣道，但光看文字很難聯想這些路殺有多嚴重。收到苗栗石虎陸殺紀錄後，結合點座標位置與路線地圖，才看到路殺的全貌，並把狀況呈顯給讀者瞭解。</p>
+          <p>製作<a @click="handleProjectLinkClick(6, 2, 'Theater', 'Click', 'Mi_Tiger')" style="color: #bbd500 ;cursor: pointer;">石虎</a>專題時，內容多次提到路殺熱區在省道、縣道，但光看文字很難聯想這些路殺有多嚴重。收到苗栗石虎陸殺紀錄後，結合點座標位置與路線地圖，才看到路殺的全貌，並把狀況呈顯給讀者瞭解。</p>
         </slot>
         <!-- 瑋琳 -->
         <slot v-if="pageInfo.key === 'q_6'">
-          <p>今年很特別的是從視覺設計跨界到PM，以視覺的角度發動<a @click="handleProjectLinkClick(7, 3, 'Theater', 'Click', 'Wei_DUI')" style="color: #ff7fa1">酒駕插畫</a>專題。</p>
+          <p>今年很特別的是從視覺設計跨界到PM，以視覺的角度發動<a @click="handleProjectLinkClick(7, 3, 'Theater', 'Click', 'Wei_DUI')" style="color: #ff7fa1 ;cursor: pointer;">酒駕插畫</a>專題。</p>
           <p><br></p>
           <p>很不一樣的是採訪現場除了問問題，腦中也得同時勾勒出受訪者描述的畫面，不停思考故事與插畫要如何串接，每一圖也都要和家屬來回確認，像是受害者生前穿的衣服款式、餐桌的座位、事故當下場景等。</p>
           <p><br></p>
@@ -92,7 +92,7 @@
         </slot>
         <!-- 汶均 -->
         <slot v-if="pageInfo.key === 'w_6'">
-          <p>去南韓採訪<a @click="handleProjectLinkClick(19, 3, 'Theater', 'Click', 'Afore_Energy')" style="color: #ff7fa1">能源轉型</a>專題時，一度以為自己回不來了。</p>
+          <p>去南韓採訪<a @click="handleProjectLinkClick(19, 3, 'Theater', 'Click', 'Afore_Energy')" style="color: #ff7fa1 ;cursor: pointer;">能源轉型</a>專題時，一度以為自己回不來了。</p>
           <p><br></p>
           <p>殺到離首爾3小時的新萬金採訪具環保爭議的綠能開發案，遭到南韓政府旗下開發公司阻撓我們採訪環保派學者（後來還聽說當地很多黑道...）</p>
           <p><br></p>
