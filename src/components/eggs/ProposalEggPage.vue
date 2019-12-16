@@ -49,33 +49,47 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 180px;
+  @media screen and (min-width: 375px) {
+    padding-top: 100px;
+  }
   .proposal_content {
       width: 100%;
     @media screen and (min-width: 769px) {
       width: 50%;
+      padding-top: 0px;
     }
   }
   .close {
         position: absolute;
-        right: 12px;
-        top: 62px;
-        width: 32px;
+        top: 40px;
+        right: 0;
         height: 32px;
-        opacity: 0.3;
-        border-radius: 50%;
+        width: 100%;
+        opacity: 0.3;        
         border: solid 1px #fff;
         cursor: pointer;
+        @media screen and (min-width: 769px) {
+          right: 12px;
+          width: 32px;
+          border-radius: 50%;
+          top: 15%;
+          right: 25%;
+        }
         &:hover {
             opacity: 1;
         }
         &:before, &:after {
             position: absolute;
             top: 16px;
-            left: 16px;
+            left: 50%;
             content: ' ';
             height: 17px;
             width: 2px;
             background-color: #fff;
+            @media screen and (min-width: 769px) {
+              left: 16px;
+            }
         }
         &:before {
             transform: translate(-50%, -50%) rotate(45deg);

@@ -1,12 +1,12 @@
 <template>
   <div :style="{'background-color': currentBackgroundColor}"  class="congrate">
-    <div class="congrate_marquee"><span>恭喜集滿彩蛋  彩蛋達人是你  (￣ ◡￣)y  你好棒棒  恭喜集滿彩蛋</span><span>恭喜集滿彩蛋  彩蛋達人是你  (￣ ◡￣)y  你好棒棒  恭喜集滿彩蛋</span><span>恭喜集滿彩蛋  彩蛋達人是你  (￣ ◡￣)y  你好棒棒  恭喜集滿彩蛋</span><span>恭喜集滿彩蛋  彩蛋達人是你  (￣ ◡￣)y  你好棒棒  恭喜集滿彩蛋</span><span>恭喜集滿彩蛋  彩蛋達人是你  (￣ ◡￣)y  你好棒棒  恭喜集滿彩蛋</span></div>
-    <div class="congrate_marquee"><span>你好棒棒  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span>你好棒棒  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span>你好棒棒  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span>你好棒棒  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span>你好棒棒  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span></div>
-    <div class="congrate_marquee"><span> ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span> ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span> ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span> ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span><span> ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒  (￣ ◡￣)y  彩蛋達人是你</span></div>
-    <div class="congrate_marquee"><span>彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒</span><span>彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒</span><span>彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒</span><span>彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒</span><span>彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  恭喜集滿彩蛋  你好棒棒</span></div>
-    <div class="congrate_marquee"><span>(￣ ◡￣)y  恭喜集滿彩蛋  你好棒棒  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  ┌( ಠ‿ಠ)┘</span><span>(￣ ◡￣)y  恭喜集滿彩蛋  你好棒棒  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  ┌( ಠ‿ಠ)┘</span><span>(￣ ◡￣)y  恭喜集滿彩蛋  你好棒棒  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  ┌( ಠ‿ಠ)┘</span><span>(￣ ◡￣)y  恭喜集滿彩蛋  你好棒棒  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  ┌( ಠ‿ಠ)┘</span><span>(￣ ◡￣)y  恭喜集滿彩蛋  你好棒棒  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘  ┌( ಠ‿ಠ)┘</span></div>
-    <div class="congrate_marquee"><span>你好棒棒  (￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘</span><span>你好棒棒  (￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘</span><span>你好棒棒  (￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘</span><span>你好棒棒  (￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘</span><span>你好棒棒  (￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  ┌( ಠ‿ಠ)┘</span></div>
-    <div class="congrate_marquee"><span>(￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  你好棒棒</span><span>(￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  你好棒棒</span><span>(￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  你好棒棒</span><span>(￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  你好棒棒</span><span>(￣ ◡￣)y  彩蛋達人是你  恭喜集滿彩蛋  你好棒棒</span></div>
+    <div class="congrate_marquee"><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span></div>
+    <div class="congrate_marquee"><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span></div>
+    <div class="congrate_marquee"><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span></div>
+    <div class="congrate_marquee"><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span></div>
+    <div class="congrate_marquee"><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span><span>彩蛋達人是你  ┌( ಠ‿ಠ)┘</span></div>
+    <div class="congrate_marquee"><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span><span>(￣ ◡￣)y  恭喜集滿彩蛋</span></div>
+    <div class="congrate_marquee"><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span><span>恭喜集滿彩蛋   你好棒棒</span></div>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="maze">
     <div class="maze_title">
-      <div v-html="srcRWD('<h2>長按方向鍵中間<div>解鎖迷宮地圖</div></h2>', '<h2>按ESC鍵即可領取迷宮地圖</h2>')" />
+      <div v-html="srcRWD('<h2>點按畫面左上角的聯logo<div>即可領取迷宮地圖</div></h2>', '<h2>點按畫面左上角的聯logo，即可領取迷宮地圖</h2>')" />
     </div>
     <div class="maze_img">
       <div class="maze_img_mob" v-if="isMobile">

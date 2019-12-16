@@ -2,7 +2,7 @@
   <div class="drama">
     <div class="left">
       <div class="light_wrapper">
-        <img  class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
+        <img class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
         <div :class="{'enter': isEnter}" :style="{'background-color': currentBackgroundColor}" class="light_cover"></div>
       </div>
       <video  :class="{'enter': isEnter}" class="profile_video" loop autoplay muted :src="profile.photo" playsinline></video>
@@ -155,9 +155,12 @@ export default {
       width: 100%;
       left: 50%;
       bottom: 0;
-      transform: translate(-50%, 110%);
+      transform: translate(-50%, 130%);
       color: white;
-      font-size: 20px;
+      font-size: 16px;
+      @media screen and (min-width: 769px) {
+        font-size: 20px;
+      }
     }
   }
   .right {

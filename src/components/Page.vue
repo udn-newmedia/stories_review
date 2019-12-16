@@ -49,9 +49,7 @@
         <!-- 欣慈 -->
         <slot v-if="pageInfo.key === 'l_3'">
           <p>還記得到南投縣採訪921地震重建那天，龍眼林協會總幹事<a @click="handleProjectLinkClick(9, 0, 'Theater', 'Click', 'Cindy_Liao')" style="color: #38bee3 ;cursor: pointer;">廖振益</a>踩著夾腳拖、熱情招呼，協會在震後為孤老們送餐20年，廖振益的退休老本全砸進去了，但他笑笑的跟我們說：「沒關係啦，我這樣很像『廢物再利用捏』」。</p>
-          <p><br></p>
           <p>他的眉毛彎彎很可愛、笑容暖暖的，卻莫名讓人覺得很心酸；臨走前他堅持塞一袋自家種的橘子給我們，那袋橘子沉甸甸，跟採訪完的心情一樣沉重。</p>
-          <p><br></p>
           <p>像廖振益這樣災後重建的故事，全台還有好多。製作921專題的半年中，總在想：我們能夠幫上什麼忙呢？</p>
         </slot>
         <!-- 佩蓉 -->
@@ -66,7 +64,7 @@
           <p><a @click="handleProjectLinkClick(16, 3, 'Theater', 'Click', 'Freddy_Privacy')" style="color: #ff7fa1 ;cursor: pointer;">數位隱私</a>都還沒寫完，</p>
           <p>下下下題長官明天要看，</p>
           <p>還好沒日沒夜沒有<a @click="handleProjectLinkClick('Theater', 'Click', 'Freddy_Tiger')" style="color: #bbd500 ;cursor: pointer;" :to="`/2/6`">石虎</a>畫成豹🐆🐆🐆</p>
-          <p><br></p>
+          <br>
           <p>年度專題照片難，首頁封面自己來，</p>
           <p>左手攝影📸，右手寫code⌨️，</p>
           <p>專題滿滿<a @click="handleProjectLinkClick(2, 0, 'Theater', 'Click', 'Freddy_921')" style="color: #38bee3 ;cursor: pointer;">天亮之後</a>。</p>
@@ -75,7 +73,6 @@
         <!-- 藹雯 -->
         <slot v-if="pageInfo.key === 'p_4'">
           <p>製作總統大選互動小遊戲時 是我玩得最開心的時候。</p>
-          <p><br></p>
           <p>當初在專案前期聽到「像遊戲一樣的感覺」這句話時，加上專題的內容本身也不那麼嚴肅 多了一點惡搞的空間，我就已經決定: 無論如何 我都要用復古的像素風格 也就是俗稱的「8bit」來製作，也很幸運的，我真的能把我升級了好一陣子的8bit技能術派上用場了。</p>
         </slot>
         <!-- 心慈 -->
@@ -85,17 +82,13 @@
         <!-- 瑋琳 -->
         <slot v-if="pageInfo.key === 'q_6'">
           <p>今年很特別的是從視覺設計跨界到PM，以視覺的角度發動<a @click="handleProjectLinkClick(7, 3, 'Theater', 'Click', 'Wei_DUI')" style="color: #ff7fa1 ;cursor: pointer;">酒駕插畫</a>專題。</p>
-          <p><br></p>
           <p>很不一樣的是採訪現場除了問問題，腦中也得同時勾勒出受訪者描述的畫面，不停思考故事與插畫要如何串接，每一圖也都要和家屬來回確認，像是受害者生前穿的衣服款式、餐桌的座位、事故當下場景等。</p>
-          <p><br></p>
           <p>採訪當下心情很沉重，面對家屬的眼淚，也常會不忍再繼續提問。插畫並非新的技術，但卻能帶給讀者更多想像空間，希望能用視覺的力量，為受害者家屬說出一些愛與傷痛吧。</p>
         </slot>
         <!-- 汶均 -->
         <slot v-if="pageInfo.key === 'w_6'">
           <p>去南韓採訪<a @click="handleProjectLinkClick(19, 3, 'Theater', 'Click', 'Afore_Energy')" style="color: #ff7fa1 ;cursor: pointer;">能源轉型</a>專題時，一度以為自己回不來了。</p>
-          <p><br></p>
           <p>殺到離首爾3小時的新萬金採訪具環保爭議的綠能開發案，遭到南韓政府旗下開發公司阻撓我們採訪環保派學者（後來還聽說當地很多黑道...）</p>
-          <p><br></p>
           <p>在地處偏遠的異地，只能再三確認飯店房門已上鎖、採訪筆記已備份，躺在漆黑的房間內，祈求自己能活過今晚。</p>
         </slot>
       </DramaEggPage>

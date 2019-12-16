@@ -41,7 +41,9 @@
     </div>
 
     <div :style="{'background-color': currentBackgroundColor}" :class="{'close': isAnimationClose}" class="egg-get-repo">
-      <h1 class="congrate_title">恭喜獲得彩蛋！<div>邀請你來看 {{ eggTitle }}</div></h1>
+      <h1 class="congrate_title">
+        恭喜獲得彩蛋！<div>邀請你來看 {{ eggTitle }}</div>
+      </h1>
       <ul class="fireworks">
         <li v-for="(item, index) in fireworksRWD" :key="index">
           <img :class="['firwork-img', item.class]" :src="item.src" alt="">
@@ -81,7 +83,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 0,
+      eggTotal: 5,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -292,6 +294,7 @@ export default {
         this.eggTotal += 1; 
         let key = newVal.key
         let whichEgg = this.mapToEggDictionary[key]
+        console.log(newVal)
         this.eggTitle = newVal.title
         this.eggShow(whichEgg, this.eggTotal)
       }
@@ -402,25 +405,25 @@ export default {
       .add({
         targets: firework1,
         opacity: 1,
-        delay: 150,
-        duration: 100
+        delay: 50,
+        duration: 50
       })
       .add({
         targets: firework2,
         opacity: 1,
-        delay: 250,
+        delay: 150,
         duration: 100
       })
       .add({
         targets: firework3,
         opacity: 1,
-        delay: 550,
-        duration: 100
+        delay: 250,
+        duration: 50
       })
       .add({
         targets: firework4,
         opacity: 1,
-        delay: 700,
+        delay: 500,
         duration: 100
       })
       .add({
@@ -444,11 +447,11 @@ export default {
         targets: firework4,
         opacity: 0,
         delay: 400,
-        duration: 50
+        duration: 150
       })
       .add({
         targets: element,
-        duration: 250,
+        duration: 150,
         delay: 800,
         translateX: move_x,
         translateY: move_y -2,

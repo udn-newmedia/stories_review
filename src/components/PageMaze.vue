@@ -111,7 +111,7 @@ export default {
           x: 2,
           y: 0,
           key: 'e_3',
-          title: '地圖迷宮',
+          title: '迷宮地圖',
           category: 5,
           egg: {
             flag: true,
@@ -527,7 +527,7 @@ export default {
           x: 28,
           y: 0,
           key: 'ae_3',
-          title: '新媒觀察室 紙本921信',
+          title: '新媒觀察室',
           category: 5,
           egg: {
             flag: true,
@@ -1119,7 +1119,7 @@ export default {
           x: 18,
           y: 2,
           key: 'u_5',
-          title: '新媒觀察室 選舉題',
+          title: '新媒觀察室',
           category: 5,
           egg: {
             flag: true,
@@ -1246,7 +1246,7 @@ export default {
           x: 5,
           y: 3,
           key: 'h_6',
-          title: '新媒觀察室 兩岸通婚',
+          title: '新媒觀察室',
           category: 5,
           egg: {
             flag: true,
