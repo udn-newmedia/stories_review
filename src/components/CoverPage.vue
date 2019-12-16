@@ -29,7 +29,7 @@
         'cover-page-description--active': imageCompletedFlag,
         }"
       >
-        <div v-if="!isMob" class="cover-page-description-light">
+        <div class="cover-page-description-light">
           <img :src="require('@/assets/cover/cover_light.png')" alt="light">
         </div>
         <div class="cover-page-description-text">
@@ -65,7 +65,7 @@ export default {
     pageImageSize() {
       return {
         width: window.innerWidth * 0.6,
-        height: window.innerHeight * 0.8,
+        height: window.innerHeight * 0.9,
       }
     },
     coverImageRatio() {
@@ -253,15 +253,9 @@ export default {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 80%;
+  height: 90%;
   display: flex;
-  background-image: url('../assets/cover/cover_door_mob.jpg');
-  background-size: cover;
-  background-position: -13px 0;
-  @media screen and (min-width: 769px) {
-    background-image: url('../assets/cover/cover_door.jpg');
-    background-position: 80% 100%;
-  }
+  background-color: #252525;
   .cover-page-title {
     position: relative;
     width: 200px;
@@ -340,6 +334,7 @@ export default {
       position: relative;
       width: 100%;
       overflow-y: auto;
+      margin-bottom: 30px;
       h1 {
         margin-bottom: 20px;
         font-size: 24px;
@@ -371,15 +366,17 @@ export default {
 }
 .cover-page-body {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
-  height: 20%;
-  background-image: url('../assets/cover/cover_ground_mob.jpg');
+  height: 30%;
+  background-image: url('../assets/cover/cover_ground_mob.png');
   background-size: cover;
-  background-position: -7px 0;
+  transform: translateY(-8vh);
   @media screen and (min-width: 769px) {
-    background-image: url('../assets/cover/cover_ground.jpg');
-    background-position: 70% 0;
+    height: 30%;
+    background-image: url('../assets/cover/cover_ground.png');
+    background-position: 90% 0;
+    transform: translateY(-18vh);
   }
 }
 </style>
