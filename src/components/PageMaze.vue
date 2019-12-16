@@ -19,7 +19,7 @@
         :colorScheme="colorScheme"
       />
     </div>
-    <CollectionEggsBar :currentId="currentId" :colorScheme="colorScheme" :pageInfo="mazeData[currentId]" />
+    <CollectionEggsBar :mazeMapFlag="mazeMapFlag" :currentId="currentId" :colorScheme="colorScheme" :pageInfo="mazeData[currentId]" />
     <div
       :class="{
         'page-maze-map': true,

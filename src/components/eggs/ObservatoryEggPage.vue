@@ -24,6 +24,7 @@ export default {
   mixins: [srcRWD],
   mounted () {
     this.imgSource = this.pageInfo.egg.observatory.pics
+    this.isEnter = this.pageInfo.egg.collected
     
   },
   computed: {

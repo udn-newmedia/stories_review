@@ -33,7 +33,7 @@
 
       <ul>
         <li v-for="(item, index) in bar_eggs" :key="index" >
-          <div :class="['egg-wrapper', {'isSix': index === 5 && eggTotal === 6}, item.class]">
+          <div :class="['egg-wrapper', {'isSix': index === 5 && eggTotal > 5}, item.class]">
             <img @click="openProposalInBar(index)" :class="{'isGet': item.isGet}" :src="item.src" alt="" class="egg-hidden">
           </div>
         </li>
@@ -81,7 +81,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 0,
+      eggTotal: 5,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -280,6 +280,10 @@ export default {
       type: String,
       default: '0',
     },
+    mazeMapFlag: {
+      type: Boolean,
+      default: false,
+    },
   },
   watch: { 
     pageInfo: function(newVal, oldVal) {
@@ -295,6 +299,12 @@ export default {
     eggTotal: function(newVal, oldVal) {
       let target = 'Collect_' + newVal
       this.handleGA('Egg', 'Collect', target)
+    },
+    mazeMapFlag: function(newVal, oldVal) {
+      console.log(newVal)
+      if (newVal === true) {
+        this.isProposalClose = true
+      }
     }
   },
   mounted () {
@@ -385,32 +395,32 @@ export default {
       .add({
         targets: '.congrate_title',
         opacity: 1,
-        duration: 3000,
+        duration: 1500,
         scale: 1,
         translateY: [1000, 0]
       })
       .add({
         targets: firework1,
         opacity: 1,
-        delay: 250,
+        delay: 150,
         duration: 100
       })
       .add({
         targets: firework2,
         opacity: 1,
-        delay: 500,
+        delay: 250,
         duration: 100
       })
       .add({
         targets: firework3,
         opacity: 1,
-        delay: 750,
+        delay: 550,
         duration: 100
       })
       .add({
         targets: firework4,
         opacity: 1,
-        delay: 900,
+        delay: 700,
         duration: 100
       })
       .add({
@@ -439,7 +449,7 @@ export default {
       .add({
         targets: element,
         duration: 250,
-        delay: 1000,
+        delay: 800,
         translateX: move_x,
         translateY: move_y -2,
         translateZ: 0,

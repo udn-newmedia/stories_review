@@ -45,10 +45,10 @@ export default {
     justify-content: center;
     overflow: hidden;
     &:nth-child(2n) span {
-      animation: marquee-left 5s linear infinite;
+      animation: marquee-left 7.5s linear infinite;
     }
     &:nth-child(2n-1) span {
-      animation: marquee-right 5s linear infinite;
+      animation: marquee-right 7.5s linear infinite;
     }
     span {
       white-space: nowrap;

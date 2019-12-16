@@ -5,7 +5,7 @@
         <img  class="light" :src="srcRWD(require('../../assets/drama/light/light_mob.svg'), require('../../assets/drama/light/light.svg'))" alt="">
         <div :class="{'enter': isEnter}" :style="{'background-color': currentBackgroundColor}" class="light_cover"></div>
       </div>
-      <video  :class="{'enter': isEnter}" class="profile_video" autobuffer loop autoplay muted :src="profile.photo" playsinline></video>
+      <video  :class="{'enter': isEnter}" class="profile_video" loop autoplay muted :src="profile.photo" playsinline></video>
       <div class="profile">
         <div>{{ profile.title }}</div>
         <div>{{ profile.name }}</div>
@@ -19,6 +19,8 @@
     </div>
   </div>
 </template>
+
+
 
 <script>
 import EventBus from '@/eventBus';
@@ -58,13 +60,13 @@ export default {
   },
   mounted () {
     this.initData()
-
+    console.log("test mounted")
   },
   watch: {
     'pageInfo.egg.collected': {
       handler(newName, oldName) {
         if(newName) {
-          // console.log('hello light:',newName)
+          console.log('hello light:',newName)
           this.isEnter = true
         }
       }
@@ -77,6 +79,7 @@ export default {
       this.profile.title = this.pageInfo.egg.drama.job
       this.profile.photo = this.srcRWD(vm.pageInfo.egg.drama.profile.mob, vm.pageInfo.egg.drama.profile.pc)
       this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]
+      this.isEnter = this.pageInfo.egg.collected
     },
     updatedEggCollectedStatus() {
       EventBus.$emit('UPDATE_COLLECTED', this.id);    

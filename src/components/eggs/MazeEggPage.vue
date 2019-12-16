@@ -103,6 +103,7 @@ export default {
   mixins: [srcRWD],
   mounted () {
     this.isMobile = this.srcRWD(true, false)
+    this.isEnter = this.pageInfo.egg.collected
   },
   watch: {
     'pageInfo.egg.collected': {
