@@ -271,7 +271,7 @@ export default {
           x: 12,
           y: 0,
           key: 'o_3',
-          title: '921地震災區重建故事一\n小村變生態城\n不依賴「英明領導人」',
+          title: '921地震災區重建故事二\n走過自殺潮 \n百面空手道金牌爭光',
           cover: require('@/assets/project_cover/o_3.jpg'),
           description: '',
           url: 'https://udn.com/newmedia/921/rebuild/huang/',
