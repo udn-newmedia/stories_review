@@ -342,7 +342,7 @@ export default {
         begin: function () {
             vm.isAnimationClose = false
             vm.$store.dispatch('setAnimationFlag', true)
-            console.log(vm.$store)
+            // console.log(vm.$store)
         },
         complete: function() {
           let img = vm.eggDictionary[`egg${target}`]
@@ -506,7 +506,7 @@ export default {
       EventBus.$emit('UPDATE_COLLECTED', id);    
     },
     handleGA (category, action, target) {
-      console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
+      // console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
       window.ga('newmedia.send', 'event', {
         eventCategory: category,
         eventAction: action,
