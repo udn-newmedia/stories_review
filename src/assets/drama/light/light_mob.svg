@@ -1,9 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="113.999" height="379" viewBox="0 0 113.999 379">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #f7cc61;
+      }
+
+      .cls-3 {
+        fill: #666;
+      }
+    </style>
+  </defs>
   <g id="Group_1603" data-name="Group 1603" transform="translate(-25 -48)">
-    <line id="Line_1" data-name="Line 1" x2="39" transform="translate(62.5 425.5)" fill="none" stroke="#fff" stroke-width="3"/>
+    <line id="Line_1" data-name="Line 1" class="cls-1" x2="39" transform="translate(62.5 425.5)"/>
     <g id="Group_1602" data-name="Group 1602">
-      <path id="Subtraction_134" data-name="Subtraction 134" d="M114,424H0L39.865,83H75.058Z" transform="translate(25 1)" fill="#ffc95c"/>
-      <path id="Subtraction_131" data-name="Subtraction 131" d="M27.875,36H-7L6.077,0H14.8L27.874,36Z" transform="translate(72 48)" fill="#666"/>
+      <path id="Subtraction_134" data-name="Subtraction 134" class="cls-2" d="M114,424H0L39.865,83H75.058Z" transform="translate(25 1)"/>
+      <path id="Subtraction_131" data-name="Subtraction 131" class="cls-3" d="M27.875,36H-7L6.077,0H14.8L27.874,36Z" transform="translate(72 48)"/>
     </g>
   </g>
 </svg>
