@@ -59,7 +59,7 @@ export default {
   name: 'EditorPage',
   computed: {
     isMob() {
-      return window.innerWidth < 768 ? true : false;
+      return window.innerWidth < 1025 ? true : false;
     }
   },
   methods: {
@@ -97,7 +97,11 @@ export default {
   @media screen and (max-width: 375px) {
     height: 160px;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 35%;
+    background-position: 50% 50%;
+  }
+  @media screen and (min-width: 1025px) {
     width: 55%;
     height: 70%;
     background-image: url('../assets/editor/ending.jpg');

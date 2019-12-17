@@ -18,4 +18,18 @@ module.exports = {
         })
     });
   },
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      template: 'public/index.html',
+      filename: 'index.html',
+      chunks: ['chunk-vendors', 'chunk-common', 'index']
+    },
+    colorful: {
+      entry: 'src/main.js',
+      template: 'public/colorful.html',
+      filename: 'colorful.html',
+      chunks: ['chunk-vendors', 'chunk-common', 'index']
+    }
+  }
 }

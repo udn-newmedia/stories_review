@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     isMob() {
-      return window.innerWidth < 768 ? true : false;
+      return window.innerWidth < 1025 ? true : false;
     },
     coverImageRatio() {
       return this.pageInfo.coverSize[this.isMob ? 'mob' : 'pc'].height / this.pageInfo.coverSize[this.isMob ? 'mob' : 'pc'].width;
@@ -214,14 +214,14 @@ export default {
   justify-content: center;
   align-items: flex-start;
   padding: 10% 0;
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1025px) {
     align-items: center;
   }
   .category-page-image-container {
     position: relative;
     width: 100%;
     height: 100%;
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1025px) {
       height: 100%;
     }
   }
@@ -238,6 +238,10 @@ export default {
     transition: opacity 1s ease-in-out;
     img {
       width: 80%;
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        height: 70%;
+        width: auto;
+      }
     }
   }
   .category-page-image-complete--active {
