@@ -55,7 +55,7 @@ export default {
   }
   .proposal_content {
       width: 100%;
-      padding: 300px 0;
+      // padding: 300px 0;
     @media screen and (min-width: 769px) {
       width: 50%;
       padding-top: 0px;
@@ -64,16 +64,18 @@ export default {
   .close {
         position: absolute;
         top: 40px;
-        right: 0;
+        right: 50%;
         height: 32px;
-        width: 100%;
+        width: 32px;
+        transform: translateX(50%);
         opacity: 0.3;        
         border: solid 1px #fff;
         cursor: pointer;
+        border-radius: 50%;
         @media screen and (min-width: 769px) {
           right: 12px;
           width: 32px;
-          border-radius: 50%;
+          
           top: 15%;
           right: 25%;
         }

@@ -86,6 +86,10 @@ export default {
 }
 .head-bar-logo {
   position: relative;
+  padding-left: 10px;
+  @media screen and (min-width: 769px) {
+    padding-left: 5px;
+  }
   i {
     font-size: 32px;
   }

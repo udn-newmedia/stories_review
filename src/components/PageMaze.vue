@@ -357,8 +357,8 @@ export default {
               job: '數位內容製作',
               name: '蔡佩蓉',
               profile: {
-                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/tsai_mob.mp4',
-                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/tsai.mp4',
+                mob: 'https://p3.udn.com.tw/stories_review/drama/profile/mob/tsai2_mob.mp4',
+                pc: 'https://p3.udn.com.tw/stories_review/drama/profile/pc/tsai2.mp4',
               }
             },
             observatory: {},

@@ -95,6 +95,7 @@ export default {
   @media screen and (min-width: 769px) {
     padding-left: 50px;
     padding-top: 100px;
+    height: 75%;
   }
   .left, .right {
     height: 80%;

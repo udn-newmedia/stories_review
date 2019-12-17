@@ -83,7 +83,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 0,
+      eggTotal: 5,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -294,7 +294,6 @@ export default {
         this.eggTotal += 1; 
         let key = newVal.key
         let whichEgg = this.mapToEggDictionary[key]
-        console.log(newVal.title === '迷宮地圖') 
         this.eggTitle = '邀請你來看 ' + newVal.title
         if (newVal.title === '迷宮地圖') {
           this.eggTitle = '拾獲迷宮地圖一捲'
@@ -360,12 +359,9 @@ export default {
         begin: function () {
             vm.isAnimationClose = false
             vm.$store.dispatch('setAnimationFlag', true)
-            // console.log(vm.$store)
         },
         complete: function() {
-          let img = vm.eggDictionary[`egg${target}`]
-          vm.bar_eggs[target_forward - 1].src = img
-          vm.bar_eggs[target_forward - 1].isGet = true       
+             
           if ( (0 < vm.eggTotal && vm.eggTotal < 6) || (6 < vm.eggTotal && vm.eggTotal < 12) ) {
             setTimeout(() => {
               vm.isMenuClose = true
@@ -469,7 +465,12 @@ export default {
       .add({
         targets: element,
         duration: 100,
-        opacity: 0
+        opacity: 0,
+        complete: function () {
+          let img = vm.eggDictionary[`egg${target}`]
+          vm.bar_eggs[target_forward - 1].src = img
+          vm.bar_eggs[target_forward - 1].isGet = true 
+        }
       });
 
       if (this.eggTotal === 6 || this.eggTotal === 12) {
@@ -628,6 +629,7 @@ export default {
         border-radius: 50%;
         background-color: #858585;
         text-align: center;
+        padding-top: 3px;
         &.isSix {
           border: solid 2px rgba(#ffbcbc, 0);
           animation: flash 3s 5s ease-in-out infinite;
