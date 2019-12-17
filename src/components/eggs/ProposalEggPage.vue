@@ -55,6 +55,7 @@ export default {
   }
   .proposal_content {
       width: 100%;
+      padding: 300px 0;
     @media screen and (min-width: 769px) {
       width: 50%;
       padding-top: 0px;

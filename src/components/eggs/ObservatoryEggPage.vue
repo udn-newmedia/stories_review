@@ -74,6 +74,8 @@ export default {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  margin: 0 auto;
+  width: 70%;
   height: 100%;
   @media screen and (min-width: 769px) {
     padding-left: 50px;
@@ -100,6 +102,7 @@ export default {
       @media screen and (min-width: 769px) {
         width: 54%;
         padding-left: 20px;
+        padding-top: 135px;
       }
       
       .observatory_title {
@@ -117,7 +120,7 @@ export default {
         width: 45%;
         padding-right: 20px;
         position: relative;
-        max-height: 60vh;
+        max-height: 55%;
       }
       .mouse {
         position: absolute;
@@ -142,10 +145,11 @@ export default {
       }
       .observatory-img-wrapper {
         @media screen and (min-width: 769px) {
-          position: absolute;
-          bottom: 0;
+          // position: absolute;
+          // bottom: 0;
           width: 100%;
-          display: flex;
+      
+          padding-top: 200px;
         }
         .observatory-img {
           width: 100%;

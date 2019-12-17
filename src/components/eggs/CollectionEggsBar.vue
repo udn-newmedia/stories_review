@@ -42,7 +42,7 @@
 
     <div :style="{'background-color': currentBackgroundColor}" :class="{'close': isAnimationClose}" class="egg-get-repo">
       <h1 class="congrate_title">
-        恭喜獲得彩蛋！<div>邀請你來看 {{ eggTitle }}</div>
+        恭喜獲得彩蛋！<div>{{ eggTitle }}</div>
       </h1>
       <ul class="fireworks">
         <li v-for="(item, index) in fireworksRWD" :key="index">
@@ -294,8 +294,12 @@ export default {
         this.eggTotal += 1; 
         let key = newVal.key
         let whichEgg = this.mapToEggDictionary[key]
-        console.log(newVal)
-        this.eggTitle = newVal.title
+        console.log(newVal.title === '迷宮地圖') 
+        this.eggTitle = '邀請你來看 ' + newVal.title
+        if (newVal.title === '迷宮地圖') {
+          this.eggTitle = '拾獲迷宮地圖一捲'
+        }
+        
         this.eggShow(whichEgg, this.eggTotal)
       }
     },
@@ -304,9 +308,10 @@ export default {
       this.handleGA('Egg', 'Collect', target)
     },
     mazeMapFlag: function(newVal, oldVal) {
-      console.log(newVal)
       if (newVal === true) {
         this.isProposalClose = true
+        this.isMenuClose = true
+        this.isAnimationClose = true
       }
     }
   },
