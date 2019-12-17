@@ -249,6 +249,9 @@ export default {
   width: 100%;
   text-align: center;
   padding-top: 35px;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 75px 50px 0 50px;
+  }
   h1 {
     color: #000000;
   }

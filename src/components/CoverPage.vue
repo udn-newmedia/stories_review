@@ -60,7 +60,7 @@ export default {
   },
   computed: {
     isMob() {
-      return window.innerWidth < 768 ? true : false;
+      return window.innerWidth < 1025 ? true : false;
     },
     pageImageSize() {
       return {
@@ -236,6 +236,7 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  background-color: #252525;
 }
 .cover-page--disabled {
   pointer-events: none;
@@ -255,12 +256,15 @@ export default {
   width: 100%;
   height: 90%;
   display: flex;
-  background-color: #252525;
   .cover-page-title {
     position: relative;
+    z-index: 1;
     width: 200px;
     height: 100%;
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 1025px) {
       width: 60%;
     }
     .cover-page-title-image {
@@ -306,7 +310,7 @@ export default {
   }
   .cover-page-description {
     position: relative;
-    width: calc(100% - 200px);
+    // width: calc(100% - 200px);
     padding: 10vh 15px 0 15px;
     display: flex;
     flex-direction: column;
@@ -320,6 +324,7 @@ export default {
     }
     .cover-page-description-light {
       position: absolute;
+      z-index: 0;
       top: 0;
       right: 0;
       width: 100%;
@@ -366,7 +371,7 @@ export default {
 }
 .cover-page-body {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
   height: 30%;
   background-image: url('../assets/cover/cover_ground_mob.png');

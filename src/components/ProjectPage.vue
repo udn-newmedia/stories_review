@@ -113,7 +113,10 @@ export default {
     position: relative;
     margin-bottom: 5px;
     height: calc((100vw - 40px) * 0.63);
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      height: 30%;
+    }
+    @media screen and (min-width: 1025px) {
       width: 50%;
       height: 45%;
       padding: 20px 0 20px 40px;

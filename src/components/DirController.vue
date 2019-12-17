@@ -576,6 +576,7 @@ export default {
     border: none;
     border-radius: 50%;
     background-color: transparent;
+    cursor: pointer;
     &:focus {
       outline: none;
     }
