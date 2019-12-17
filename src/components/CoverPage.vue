@@ -30,7 +30,7 @@
         }"
       >
         <div class="cover-page-description-light">
-          <img :src="require('@/assets/cover/cover_light.png')" alt="light">
+          <img :src="require(isMob ? '@/assets/cover/cover_light_mob.png' : '@/assets/cover/cover_light.png')" alt="light">
         </div>
         <div class="cover-page-description-text">
           <h1>你敢挑戰嗎？</h1>
@@ -64,7 +64,7 @@ export default {
     },
     pageImageSize() {
       return {
-        width: window.innerWidth * 0.6,
+        width: window.innerWidth * 0.65,
         height: window.innerHeight * 0.9,
       }
     },
@@ -73,7 +73,8 @@ export default {
       return this.isMob ? (443 / 272) : 0.6;
     },
     titleImageSrc() {
-      return require(this.isMob ? '@/assets/cover/cover_title_mob.png' : '@/assets/cover/cover_title.png');
+      return require('@/assets/cover/cover_title.png');
+      // return require(this.isMob ? '@/assets/cover/cover_title_mob.png' : '@/assets/cover/cover_title.png');
     },
   },
   methods: {
@@ -222,7 +223,6 @@ export default {
   },
   mounted() {
     this.drawParticules();
-    // window.onload = () => { this.drawParticules(); };
   },
 };
 </script>
@@ -254,13 +254,15 @@ export default {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 90%;
-  display: flex;
+  height: 75%;
+  @media screen and (min-width: 769px) {
+    display: flex;
+  }
   .cover-page-title {
     position: relative;
     z-index: 1;
-    width: 200px;
     height: 100%;
+    text-align: left;
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       width: 50%;
     }
@@ -273,11 +275,16 @@ export default {
       height: 100%;
       opacity: 0;
       transition: .333s ease-in-out;
-      padding-top: 5vh;
+      padding-top: 3vh;
+      @media screen and (min-width: 769px) {
+        padding-top: 5vh;
+      }
       img {
-        width: 60vw;
+        width: 65vw;
+        margin-left: 20px;
         @media screen and (min-width: 769px) {
           width: 50vw;
+          margin-left: 0;
         }
       }
     }
@@ -309,17 +316,21 @@ export default {
     }
   }
   .cover-page-description {
-    position: relative;
-    // width: calc(100% - 200px);
-    padding: 10vh 15px 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    padding: 23vh 15px 0 15px;
     opacity: 0;
     @media screen and (max-width: 375px) {
-      padding: 10vh 15px 0 0;
+      padding: 25vh 15px 0 15px;
     }
     @media screen and (min-width: 769px) {
+      position: relative;
       width: 40%;
+      align-items: flex-start;
       padding: 150px 100px 0 0;
     }
     .cover-page-description-light {
@@ -327,9 +338,10 @@ export default {
       z-index: 0;
       top: 0;
       right: 0;
-      width: 100%;
+      width: 60%;
       @media screen and (min-width: 769px) {
         right: 50px;
+        width: 100%;
       }
       img {
         width: 100%;
@@ -340,21 +352,34 @@ export default {
       width: 100%;
       overflow-y: auto;
       margin-bottom: 30px;
+      padding: 0 18px;
+      @media screen and (max-width: 375px) {
+        padding: 0;
+      }
+      @media screen and (min-width: 769px) {
+        padding: 0;
+      }
       h1 {
         margin-bottom: 20px;
+        margin-left: 135px;
         font-size: 24px;
+        font-weight: 900;
         color: #ffffff;
         @media screen and (min-width: 769px) {
+          position: relative;
           font-size: 3rem;
-          font-weight: 900;
+          margin-left: 0;
           margin-bottom: 50px;
         }
       }
       p {
         color: #ffffff;
         text-align: justify;
-        margin-bottom: 20px;
-        line-height: 1.67;
+        margin-bottom: 5px;
+        line-height: 1.67;    
+        @media screen and (max-width: 375px) {
+          font-size: 1.0rem;
+        }
         @media screen and (min-width: 769px) {
           font-size: 1.6rem;
         }
@@ -373,10 +398,9 @@ export default {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 30%;
+  height: 25%;
   background-image: url('../assets/cover/cover_ground_mob.png');
   background-size: cover;
-  transform: translateY(-8vh);
   @media screen and (min-width: 769px) {
     height: 30%;
     background-image: url('../assets/cover/cover_ground.png');

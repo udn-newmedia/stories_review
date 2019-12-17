@@ -91,11 +91,12 @@ export default {
 .editor-page-head {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 135px;
   background-image: url('../assets/editor/ending_mob.jpg');
   background-size: cover;
+  background-position: 50% 100%;
   @media screen and (max-width: 375px) {
-    height: 160px;
+    height: 90px;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     height: 35%;

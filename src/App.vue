@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import InApp from 'detect-inapp';
 import HeadBar from './components/HeadBar.vue'
 import PageMaze from './components/PageMaze.vue'
 

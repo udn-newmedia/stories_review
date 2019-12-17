@@ -170,7 +170,7 @@ export default {
   .maze-map-table {
     position: relative;
     height: 85%;
-    overflow-x: auto;
+    overflow-x: scroll;
     @media screen and (min-width: 769px) {
       height: calc(100% - 50px);
       margin-left: 185px;
