@@ -77,8 +77,8 @@ export default {
           },
           coverSize: {
             mob: {
-              width: 300,
-              height: 518,
+              width: 331,
+              height: 472,
             },
             pc: {
               width: 1011,
@@ -561,8 +561,8 @@ export default {
           },
           coverSize: {
             mob: {
-              width: 371,
-              height: 427,
+              width: 329,
+              height: 379,
             },
             pc: {
               width: 1003,
@@ -835,8 +835,8 @@ export default {
           },
           coverSize: {
             mob: {
-              width: 392,
-              height: 477,
+              width: 353,
+              height: 439,
             },
             pc: {
               width: 1129,
@@ -1166,8 +1166,8 @@ export default {
           },
           coverSize: {
             mob: {
-              width: 363,
-              height: 562,
+              width: 355,
+              height: 513,
             },
             pc: {
               width: 1128,
