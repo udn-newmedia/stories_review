@@ -104,7 +104,7 @@ export default {
             vm.pageImageSize.width * (vm.isMob ? 0.1 : 0),
             vm.pageImageSize.width * (vm.isMob ? 0.1 : 0),
             vm.pageImageSize.width * (vm.isMob ? 1 : 0.76),
-            vm.pageImageSize.width * (vm.isMob ? 0.7 : 0.6)
+            vm.pageImageSize.width * (vm.isMob ? 0.65 : 0.6)
           );
           getImageData();
         };
