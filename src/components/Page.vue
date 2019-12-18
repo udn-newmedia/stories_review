@@ -219,11 +219,13 @@ export default {
       EventBus.$emit('UPDATE_CURRENTID', this.id);
     },
     handleProjectLinkClick(x, y, category, action, target) {
-      this.$store.dispatch('setCoordinate', {x: x, y: y});
       this.handleGA(category, action, target);
+      this.$store.dispatch('setCoordinate', {x: x, y: y});
+      
     },
     handleGA (category, action, target) {
-      // console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
+      console.log("[" + Utils.detectPlatform() + "][" + document.querySelector('title').innerHTML + "] [" + target +  "]")
+      console.log(category)
       window.ga('newmedia.send', 'event', {
         eventCategory: category,
         eventAction: action,
