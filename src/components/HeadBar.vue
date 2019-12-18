@@ -36,6 +36,7 @@ export default {
     shareUrlLine() {
       let sharedText = document.querySelector('title').innerHTML
       let shareContent = document.querySelector('meta[property="og:description"]').content
+
       // desktop
       if (!this.isMobile) {
         return `https://social-plugins.line.me/lineit/share?text=${encodeURIComponent(sharedText)}%0D%0A%0D%0A${encodeURIComponent(shareContent)}&url=${encodeURIComponent(this.href)}`
