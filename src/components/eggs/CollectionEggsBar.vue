@@ -83,7 +83,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 5,
+      eggTotal: 0,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
