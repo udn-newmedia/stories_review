@@ -65,12 +65,8 @@ export default {
     pageImageSize() {
       return {
         width: window.innerWidth * 0.65,
-        height: window.innerHeight * 0.9,
+        height: window.innerHeight * 0.8,
       }
-    },
-    coverImageRatio() {
-      // return this.isMob ? (443 / 272) : (931 / 1288);
-      return this.isMob ? (443 / 272) : 0.6;
     },
     titleImageSrc() {
       return require('@/assets/cover/cover_title.png');
@@ -105,10 +101,10 @@ export default {
             0,
             img.width,
             img.height,
-            vm.pageImageSize.width * (vm.isMob ? 0 : 0.075),
-            0,
-            vm.pageImageSize.width * (vm.isMob ? 1 : 0.85),
-            vm.pageImageSize.width * vm.coverImageRatio
+            vm.pageImageSize.width * (vm.isMob ? 0.1 : 0),
+            vm.pageImageSize.width * (vm.isMob ? 0.1 : 0),
+            vm.pageImageSize.width * (vm.isMob ? 1 : 0.76),
+            vm.pageImageSize.width * (vm.isMob ? 0.7 : 0.6)
           );
           getImageData();
         };
@@ -275,10 +271,7 @@ export default {
       height: 100%;
       opacity: 0;
       transition: .333s ease-in-out;
-      padding-top: 3vh;
-      @media screen and (min-width: 769px) {
-        padding-top: 5vh;
-      }
+      padding-top: 5vh;
       img {
         width: 65vw;
         margin-left: 20px;
@@ -325,7 +318,7 @@ export default {
     padding: 23vh 15px 0 15px;
     opacity: 0;
     @media screen and (max-width: 375px) {
-      padding: 25vh 15px 0 15px;
+      padding: 26vh 15px 0 15px;
     }
     @media screen and (min-width: 769px) {
       position: relative;
@@ -376,7 +369,7 @@ export default {
         color: #ffffff;
         text-align: justify;
         margin-bottom: 5px;
-        line-height: 1.67;    
+        line-height: 1.67;
         @media screen and (max-width: 375px) {
           font-size: 1.0rem;
         }
@@ -395,7 +388,9 @@ export default {
   }
 }
 .cover-page-body {
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   z-index: 1;
   width: 100%;
   height: 25%;
@@ -405,7 +400,6 @@ export default {
     height: 30%;
     background-image: url('../assets/cover/cover_ground.png');
     background-position: 90% 0;
-    transform: translateY(-18vh);
   }
 }
 </style>

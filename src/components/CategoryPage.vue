@@ -238,6 +238,9 @@ export default {
     transition: opacity 1s ease-in-out;
     img {
       width: 80%;
+      @media screen and (max-width: 375px) {
+        transform: scale(0.8);
+      }
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         height: 70%;
         width: auto;
@@ -250,6 +253,10 @@ export default {
   .category-page-canvas {
     transition: opacity 1s ease-in-out;
     animation: bounce .666s ease-in-out forwards;
+    @media screen and (max-width: 375px) {
+      animation: bounce-shrink .666s ease-in-out forwards;
+      transform-origin: 50% 30%;
+    }
     @keyframes bounce {
       0% {
         transform: scale(5);
@@ -259,6 +266,17 @@ export default {
       }
       100% {
         transform: scale(1);
+      }
+    }
+    @keyframes bounce-shrink {
+      0% {
+        transform: scale(5);
+      }
+      50% {
+        transform: scale(2);
+      }
+      100% {
+        transform: scale(0.8);
       }
     }
   }
