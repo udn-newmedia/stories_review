@@ -83,7 +83,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 0,
+      eggTotal: 5,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -305,6 +305,9 @@ export default {
     eggTotal: function(newVal, oldVal) {
       let target = 'Collect_' + newVal
       this.handleGA('Egg', 'Collect', target)
+      if (newVal === 6) {
+        
+      }
     },
     mazeMapFlag: function(newVal, oldVal) {
       if (newVal === true) {
@@ -312,7 +315,7 @@ export default {
         this.isMenuClose = true
         this.isAnimationClose = true
       }
-    }
+    },
   },
   mounted () {
     this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]

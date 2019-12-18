@@ -50,6 +50,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding-top: 180px;
+  z-index: 50;
   @media screen and (min-width: 375px) {
     padding-top: 100px;
   }
