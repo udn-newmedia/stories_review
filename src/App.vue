@@ -17,7 +17,7 @@ export default {
     PageMaze
   },
   created() {
-    // 處理inapp browser window.innerWidth問題
+    // 處理iOS fb inapp browser window.innerWidth問題
     (function() {
       const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera);
       let currentWidth = window.innerWidth;
