@@ -83,7 +83,7 @@ export default {
   name: 'app',
   data () {
     return {
-      eggTotal: 5,
+      eggTotal: 0,
       eggTitle: '新媒小劇場',
       isMenuClose: true,
       isAnimationClose: true, 
@@ -305,9 +305,12 @@ export default {
     eggTotal: function(newVal, oldVal) {
       let target = 'Collect_' + newVal
       this.handleGA('Egg', 'Collect', target)
-      if (newVal === 6) {
-        
-      }
+      // if (newVal === 6) {
+      //   this.$store.dispatch('setSizEggsFlag', true)
+      // } else {
+
+      //   this.$store.dispatch('setSizEggsFlag', false)
+      // }
     },
     mazeMapFlag: function(newVal, oldVal) {
       if (newVal === true) {
@@ -316,6 +319,14 @@ export default {
         this.isAnimationClose = true
       }
     },
+    isAnimationClose: function (newVal, oldVal) {
+      console.log('isAni',newVal)
+      if (newVal) {
+        this.$store.dispatch('setControllerFlag', false)
+      } else {
+        this.$store.dispatch('setControllerFlag', true)
+      }
+    }
   },
   mounted () {
     this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]
@@ -326,7 +337,6 @@ export default {
       this.eggShow(whichEgg, this.eggTotal)
       this.eggTotal += 1;
     }
-    
   },
   components: {
     ProposalEggPage,
@@ -361,7 +371,7 @@ export default {
       let tl = anime.timeline({
         begin: function () {
             vm.isAnimationClose = false
-            vm.$store.dispatch('setAnimationFlag', true)
+            // vm.$store.dispatch('setControllerFlag', true)
         },
         complete: function() {
              
@@ -386,7 +396,7 @@ export default {
             }, 5000);
           }
 
-          vm.$store.dispatch('setAnimationFlag', false)
+          // vm.$store.dispatch('setControllerFlag', false)
         }
       });
 

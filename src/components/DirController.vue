@@ -2,7 +2,7 @@
   <div :class="{
     'page-maze-controller': true,
     'page-maze-controller--cover': isOnCover,
-    'page-maze-controller--disabled': $store.state.animationFlag
+    'page-maze-controller--disabled': $store.state.controllerFlag
   }">
     <svg
       version="1.1"
@@ -258,7 +258,7 @@
             'category--3': currentCategory === 3,
             'category--4': currentCategory === 4 || isOnCover,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('right') && !isOnCover || $store.state.animationFlag,
+            'category--disabled': !hasNeighbor('right') && !isOnCover || $store.state.controllerFlag,
           }"
           d="M116.24,63.82c1.41,0.87,1.84,2.72,0.97,4.13c-0.24,0.39-0.58,0.73-0.97,0.97l-8.29,5.12
           c-1.41,0.87-3.26,0.43-4.13-0.98c-0.29-0.47-0.45-1.02-0.45-1.57V61.25c0-1.66,1.34-3,3-3c0.56,0,1.1,0.16,1.58,0.45L116.24,63.82z
@@ -275,7 +275,7 @@
             'category--3': currentCategory === 3 || isOnCover,
             'category--4': currentCategory === 4,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('down') && !isOnCover || $store.state.animationFlag,
+            'category--disabled': !hasNeighbor('down') && !isOnCover || $store.state.controllerFlag,
           }"
           d="M68.42,116.74c-0.87,1.41-2.72,1.84-4.13,0.97c-0.39-0.24-0.73-0.58-0.97-0.97l-5.12-8.29
           c-0.87-1.41-0.43-3.26,0.98-4.13c0.47-0.29,1.02-0.45,1.57-0.45h10.24c1.66,0,3,1.34,3,3c0,0.56-0.15,1.1-0.45,1.58L68.42,116.74z"
@@ -291,7 +291,7 @@
             'category--3': currentCategory === 3,
             'category--4': currentCategory === 4,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('left') && !isOnCover || $store.state.animationFlag,
+            'category--disabled': !hasNeighbor('left') && !isOnCover || $store.state.controllerFlag,
           }"
           d="M15.5,68.92c-1.41-0.87-1.84-2.72-0.97-4.13c0.24-0.39,0.58-0.73,0.97-0.97l8.29-5.12
           c1.41-0.87,3.26-0.43,4.13,0.98c0.29,0.47,0.45,1.02,0.45,1.57v10.24c0,1.66-1.34,3-3,3c-0.56,0-1.1-0.15-1.58-0.45L15.5,68.92z"
@@ -307,7 +307,7 @@
             'category--3': currentCategory === 3,
             'category--4': currentCategory === 4,
             'category--5': currentCategory === 5,
-            'category--disabled': !hasNeighbor('up') && !isOnCover || $store.state.animationFlag,
+            'category--disabled': !hasNeighbor('up') && !isOnCover || $store.state.controllerFlag,
           }"
           d="M63.32,16c0.87-1.41,2.72-1.84,4.13-0.97c0.39,0.24,0.73,0.58,0.97,0.97l5.12,8.29
           c0.87,1.41,0.43,3.26-0.98,4.13c-0.47,0.29-1.02,0.45-1.57,0.45H60.75c-1.66,0-3-1.34-3-3c0-0.56,0.16-1.1,0.45-1.58L63.32,16z"
@@ -322,7 +322,7 @@
         <button
           :class="{
             'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('up') && !isOnCover || $store.state.animationFlag
+            'page-maze-controller-button--disabled': !hasNeighbor('up') && !isOnCover || $store.state.controllerFlag
           }"
           @click="handleControllerClick('up')"
         />
@@ -331,14 +331,14 @@
         <button
           :class="{
             'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('left') && !isOnCover || $store.state.animationFlag
+            'page-maze-controller-button--disabled': !hasNeighbor('left') && !isOnCover || $store.state.controllerFlag
           }"
           @click="handleControllerClick('left')"
         />
         <button
           :class="{
             'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('right') && !isOnCover || $store.state.animationFlag
+            'page-maze-controller-button--disabled': !hasNeighbor('right') && !isOnCover || $store.state.controllerFlag
           }"
           @click="handleControllerClick('right')"
         />
@@ -347,7 +347,7 @@
         <button
           :class="{
             'page-maze-controller-button': true,
-            'page-maze-controller-button--disabled': !hasNeighbor('down') && !isOnCover || $store.state.animationFlag
+            'page-maze-controller-button--disabled': !hasNeighbor('down') && !isOnCover || $store.state.controllerFlag
           }"
           @click="handleControllerClick('down')"
         />

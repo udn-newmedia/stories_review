@@ -7,8 +7,7 @@ export default new Vuex.Store({
   state: {
     x: 0,
     y: 0,
-    animationFlag: false,
-    sixEggsFlag: false,
+    controllerFlag: false
   },
   getters: {
     
@@ -18,22 +17,16 @@ export default new Vuex.Store({
       state.x = coords.x;
       state.y = coords.y;
     },
-    setAnimationFlag(state, status) {
-      state.animationFlag = status
-    },    
-    setSizEggsFlag(state, status) {
-      state.sixEggsFlag = status
-    },
+    setControllerFlag(state, status) {
+      state.controllerFlag = status
+    }
   },
   actions: {
     setCoordinate(context, coords) {
       context.commit('setCoordinate', coords);
     },
-    setAnimationFlag(context, status) {
-      context.commit('setAnimationFlag', status);
-    },    
-    setSizEggsFlag(context, status) {
-      context.commit('setSizEggsFlag', status);
-    },
+    setControllerFlag(context, status) {
+      context.commit('setControllerFlag', status);
+    }
   }
 });
