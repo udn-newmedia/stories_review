@@ -412,7 +412,7 @@ export default {
       .add({
         targets: '.congrate_title',
         opacity: 1,
-        duration: 1500,
+        duration: 1000,
         scale: 1,
         translateY: [1000, 0]
       })
@@ -466,7 +466,6 @@ export default {
       .add({
         targets: element,
         duration: 150,
-        delay: 800,
         translateX: move_x,
         translateY: move_y -2,
         translateZ: 0,
