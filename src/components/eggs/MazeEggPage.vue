@@ -200,12 +200,15 @@ export default {
   .maze_title {
     h2 {
       text-align: center;
-      margin-bottom: 71px;
+      margin-bottom: 40px;
       color: #fcff98;
       font-size: 1.652rem;
       line-height: 1.33;
       font-family: 'Microsoft JhengHei';
       font-weight: 500;
+      @media screen and (min-width: 769px) {
+        margin-bottom: 70px;
+      }
     }
   }
   .maze_img {
