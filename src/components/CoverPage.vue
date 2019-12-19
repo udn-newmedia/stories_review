@@ -183,7 +183,7 @@ export default {
       }
       class particule {
         constructor(options) {
-          const centerOffsetX = 0;
+          const centerOffsetX = vm.isMob ? 0 : window.innerHeight * 0.07;
           const centerOffsetY = window.innerHeight * 0.05;
           this.centerPosX = centerOffsetX + options.x;
           this.centerPosY = centerOffsetY + options.y;
@@ -272,6 +272,10 @@ export default {
       opacity: 0;
       transition: .333s ease-in-out;
       padding-top: 5vh;
+      @media screen and (min-width: 1025px) {
+        padding-top: 5vh;
+        padding-left: 7vh;
+      }
       img {
         width: 65vw;
         margin-left: 20px;
@@ -315,12 +319,19 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 23vh 15px 0 15px;
+    padding: 28vh 15px 0 15px;
     opacity: 0;
     @media screen and (max-width: 375px) {
       padding: 26vh 15px 0 15px;
     }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      padding: 35vh 5% 0 5%;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+      width: 100%;
+      padding: 28vh 15px 0 25vw;
+    }
+    @media screen and (min-width: 1280px) {
       position: relative;
       width: 40%;
       align-items: flex-start;
@@ -332,7 +343,15 @@ export default {
       top: 0;
       right: 0;
       width: 60%;
-      @media screen and (min-width: 769px) {
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        right: 50px;
+        width: 50%;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        right: 50px;
+        width: 40%;
+      }
+      @media screen and (min-width: 1280px) {
         right: 50px;
         width: 100%;
       }
@@ -358,7 +377,11 @@ export default {
         font-size: 24px;
         font-weight: 900;
         color: #ffffff;
-        @media screen and (min-width: 769px) {
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          margin-left: 300px;
+          font-size: 2.6rem;
+        }
+        @media screen and (min-width: 1025px) {
           position: relative;
           font-size: 3rem;
           margin-left: 0;
@@ -373,7 +396,10 @@ export default {
         @media screen and (max-width: 375px) {
           font-size: 1.0rem;
         }
-        @media screen and (min-width: 769px) {
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 1.3rem;
+        }
+        @media screen and (min-width: 1025px) {
           font-size: 1.6rem;
         }
       }

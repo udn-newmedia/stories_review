@@ -545,12 +545,20 @@ export default {
   position: fixed;
   z-index: 10;
   right: 18px;
-  top: calc((100vw - 40px) * 0.63 + 36vh - 50px);
+  top: calc((100vw - 40px) * 0.63 + 36vh - 35px);
   width: 120px;
   height: 120px;
   margin: 10px;
   transition: .666s ease-in-out;
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    right: calc(50% - 324px);
+    top: 70%;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    right: calc(50% - 425px);
+    top: 58%;
+  }
+  @media screen and (min-width: 1280px) {
     right: calc(50% - 540px);
     top: 63%;
   }
@@ -586,7 +594,15 @@ export default {
   }
 }
 .page-maze-controller--cover {
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    transform: scale(1.75);
+    right: 50px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    transform: scale(1.75);
+    right: 90px;
+  }
+  @media screen and (min-width: 1280px) {
     transform: scale(1.75);
     right: 180px;
   }

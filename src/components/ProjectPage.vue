@@ -200,7 +200,14 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      bottom: 10px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+      padding: 0 50px;
+      bottom: 35px;
+    }
+    @media screen and (min-width: 1280px) {
       padding: 0 50px;
     }
     .project-page-url-arrow {
