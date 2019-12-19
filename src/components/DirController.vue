@@ -594,6 +594,7 @@ export default {
   }
 }
 .page-maze-controller--cover {
+  animation: pump 1s ease-in-out infinite;
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     transform: scale(1.75);
     right: 50px;
@@ -605,6 +606,20 @@ export default {
   @media screen and (min-width: 1280px) {
     transform: scale(1.75);
     right: 180px;
+  }
+  @keyframes pump {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
 .page-maze-controller--disabled {
