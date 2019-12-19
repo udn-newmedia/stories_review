@@ -75,7 +75,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
   height: 100%;
   @media screen and (min-width: 769px) {
     padding-left: 50px;

@@ -63,7 +63,7 @@
           <p>吼(ノ‵□′)ノ～┴─┴ </p>
           <p><a @click="handleProjectLinkClick(16, 3, 'Theater', 'Click', 'Freddy_Privacy')" style="color: #ff7fa1 ;cursor: pointer;">數位隱私</a>都還沒寫完，</p>
           <p>下下下題長官明天要看，</p>
-          <p>還好沒日沒夜沒有<a @click="handleProjectLinkClick('Theater', 'Click', 'Freddy_Tiger')" style="color: #bbd500 ;cursor: pointer;" :to="`/2/6`">石虎</a>畫成豹🐆🐆🐆</p>
+          <p>還好沒日沒夜沒有<a @click="handleProjectLinkClick(6, 2, 'Theater', 'Click', 'Freddy_Tiger')" style="color: #bbd500 ;cursor: pointer;">石虎</a>畫成豹🐆🐆🐆</p>
           <br>
           <p>年度專題照片難，首頁封面自己來，</p>
           <p>左手攝影📸，右手寫code⌨️，</p>
@@ -87,7 +87,7 @@
         </slot>
         <!-- 汶均 -->
         <slot v-if="pageInfo.key === 'w_6'">
-          <p>去南韓採訪<a @click="handleProjectLinkClick(19, 3, 'Theater', 'Click', 'Afore_Energy')" style="color: #ff7fa1 ;cursor: pointer;">能源轉型</a>專題時，一度以為自己回不來了。</p>
+          <p>去南韓採訪<a @click="handleProjectLinkClick(20, 3, 'Theater', 'Click', 'Afore_Energy')" style="color: #ff7fa1 ;cursor: pointer;">能源轉型</a>專題時，一度以為自己回不來了。</p>
           <p>殺到離首爾3小時的新萬金採訪具環保爭議的綠能開發案，遭到南韓政府旗下開發公司阻撓我們採訪環保派學者（後來還聽說當地很多黑道...）</p>
           <p>在地處偏遠的異地，只能再三確認飯店房門已上鎖、採訪筆記已備份，躺在漆黑的房間內，祈求自己能活過今晚。</p>
         </slot>

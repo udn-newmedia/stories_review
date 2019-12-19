@@ -538,12 +538,10 @@ export default {
               flag: true,
               pics: {
                 mob: [
-                  require('@/assets/observatory/AE_3_pic01_mob.jpg'),
-                  require('@/assets/observatory/AE_3_pic02_mob.jpg'),
+                  require('@/assets/observatory/AE_3_pic01_mob.jpg')
                 ],
                 pc: [
-                  require('@/assets/observatory/AE_3_pic01.jpg'),
-                  require('@/assets/observatory/AE_3_pic02.jpg'),
+                  require('@/assets/observatory/AE_3_pic01.jpg')
                 ],
               },
             },

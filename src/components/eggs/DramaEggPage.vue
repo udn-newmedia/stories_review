@@ -119,7 +119,6 @@ export default {
         transform: translate(-50%);
         opacity: 1;
         left: 50%;
-        
       }
       .light_cover {
           position: absolute;
@@ -140,10 +139,13 @@ export default {
       position: absolute;
       left: 50%;
       height: 30%;
-      bottom: 5px;
+      bottom: 2px;
       transform: translateX(-50%);
       opacity: 0;
       transition: opacity 1s;
+      @media screen and (min-width: 769px) {
+        bottom: 3px;
+      }
       &.enter {
         transition-delay: 1s;
         translate: opacity 1s;
