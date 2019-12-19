@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     shareUrlFB() {
-      return 'https://www.facebook.com/dialog/share?app_id=1010324812347164&display=popup&href=' + encodeURIComponent(this.href);
+      return 'https://www.facebook.com/dialog/share?app_id=1010324812347164&display=popup&href=' + encodeURIComponent(this.href) + '&redirect_uri=' + encodeURIComponent(this.href);
     },
     shareUrlLine() {
       let sharedText = document.querySelector('title').innerHTML

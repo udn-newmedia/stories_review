@@ -329,7 +329,6 @@ export default {
     }
   },
   mounted () {
-    this.currentBackgroundColor = this.colorScheme[this.pageInfo.category - 1]
     if (this.pageInfo.egg.flag && this.pageInfo.egg.collected === false) {
       let key = this.pageInfo.key
       let whichEgg = this.mapToEggDictionary[key]

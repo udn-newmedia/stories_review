@@ -35,6 +35,10 @@ export default {
         }, 100);
       }
     })();
+    // rec.udn.com追蹤碼
+    window.onload = () => {
+      document.getElementsByTagName('iframe')[0].style.top = 0;
+    };
   },
 };
 </script>
