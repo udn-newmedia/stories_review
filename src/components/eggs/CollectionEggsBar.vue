@@ -289,8 +289,14 @@ export default {
   },
   watch: { 
     pageInfo: function(newVal, oldVal) {
+      let vm = this
+      console.log("觸發")
+      console.log(newVal.egg.flag)
+      console.log(newVal.egg.collected)
       this.currentBackgroundColor = this.colorScheme[newVal.category - 1]
-      if (newVal.egg.flag && newVal.egg.collected === false) {
+      if (newVal.egg.flag && newVal.egg.collected === false && this.isAnimationClose === true 
+                          && this.isMenuClose === true && this.isProposalClose === true && this.isCongrateClose === true) {
+        
         this.eggTotal += 1; 
         let key = newVal.key
         let whichEgg = this.mapToEggDictionary[key]
@@ -298,8 +304,8 @@ export default {
         if (newVal.title === '迷宮地圖') {
           this.eggTitle = '拾獲迷宮地圖一捲'
         }
-        
         this.eggShow(whichEgg, this.eggTotal)
+        this.updatedEggCollectedStatus(vm.currentId)
       }
     },
     eggTotal: function(newVal, oldVal) {
@@ -320,7 +326,7 @@ export default {
       }
     },
     isAnimationClose: function (newVal, oldVal) {
-      console.log('isAni',newVal)
+      // console.log('isAni',newVal)
       if (newVal) {
         this.$store.dispatch('setControllerFlag', false)
       } else {
@@ -378,12 +384,12 @@ export default {
             setTimeout(() => {
               vm.isMenuClose = true
               vm.isAnimationClose = true
-              vm.updatedEggCollectedStatus(vm.currentId)
+              
             }, 1000);
           } else if (vm.eggTotal === 6) {
             setTimeout(() => {
               vm.isMenuClose = true
-              vm.updatedEggCollectedStatus(vm.currentId)
+              // vm.updatedEggCollectedStatus(vm.currentId)
             }, 1000);
           } else {
               vm.isCongrateClose = false
@@ -391,7 +397,7 @@ export default {
               vm.isCongrateClose = true
               vm.isMenuClose = true
               vm.isAnimationClose = true
-              vm.updatedEggCollectedStatus(vm.currentId)
+              // vm.updatedEggCollectedStatus(vm.currentId)
             }, 5000);
           }
 
