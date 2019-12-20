@@ -29,6 +29,12 @@ export default {
       default: window.location.href,
     },
   },
+  data() {
+    return {
+      isMobile: false,
+      isInApp: false
+    };
+  },
   computed: {
     shareUrlFB() {
       return 'https://www.facebook.com/dialog/share?app_id=1010324812347164&display=popup&href=' + encodeURIComponent(this.href) + '&redirect_uri=' + encodeURIComponent(this.href);
@@ -69,6 +75,10 @@ export default {
         "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [headbar Line分享]"
       });
     },
+  },
+  mounted() {
+    this.isMobile = Utils.detectMob();
+    this.isInApp = Utils.isFacebookApp(148) || Utils.isLineApp();
   },
 };
 </script>

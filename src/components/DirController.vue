@@ -405,6 +405,7 @@ export default {
         const currentX = this.$store.state.x;
         const currentY = this.$store.state.y;
   
+        // eslint-disable-next-line no-inner-declarations
         function traceDirect() {
           let directArray = vm.mazeIndexTable.filter((e, i) => {
             if (dir === 'up') {
