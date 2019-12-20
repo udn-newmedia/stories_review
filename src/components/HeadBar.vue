@@ -36,6 +36,9 @@ export default {
     };
   },
   computed: {
+    isOnCover() {
+      return this.$store.state.x === 0 && this.$store.state.y === 0;
+    },
     shareUrlFB() {
       return 'https://www.facebook.com/dialog/share?app_id=1010324812347164&display=popup&href=' + encodeURIComponent(this.href) + '&redirect_uri=' + encodeURIComponent(this.href);
     },
@@ -57,7 +60,7 @@ export default {
   },
   methods: {
     updatedMazeMapFlag() {
-      EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
+      if (!this.isOnCover) EventBus.$emit('UPDATE_MAZEMAP_FLAG', true);
     },
     sendFacebookGA() {
       window.ga("newmedia.send", {

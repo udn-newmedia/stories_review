@@ -36,7 +36,7 @@
               'maze-map-table-row-item--category4-active': item_r.y === 3 && +index_r === +currentId,
               'maze-map-table-row-item--category5-active': item_r.y === 4 && +index_r === +currentId,
             }"
-            @click="mapTabClick(item_r.x + 1, item_r.y, item_r.key)"
+            @click.capture="mapTabClick(item_r.x + 1, item_r.y, item_r.key)"
           >
             <div class="maze-map-table-row-item-text">
               <p
